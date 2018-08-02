@@ -4,4 +4,4 @@ This is my personal travel blog that I started building on [Codepen](https://cod
 
 Using those tools I created this site (which is still a work in progress) as a personal blog and my own travel app to continue documenting my travels. 
 
-![alt text](https://scontent-dfw5-1.cdninstagram.com/vp/a4710fc9b540a99366c0a4c0d84e4c8f/5B648BDB/t50.2886-16/38025277_435267123639265_6188436408579154460_n.mp4)
+![Alt Text](travel-blog-gif.gif)
