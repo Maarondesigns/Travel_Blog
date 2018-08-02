@@ -1,6 +1,4 @@
 
-
-
 function submitJSON(){
     var step = document.getElementById("step").value;
     var day = document.getElementById("day_of_trip").value;
@@ -14,29 +12,5 @@ function submitJSON(){
 
     function finished(data){
         console.log(data);
-    }
-
-    
+    }  
 }
-
-
-
-// d3.json('/all', allTheStuff);
-
-
-//   function allTheStuff(data){
-//       var dataArray = Object.entries(data);
-
-//       var svg = d3.select("body")
-//       .append("svg")
-//       .style("margin-top", "20px");
-
-//       svg.selectAll("rect")
-//       .data(dataArray)
-//       .enter()
-//       .append("rect")
-//       .attr("height", d => d[1]*10)
-//       .attr("width", 10)
-//       .attr("x", d => d[1]*11)
-//       .text(d => d);
-//   }
