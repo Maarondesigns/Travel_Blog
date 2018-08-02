@@ -1,0 +1,22 @@
+{
+  "steps": [
+    {
+      "step": 1,
+      "day": 1,
+      "date": "August 16, 2018",
+      "lattitude": 32.8998,
+      "longitude": -97.0403,
+      "country": "United States",
+      "city": "Dallas"
+    },
+    {
+      "step": 2,
+      "day": 2,
+      "date": "August 17, 2018",
+      "lattitude": 64.1265,
+      "longitude": -21.8174,
+      "country": "Iceland",
+      "city": "Reykjavik"
+    }
+  ]
+}

@@ -334,9 +334,13 @@ console.log(k);
       d3.json,
       "https://raw.githubusercontent.com/Maarondesigns/Polarsteps_JSON/master/wequitourjobs.json"
     )
+    .defer(
+      d3.json,
+      "steps.json"
+    )
     .await(ready);
 
-  function ready(error, world, names, data) {
+  function ready(error, world, names, data, dataIceland) {
     if (error) throw error;
 
     // DRAG FUNCTIONS TAKEN FROM IVY WANG
@@ -352,7 +356,7 @@ console.log(k);
     var gpos0, o0;
 
     function dragstarted() {
-      console.log("dragstarted");
+     // console.log("dragstarted");
       gpos0 = projection.invert(d3.mouse(this));
       o0 = projection.rotate();
 
@@ -364,7 +368,7 @@ console.log(k);
     }
 
     function dragged() {
-      console.log("dragged");
+     // console.log("dragged");
       var gpos1 = projection.invert(d3.mouse(this));
 
       o0 = projection.rotate();
@@ -378,11 +382,13 @@ console.log(k);
       d3.selectAll(".land").attr("d", path);
       d3.selectAll(".border").attr("d", path);
       svg.selectAll(".pin").attr("d", path);
+      svg.selectAll(".icelandPins").attr("d", path);
       svg.selectAll(".travelPath").attr("d", path);
+      svg.selectAll(".icelandTravelPath").attr("d", path);
     }
 
     function dragended() {
-      console.log("dragended");
+      //console.log("dragended");
       svg.selectAll(".point").remove();
     }
 
@@ -433,6 +439,7 @@ console.log(k);
       .enter()
       .append("path")
       .attr("class", "land")
+      .attr("stroke", "#515151")
       .attr("d", path)
       .on("mouseover", showCountryName)
       .on("mouseout", hideCountryName)
@@ -448,7 +455,8 @@ console.log(k);
           return countryName[0].name;
         })
         .style("left", d3.event.pageX + 25 + "px")
-        .style("top", d3.event.pageY - 28 + "px");
+        .style("top", d3.event.pageY - 28 + "px")
+        .style("box-shadow", "0px 0px 8px 4px"+this.getAttribute("stroke"));
 
       d3.select(this).classed("landHover", true);
     }
@@ -473,26 +481,28 @@ console.log(k);
 
     var locations = [];
 
+    const formatMonth = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "Octover",
+      "November",
+      "December"
+    ];
+
     // GO THROUGH JSON DATA AND CREATE OBJECTS WITH [LONGITUDE, LATITUDE] AND OTHER INFO
     for (let i = 0; i < data.all_steps.length; i++) {
       
       // CONVERT JSON TIME DATA INTO MONTH, DAY, YEAR
 
       let utcTime = new Date(data.all_steps[i].start_time * 1000);
-      const formatMonth = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "Octover",
-        "November",
-        "December"
-      ];
+
       let month = formatMonth[utcTime.getMonth()];
       let day = utcTime.getDate();
       let year = utcTime.getFullYear();
@@ -601,6 +611,68 @@ console.log(k);
       .on("mouseout", locationDataOff)
       .on("click", showImage);
 
+
+      // CREATE ARRAYS FOR ICELAND TRIP LOCATIONS AND PATHS
+      
+      icelandLocations = [];
+      for (let i =0; i < dataIceland.steps.length; i++){
+        icelandLocations[i] = {
+          "coordinates": [
+            dataIceland.steps[i].longitude, 
+            dataIceland.steps[i].lattitude
+          ],
+          "locationInfo": `Step ${i}</br> ${dataIceland.steps[i].city}, ${dataIceland.steps[i].country}</br>${dataIceland.steps[i].date}`,
+          "locationImage": "no image"
+          }
+      }
+
+      let icelandLocationsPaths = [];
+      for (let i = 0; i < icelandLocations.length - 1; i++) {
+        if (i == icelandLocations.length - 1) {
+          icelandLocationsPaths.push([
+            icelandLocations[i].coordinates,
+            icelandLocations[0].coordinates
+          ]);
+        } else {
+          icelandLocationsPaths.push([
+            icelandLocations[i].coordinates,
+            icelandLocations[i + 1].coordinates
+          ]);
+        }
+      }
+     
+      //CREATE TRAVEL PATH AND PINS OF ICELAND TRIP
+  
+      svg
+        .append("g")
+        .selectAll(".IcelandTravelPath")
+        .data(geoPaths(icelandLocationsPaths))
+        .enter()
+        .append("path")
+        .attr("class", "icelandTravelPath")
+        .attr("stroke", "red")
+        .attr("stroke-width", "2px")
+        .attr("fill", "none")
+        .attr("d", path);
+
+     
+      svg
+      .selectAll(".icelandPins")
+      .data(geoLocations(icelandLocations))
+      .enter()
+      .append("path")
+      .attr("d", path)
+      .attr("class", "icelandPins")
+      .attr("fill", "white")
+      .attr("stroke", "#ff0000")
+      .attr("stroke-width", "2px")
+      .on("mouseover", locationData)
+      .on("mouseout", locationDataOff)
+      .on("click", showImage);
+
+
+      // PIN HOVER AND CLICK FUNCTIONS
+
     function showImage(d, i) {
       let container = d3
         .select("body")
@@ -637,14 +709,18 @@ console.log(k);
         .style("transform-origin", `${thisX}px  ${thisY}px`)
         .style("animation-name", "pinGrow");
 
+        let color = this.getAttribute("stroke");
       d3
         .select("#tooltip")
         .attr("class", "showBefore")
         .style("visibility", "visible")
         .html(d.info)
         .style("left", x + 87 + "px")
-        .style("top", y - 30 + "px");
-      // }
+        .style("top", y - 30 + "px")
+        .style("border-color", color)
+        .style("box-shadow", "0px 0px 8px 4px"+color);
+
+          
     }
 
     function locationDataOff(d, i) {
