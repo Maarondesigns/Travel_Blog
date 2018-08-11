@@ -1,32 +1,144 @@
 
 
-html{
+/* html{
   overflow: hidden;
-}
+} */
 
 body{
   margin: 0;
   display: flex;
   justify-content: center;
 }
-#background{
+#fullscreen{
   position: absolute;
+  top: 20px;
+  right: 25px;
+  height: 26px;
+  width: 26px;
+  background-color: white;
+  cursor: pointer;
+}
+#fs1, #fs2{
+  position: absolute;
+  height: 27px;
+  width: 13px;
+  background-color: black;
+}
+#fs1{
+  transform: translate(6.5px, 0);
+}
+#fs2{
+  transform: rotate(90deg);
+}
+#fs3{
+  position: absolute;
+  transform: translate(-4px,3px);
+  height: 21px;
+  width: 21px;
+  background-color: black;
+}
+
+#background{
+  position: fixed;
   height: 100%;
   width: 100%;
   margin: 0;
   z-index: -1;
 }
-#themeButton{
+#showMenu{
   position: absolute;
+  top: 10px;
+  left: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font: bold 14px verdana;
+}
+#buttonsMenu{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  box-shadow: 0 0 10px white;
+  padding: 10px;
+  border-radius: 4px;
+  visibility: hidden;
+}
+#themeButton{
   padding: 5px;
   cursor: pointer;
   font-family: verdana;
-  box-shadow: 0 0 10px white;
   border-radius: 4px;
-  top: 80px;
-  left: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#themeButton:hover{
+  box-shadow: 0 0 10px #9aafd1;
+}
+#buttonOfDoom{
+  padding: 5px;
+    cursor: pointer;
+    color: white;
+    font-family: verdana;
+    border-radius: 4px;
+    text-align: center;
+  margin-bottom: 10px;
+  }
+  #buttonOfDoom:hover{
+    box-shadow: 0 0 10px #9aafd1;
+  }
+
+#hideIceland{
+  padding: 5px;
+  cursor: pointer;
+  font-family: verdana;
+  border-radius: 4px;
   text-align: center;
 }
+  #hideIceland:hover{
+    box-shadow: 0 0 10px #9aafd1;
+  }
+
+#hideWorldTrip{
+  padding: 5px;
+  cursor: pointer;
+  font-family: verdana;
+  border-radius: 4px;
+  text-align: center;
+}
+  #hideWorldTrip:hover{
+    box-shadow: 0 0 10px #9aafd1;
+  }
+
+  #closeMenu:hover{
+    animation-name: growButton;
+    animation-duration: .5s;
+  animation-iteration-count: infinite;
+  }
+@keyframes growButton{
+  0% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+
+#zoom{
+  position: absolute;
+  top: 90%;
+  left: 25px;
+}
+#zoomIn, #zoomOut{
+  height: 25px;
+  width: 25px;
+  color: white;
+  border: solid 1px white;
+  border-radius: 4px;
+  text-align: center;
+  font: bold 16px verdana;
+  cursor: pointer;
+}
+#zoomIn:hover, #zoomOut:hover{
+  background-color: gray;
+}
+
 
 .land{
 	fill: #262626;
@@ -89,8 +201,14 @@ body{
   }
 }
 @keyframes pinShrink {
-    from {transform: scale(3); }
-    to {transform: scale(1); }
+    from {
+      transform: scale(3);
+      stroke-width: .6px; 
+    }
+    to {
+      transform: scale(1);
+      stroke-width: 2px;
+     }
 }
 
 #svg2{
@@ -117,19 +235,6 @@ fill: lightgray;
 
 .point{
   fill: none;
-}
-
-#buttonOfDoom{
-padding: 5px;
-  cursor: pointer;
-  position: absolute;
-  color: white;
-  font-family: verdana;
-  box-shadow: 0 0 10px white;
-  border-radius: 4px;
-  top: 10px;
-  left: 10px;
-  text-align: center;
 }
 
 #changeProjection{

@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="inputpage.css"> 
     <title>Document</title>
 </head>
 <body>
      <script src="https://d3js.org/d3.v4.min.js"></script>
      <script src="/myApp.js"></script>
-     
+     <div id="stepContainer" class="container">
+     <h2>Add Journey Step</h2>
        Step:<br>
        <input id="step">
        <br>
@@ -19,43 +21,52 @@
        Date:<br>
        <input id="date">
        <br>
+       City:<br>
+       <input id="city" oninput="getCityInfo()">
+       <br>
+       Region:<br>
+       <input id="region">
+       <br>
+       Country:<br>
+       <input id="country">
+       <br>
        Lattitude:<br>
        <input id="lattitude">
        <br>
        Longitude:<br>
        <input id="longitude">
-       <br>
-       Country:<br>
-       <input id="country">
-       <br>
-       City:<br>
-       <input id="city">
        <br><br>
        <button id="stepSubmit" onclick="submitJSON()">Submit</button>
 
        <br><br>
-     
-     
-          <form id="budget">
+       <div id="stepArea"></div>
+       <br><br>
+      </div>
+    <div id="budgetContainer" class="container">
+       <h2>Add Budget Step</h2>
        Date:<br>
-       <input type="text" name="firstname" value="">
+       <input id="budgetDate" value="">
        <br>
        Amount:<br>
-       <input type="text" name="lattitude" id="lat" value="">
+       <input id="amount" id="lat" value="">
        <br>
        Currency:<br>
-       <input type="text" name="longitude" id="long" value="">
+       <input id="currency" id="long" value="">
        <br>
        Category:<br>
-       <input type="text" name="longitude" id="long" value="">
+       <input id="category" id="long" value="">
        <br>
        Country:<br>
-       <input type="text" name="longitude" id="long" value="">
+       <input id="budgetCountry" id="long" value="">
        <br>
        City:<br>
-       <input type="text" name="longitude" id="long" value="">
+       <input id="budgetCity" id="long" value="">
        <br><br>
-       <input type="submit" id="budgetSubmit" value="Submit">
-     </form> 
+       <button id="budgetSubmit">Submit</button>
+       <br><br>
+       <div id="budgetArea"></div>
+       <br><br>
+      </div>
+      
 </body>
 </html>

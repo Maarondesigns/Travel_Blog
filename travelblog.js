@@ -1,3 +1,41 @@
+
+d3.select("body")
+.append("div")
+.attr("id", "fullscreen")
+.attr("title", "Fullscreen")
+.on("click", fullscreen)
+.append("div")
+.attr("id", "fs1")
+.append("div")
+.attr("id", "fs2")
+.append("div")
+.attr("id", "fs3");
+
+function fullscreen(){
+  let elem = document.getElementsByTagName("body")[0];
+
+  if (document.fullscreenElement) { 
+    document.exitFullscreen() 
+  } else if (document.webkitFullscreenElement) { 
+    document.webkitExitFullscreen() 
+  } else if (document.msFullscreenElement) { 
+    document.msExitFullscreen() 
+  } else if (document.mozFullscreenElement) { 
+    document.mozExitFullscreen() 
+  } else { 
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+      elem.msRequestFullscreen();
+    }
+  }
+  
+}
+
 var themeCount = 0;
 
 //THEME BUTTON
@@ -5,60 +43,101 @@ var themeCount = 0;
 d3
   .select("body")
   .append("div")
+  .attr("id", "showMenu")
+  .attr("class", "menuItem")
+  .html("Menu")
+  .style("color", "white")
+  .style("box-shadow", "0 0 10px white")
+  .on("click", showMenu);
+
+  function showMenu(){
+    d3.select(this).transition().duration(500)
+    .style("visibility", "hidden");
+
+    d3.select("#buttonsMenu").transition().duration(500)
+    .style("visibility", "visible");
+  }
+
+d3
+  .select("body")
+  .append("div")
+  .attr("id", "buttonsMenu")
+  .attr("class", "menuItem")
+  .style("box-shadow", "0 0 10px white");
+
+d3
+  .select("#buttonsMenu")
+  .append("div")
   .attr("id", "themeButton")
   .html("Change to Light Mode")
-  .style("background-color", "#070f1c")
   .style("color", "#bbcce8")
-  .style("box-shadow", "0 0 10px white")
   .on("click", changeTheme);
 
 //CHANGE SOME STUFF WHEN THE THEME BUTTON IS PRESSED
 function changeTheme() {
   if (themeCount == 0) {
-    d3.select("#background").transition().duration(1000)
+
+    d3.select("#background")
+    .transition().duration(1000)
       .style("background-color", "white");
 
-    d3.select("#globe").transition().duration(600)
+    d3.select("#globe")
+    .transition().duration(600)
       .attr("fill", "#bbcce8");
     
-setTimeout(changeButtons, 1000);
-    function changeButtons(){
-    d3
-      .select("#themeButton")
-      .html("Change to Dark Mode")
-      .style("background-color", "#bbcce8")
-      .style("color", "#070f1c")
-      .style("box-shadow", "0 0 10px black");
+    setTimeout(
+      function (){
+        d3.selectAll("#showMenu, #themeButton, #buttonOfDoom, #closeMenu, #zoomIn, #zoomOut")
+      .style("color", "black");
 
-    d3
-      .select("#buttonOfDoom")
-      .style("background-color", "white")
-      .style("color", "black")
-      .style("box-shadow", "0 0 10px black");
-    }
+        d3.selectAll("#showMenu, #buttonsMenu")
+       .style("box-shadow", "0 0 10px black");
+
+        d3.select("#themeButton")
+        .html("Change to Dark Mode");
+
+      d3.selectAll("#zoomIn, #zoomOut")
+      .style("border", "solid 1px black");
+
+      d3.select("#fullscreen")
+      .style("background-color", "black");
+      d3.selectAll("#fs1, #fs2, #fs3")
+      .style("background-color", "white");
+
+      }, 800);
+
     themeCount = 1;
+
   } else {
-    d3.select("#background").transition().duration(1000)
+    d3.select("#background")
+    .transition().duration(1000)
       .style("background-color", "black");
 
-    d3.select("#globe").transition().duration(600)
+    d3.select("#globe")
+    .transition().duration(600)
       .attr("fill", "#070f1c");
     
-setTimeout(changeButtons2, 1000);
-    function changeButtons2(){
-    d3
-      .select("#themeButton")
-      .html("Change to Light Mode")
-      .style("background-color", "#070f1c")
-      .style("color", "#bbcce8")
-      .style("box-shadow", "0 0 10px white");
+    setTimeout(
+      function (){
+        d3.selectAll("#showMenu, #themeButton, #buttonOfDoom, #closeMenu, #zoomIn, #zoomOut")
+      .style("color", "white");
 
-    d3
-      .select("#buttonOfDoom")
-      .style("background-color", "black")
-      .style("color", "white")
-      .style("box-shadow", "0 0 10px white");
-    }
+        d3.selectAll("#showMenu, #buttonsMenu")
+       .style("box-shadow", "0 0 10px white");
+
+        d3.select("#themeButton")
+        .html("Change to Light Mode");
+
+      d3.selectAll("#zoomIn, #zoomOut")
+      .style("border", "solid 1px white");
+
+      d3.select("#fullscreen")
+      .style("background-color", "white");
+      d3.selectAll("#fs1, #fs2, #fs3")
+      .style("background-color", "black");
+
+    }, 800);
+
     themeCount = 0;
   }
 }
@@ -68,10 +147,15 @@ setTimeout(changeButtons2, 1000);
 var buttonText = "Orthographic";
 
 var projectionButton = d3
-  .select("body")
+  .select("#buttonsMenu")
   .append("div")
   .attr("id", "buttonOfDoom")
-  .on("click", refresh);
+  .on("click", function (){
+    d3.select(this).classed("clicked", true);
+    d3.select("#zoomIn").classed("clicked", false);
+    d3.select("#zoomOut").classed("clicked", false);
+    refresh();
+  });
 
 projectionButton
   .append("div")
@@ -82,6 +166,102 @@ projectionButton
   .append("div")
   .attr("id", "projectionType")
   .html(buttonText);
+
+//OPACITY HIDE/SHOW TRIP BUTTONS AND FUNCTIONS
+
+d3
+  .select("#buttonsMenu")
+  .append("div")
+  .attr("id", "hideIceland")
+  .html("Hide Iceland")
+  .style("color", "darkred")
+  .on("click", hideIceland);
+
+d3
+  .select("#buttonsMenu")
+  .append("div")
+  .attr("id", "hideWorldTrip")
+  .html("Hide World Trip")
+  .style("color", "#4292c6")
+  .on("click", hideWorldTrip);
+    
+var icelandOpacity = 1;
+
+function hideIceland(){
+  if (icelandOpacity === 1) {
+      icelandOpacity -= 1;
+    this.innerHTML = "Show Iceland";
+  } else {
+      icelandOpacity += 1;
+    this.innerHTML = "Hide Iceland";
+    }
+  d3.selectAll(".icelandTravelPath, .icelandPins")
+    .transition().duration(500)
+    .style("opacity", icelandOpacity);
+}
+
+var worldTripOpacity = 1;
+
+function hideWorldTrip(){
+  if (worldTripOpacity === 1) {
+      worldTripOpacity -= 1;
+    this.innerHTML = "Show World Trip";
+  } else {
+      worldTripOpacity += 1;
+    this.innerHTML = "Hide World Trip";
+    }
+  d3.selectAll(".travelPath, .pin")
+    .transition().duration(500)
+    .style("opacity", worldTripOpacity);
+}
+
+//CLOSE THE MENU BOTTON AND FUNCTION
+  d3
+  .select("#buttonsMenu")
+  .append("div")
+  .attr("id", "closeMenu")
+  .html("^")
+  .style("text-align", "center")
+  .style("font", "bold 18px verdana")
+  .style("color", "white")
+  .style("margin-top", "10px")
+  .style("cursor", "pointer")
+  .on("click", closeMenu); 
+
+  function closeMenu(){
+    d3.select("#buttonsMenu").transition().duration(500)
+    .style("visibility", "hidden");
+
+    d3.select("#showMenu").transition().duration(500)
+    .style("visibility", "visible");
+  }
+
+// ZOOM BUTTONS AND FUNCTIONS
+
+  let zoom = d3.select("body")
+  .append("div")
+  .attr("id", "zoom")
+  .attr("class", "menuItem");
+
+  zoom.append("div")
+  .attr("id", "zoomIn")
+  .html("+")
+  .on("click", function(){
+    d3.select("#buttonOfDoom").classed("clicked", false);
+    d3.select("#zoomOut").classed("clicked", false);
+    d3.select(this).classed("clicked", true);
+    refresh()
+  });
+
+  zoom.append("div")
+  .attr("id", "zoomOut")
+  .html("-")
+  .on("click", function(){
+    d3.select("#buttonOfDoom").classed("clicked", false);
+    d3.select("#zoomIn").classed("clicked", false);
+    d3.select(this).classed("clicked", true);
+    refresh()
+  });
 
 /***** ALL MATH FUNCTIONS ****/
 //_______Copied from Ivy Wang's "Drag to Rotate the Globe" --> http://bl.ocks.org/ivyywang/7c94cb5a3accd9913263
@@ -256,12 +436,26 @@ if (windowHeight <= windowWidth) {
 // ORTHOGRAPHIC PROJECTION TO START WITH
 
 projection = d3.geoOrthographic()
-  .translate([width / 2, height / 2])
+  .translate([windowWidth / 2, windowHeight / 2])
   .scale(width / 2 - 20)
   .clipAngle(90)
-  .precision(0.6)
-  .rotate([-40, -30]);
+  .precision(0.6);
+//  .rotate([-40, -30]);
 
+if (Math.abs(window.orientation) === 90) {
+  windowHeight *= 1.01;
+  setTimeout(()=>{alert("Turn to portrait mode and then back to landscape again.")}, 500);
+}
+if (Math.abs(window.orientation) === 90 || window.orientation === 0) {
+  d3.select("#zoom")
+  .style("transform", "translate(0px, -150%) scale(2)");
+  d3.selectAll("#buttonsMenu, #showMenu")
+  .style("transform", "translate(50%, 100px) scale(2)");
+  d3.select("#fullscreen")
+  .style("visibility", "hidden");
+} 
+
+ 
 // INITIALIZE EVERYTHING (RUNS AGAIN WHEN PROJECTION BUTTON IS CLICKED)
 
 initialize();
@@ -282,57 +476,52 @@ function initialize() {
     });
 
   // CREATE THE SVG
-
-  
+                 		
+      
   var svg = d3
     .select("body")
     .append("svg")
     .attr("id", "world")
-    .attr("width", width)
-    .attr("height", height)
-    .call(d3.zoom().on("zoom", zoomed));
+    .attr("width", function(){
+      if (window.chrome) {
+        return "100vw"
+      } else return "100%"
+    })
+    .attr("height", windowHeight);
+  //   .call(d3.zoom().on("zoom", zoomed));
   
-   svg.on("mousedown.zoom", null)
-      .on("touchstart.zoom", null)
-      .on("touchmove.zoom", null)
-      .on("touchend.zoom", null);
+  //  svg.on("mousedown.zoom", null)
+  //     .on("touchstart.zoom", null)
+  //     .on("touchmove.zoom", null)
+  //     .on("touchend.zoom", null);
   
-
- 
   
-  function zoomed() {
+  // function zoomed() {
 
-  let k = d3.event.transform.k;
-    d3.selectAll("#world").attr("transform", "scale(" + k + ")");
-console.log(k);
-    //STILL TRYING TO FIGURE OUT HOW TO SCALE MAP PINS AS YOU ZOOM. TRANSLATING SVG TO WINDOW COORDINATES IS A NIGHTMARE. POSSIBLE TO USE D3 SEMATNTIC ZOOMING IF I CAN FIGURE IT OUT.
-    //      d3.select(".pin")
-    //        .attr("transform", d => {
-    //              return "scale(" + 1/k + ")"})
-    //        .attr("transform-origin", "center");
-    // console.log(document.getElementsByClassName('pin')[0].getBoundingClientRect())
+  // let k = d3.event.transform.k;
+  //   d3.selectAll("#world").attr("transform", "scale(" + k + ")");
 
-     d3.selectAll(".graticule").attr("stroke-width", 0.5 / k);
-     d3.selectAll(".pin").attr("stroke-width", 2 / k);
-     d3.selectAll(".travelPath").attr("stroke-width", 2 / k);
-     d3.selectAll(".land").attr("stroke-width", 1 / k);
-     d3.selectAll(".border").attr("stroke-width", 1 / k);
-   }
+  //    d3.selectAll(".graticule").attr("stroke-width", 0.5 / k);
+  //    d3.selectAll(".pin").attr("stroke-width", 2 / k);
+  //    d3.selectAll(".travelPath").attr("stroke-width", 2 / k);
+  //    d3.selectAll(".land").attr("stroke-width", 1 / k);
+  //    d3.selectAll(".border").attr("stroke-width", 1 / k);
+  //  }
   
   // QUEUE MY JSON FILES --> MAP, COUNTRY NAMES, AND TRAVEL INFO
 
   queue()
     .defer(
       d3.json,
-      "https://raw.githubusercontent.com/Maarondesigns/Polarsteps_JSON/master/WorldCountries.json"
+      "WorldCountries.json"
     )
     .defer(
       d3.tsv,
-      "https://raw.githubusercontent.com/Maarondesigns/Polarsteps_JSON/master/WorldCountryNames.tsv"
+      "WorldCountryNames.tsv"
     )
     .defer(
       d3.json,
-      "https://raw.githubusercontent.com/Maarondesigns/Polarsteps_JSON/master/wequitourjobs.json"
+      "wequitourjobs.json"
     )
     .defer(
       d3.json,
@@ -354,12 +543,12 @@ console.log(k);
     svg.call(drag);
 
     var gpos0, o0;
-
+    
     function dragstarted() {
-     // console.log("dragstarted");
+
       gpos0 = projection.invert(d3.mouse(this));
       o0 = projection.rotate();
-
+      
       svg
         .insert("path")
         .datum({ type: "Point", coordinates: gpos0 })
@@ -368,7 +557,7 @@ console.log(k);
     }
 
     function dragged() {
-     // console.log("dragged");
+
       var gpos1 = projection.invert(d3.mouse(this));
 
       o0 = projection.rotate();
@@ -388,7 +577,7 @@ console.log(k);
     }
 
     function dragended() {
-      //console.log("dragended");
+
       svg.selectAll(".point").remove();
     }
 
@@ -560,7 +749,8 @@ console.log(k);
       .attr("stroke", "#4292c6")
       .attr("stroke-width", "2px")
       .attr("fill", "none")
-      .attr("d", path);
+      .attr("d", path)
+      .style("opacity", worldTripOpacity);
 
  //CONVERT LOCATION POINTS TO GEOJSON FORMAT
 
@@ -607,6 +797,7 @@ console.log(k);
       .attr("fill", "white")
       .attr("stroke", "#4292c6")
       .attr("stroke-width", "2px")
+      .style("opacity", worldTripOpacity)
       .on("mouseover", locationData)
       .on("mouseout", locationDataOff)
       .on("click", showImage);
@@ -653,7 +844,8 @@ console.log(k);
         .attr("stroke", "red")
         .attr("stroke-width", "2px")
         .attr("fill", "none")
-        .attr("d", path);
+        .attr("d", path)
+        .style("opacity", icelandOpacity);
 
      
       svg
@@ -666,10 +858,10 @@ console.log(k);
       .attr("fill", "white")
       .attr("stroke", "#ff0000")
       .attr("stroke-width", "2px")
+      .style("opacity", icelandOpacity)
       .on("mouseover", locationData)
       .on("mouseout", locationDataOff)
       .on("click", showImage);
-
 
       // PIN HOVER AND CLICK FUNCTIONS
 
@@ -710,6 +902,7 @@ console.log(k);
         .style("animation-name", "pinGrow");
 
         let color = this.getAttribute("stroke");
+      
       d3
         .select("#tooltip")
         .attr("class", "showBefore")
@@ -742,7 +935,7 @@ console.log(k);
       if (d.id == 840) {
         newProj = d3.geoAlbersUsa()
           .scale(width)
-          .translate([width / 2, height / 2]);
+          .translate([width / 2, width / 2]);
       } else {
         newProj = d3.geoOrthographic()
           .scale(
@@ -758,7 +951,7 @@ console.log(k);
               ? width * 3 
               : width * 5
           )
-          .translate([width / 2, height / 2])
+          .translate([width / 2, width / 2])
           .rotate([-d3.geoCentroid(d)[0], -d3.geoCentroid(d)[1]]);
       }
 
@@ -829,6 +1022,10 @@ console.log(k);
       let locationFilter = locations.filter(x =>
         d3.geoContains(d, x.coordinates)
       );
+      
+      let icelandLocationFilter = icelandLocations.filter(x =>
+        d3.geoContains(d, x.coordinates)
+      );
 
       svg2
         .selectAll(".newPin")
@@ -839,6 +1036,20 @@ console.log(k);
         .attr("class", "newPin")
         .attr("fill", "white")
         .attr("stroke", "#4292c6")
+        .attr("stroke-width", "3px")
+        .on("mouseover", locationData)
+        .on("mouseout", locationDataOff)
+        .on("click", showImage);
+      
+            svg2
+        .selectAll(".newIcelandPin")
+        .data(geoLocations(icelandLocationFilter))
+        .enter()
+        .append("path")
+        .attr("d", newPath)
+        .attr("class", "newIcelandPin")
+        .attr("fill", "white")
+        .attr("stroke", "#ff0000")
         .attr("stroke-width", "3px")
         .on("mouseover", locationData)
         .on("mouseout", locationDataOff)
@@ -867,38 +1078,53 @@ console.log(k);
 
 //COUNTER FOR PROJECTION TYPE
 var count = 0;
+var zoomCount = 1;
 
 // REFRESH RUNS WHEN PROJECTION BUTTON IS PRESSED
 function refresh() {
-  count++;
+  let center = projection.rotate();
 
-  // REMOVE EVERYTHING EXCEPT BUTTON
-  let myNode = document.getElementsByTagName("BODY")[0];
+  d3.select("#world").remove();
+  d3.select("#background").remove();
+
   let doom = document.getElementById("buttonOfDoom");
-  let theme = document.getElementById("themeButton");
+  let zoomIn = document.getElementById("zoomIn");
+  let zoomOut = document.getElementById("zoomOut");
 
-  while (myNode.childElementCount > 2) {
-    if (myNode.firstChild !== doom && myNode.firstChild !== theme) {
-      myNode.removeChild(myNode.firstChild);
-    } else if (
-      myNode.childNodes[1] !== doom &&
-      myNode.childNodes[1] !== theme
-    ) {
-      myNode.removeChild(myNode.childNodes[1]);
-    } else {
-      myNode.removeChild(myNode.childNodes[2]);
-    }
+  if (doom.classList.contains("clicked")){
+    count++;
+  }
+  if (zoomIn.classList.contains("clicked")){
+    zoomCount *= 1.3 ;
+  }
+  if (zoomOut.classList.contains("clicked")){
+    zoomCount /= 1.3 ;
   }
 
+  
   // CHANGE PROJECTION TYPE
+  if (count == 0) {
+    buttonText = "Orthographic";
+
+    d3.select("#projectionType").html(buttonText);
+
+    projection = d3.geoOrthographic()
+      .translate([windowWidth / 2, windowHeight / 2])
+      .scale((width / 2 - 20)*zoomCount)
+      .rotate(center)
+      .clipAngle(90)
+      .precision(0.6);
+  }
+  
   if (count == 1) {
     buttonText = "Natural Earth";
 
     d3.select("#projectionType").html(buttonText);
 
     projection = d3.geoNaturalEarth1()
-      .translate([width / 2, height / 2])
-      .scale(width / 5 - 20)
+      .translate([windowWidth / 2, windowHeight / 2])
+      .scale((width / 5 - 20)*zoomCount)
+      .rotate(center)
       .precision(0.1);
   }
 
@@ -908,8 +1134,9 @@ function refresh() {
     d3.select("#projectionType").html(buttonText);
 
     projection = d3.geoBaker()
-      .scale(width / 6 - 20)
-      .translate([width / 2, height / 2])
+      .scale((width / 6 - 20)*zoomCount)
+      .translate([windowWidth / 2, windowHeight / 2])
+      .rotate(center)
       .precision(0.1);
   }
 
@@ -919,8 +1146,9 @@ function refresh() {
     d3.select("#projectionType").html(buttonText);
 
     projection = d3.geoMollweide()
-      .scale(width / 5 - 30)
-      .translate([width / 2, height / 2])
+      .scale((width / 5 - 30)*zoomCount)
+      .translate([windowWidth / 2, windowHeight / 2])
+      .rotate(center)
       .precision(0.1);
   }
 
@@ -930,11 +1158,11 @@ function refresh() {
     d3.select("#projectionType").html(buttonText);
 
     projection = d3.geoStereographic()
-    .scale(width/5)
-    .translate([width / 2, height / 2])
-    .rotate([-20, 0])
+    .scale((width/5)*zoomCount)
+    .translate([windowWidth / 2, windowHeight / 2])
+    .rotate(center)
     .clipAngle(180 - 1e-4)
-    .clipExtent([[0, 0], [width, height]])
+    .clipExtent([[0, 0], [windowWidth, windowHeight]])
     .precision(0.1);
   }
   
@@ -944,8 +1172,9 @@ function refresh() {
     d3.select("#projectionType").html(buttonText);
     
   projection = d3.geoEisenlohr()
-    .scale(width/13)
-    .translate([width / 2, height / 2])
+    .scale((width/13)*zoomCount)
+    .translate([windowWidth / 2, windowHeight / 2])
+    .rotate(center)
     .precision(0.1);
   }
   
@@ -955,8 +1184,9 @@ function refresh() {
     d3.select("#projectionType").html(buttonText);
 
     projection = d3.geoMercator()
-      .scale((width - 3) / (2 * Math.PI))
-      .translate([width / 2, height / 2]);
+      .scale(((width-20) / (2 * Math.PI))*zoomCount)
+      .rotate(center)
+      .translate([windowWidth / 2, windowHeight / 2]);
   }
 
   if (count == 7) {
@@ -967,8 +1197,9 @@ function refresh() {
     d3.select("#projectionType").html(buttonText);
 
     projection = d3.geoOrthographic()
-      .translate([width / 2, height / 2])
-      .scale(width / 2 - 20)
+      .translate([windowWidth / 2, windowHeight / 2])
+      .scale((width / 2 - 20)*zoomCount)
+      .rotate(center)
       .clipAngle(90)
       .precision(0.6);
   }
