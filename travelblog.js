@@ -173,7 +173,7 @@ d3
   .select("#buttonsMenu")
   .append("div")
   .attr("id", "hideIceland")
-  .html("Hide Iceland")
+  .html("Hide Iceland Trip")
   .style("color", "darkred")
   .on("click", hideIceland);
 
@@ -190,10 +190,10 @@ var icelandOpacity = 1;
 function hideIceland(){
   if (icelandOpacity === 1) {
       icelandOpacity -= 1;
-    this.innerHTML = "Show Iceland";
+    this.innerHTML = "Show Iceland Trip";
   } else {
       icelandOpacity += 1;
-    this.innerHTML = "Hide Iceland";
+    this.innerHTML = "Hide Iceland Trip";
     }
   d3.selectAll(".icelandTravelPath, .icelandPins")
     .transition().duration(500)
@@ -525,7 +525,7 @@ function initialize() {
     )
     .defer(
       d3.json,
-      "steps.json"
+      "/all"
     )
     .await(ready);
 
@@ -691,7 +691,8 @@ function initialize() {
       // CONVERT JSON TIME DATA INTO MONTH, DAY, YEAR
 
       let utcTime = new Date(data.all_steps[i].start_time * 1000);
-
+      let firstDay = new Date(data.all_steps[0].start_time * 1000);
+      let dayNum = Math.floor((utcTime - firstDay)/86400000); //difference (86,400,000 milliseconds in a day)
       let month = formatMonth[utcTime.getMonth()];
       let day = utcTime.getDate();
       let year = utcTime.getFullYear();
@@ -703,7 +704,7 @@ function initialize() {
           data.all_steps[i].location.lon,
           data.all_steps[i].location.lat
         ],
-        locationInfo: `Step ${i}</br>${data.all_steps[i].location.name}, ${
+        locationInfo: `World Trip, Day ${dayNum}</br>${data.all_steps[i].location.name}, ${
           data.all_steps[i].location.detail
         }</br>${month} ${day}, ${year}`,
         locationImage: `<img src=${data.all_steps[i].main_media_item_path} />`
@@ -806,16 +807,26 @@ function initialize() {
       // CREATE ARRAYS FOR ICELAND TRIP LOCATIONS AND PATHS
       
       icelandLocations = [];
-      for (let i =0; i < dataIceland.steps.length; i++){
+      for (let i =0; i < dataIceland.length; i++){
         icelandLocations[i] = {
           "coordinates": [
-            dataIceland.steps[i].longitude, 
-            dataIceland.steps[i].lattitude
+            dataIceland[i].longitude, 
+            dataIceland[i].lattitude
           ],
-          "locationInfo": `Step ${i}</br> ${dataIceland.steps[i].city}, ${dataIceland.steps[i].country}</br>${dataIceland.steps[i].date}`,
+          "locationInfo": `Iceland Trip, Day ${dataIceland[i].day}</br> ${dataIceland[i].city}, ${dataIceland[i].country}</br>${dataIceland[i].date}`,
+          "day": dataIceland[i].day,
+          "time": dataIceland[i].time,
           "locationImage": "no image"
           }
       }
+      icelandLocations.sort((a,b)=>{
+        let aTime = a.time.substring(0,8).split(":");
+        let bTime = b.time.substring(0,8).split(":");
+        if (a.day>b.day) {return 1};
+        if (a.day<b.day) {return -1};
+        if (Number(aTime[0])>Number(bTime[0])) {return 1};
+        if (Number(aTime[0])<Number(bTime[0])) {return -1};
+      })
 
       let icelandLocationsPaths = [];
       for (let i = 0; i < icelandLocations.length - 1; i++) {

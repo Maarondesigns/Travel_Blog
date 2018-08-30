@@ -2,11 +2,26 @@
 window.onload = getDate;
 
 function getDate(){
-let dateUTC = Date()
-let dateFormat = dateUTC.split(" ").slice(0,5).join(" ");
+let dateUTC = new Date();
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+const dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",
+  "Sunday"
+];
+let month = monthNames[dateUTC.getUTCMonth()];
+let dayNum = dateUTC.getDate();
+let year = dateUTC.getFullYear();
+let timeFormat = dateUTC.toString().split(" ").slice(4).join(" ");
+let dayFormat = dayNames[dateUTC.getDay()];
+let dateFormat = `${month} ${dayNum}, ${year}`
 
+let day = document.getElementById("day");
+day.value = dayFormat;
 let date = document.getElementById("date");
 date.value = dateFormat;
+let time = document.getElementById("time");
+time.value = timeFormat;
 }
 
 function getCityInfo(){
@@ -81,27 +96,27 @@ if (city.value.length>3){
 
 function submitJSON(){
     
-    let step = document.getElementById("step");
     let day = document.getElementById("day_of_trip");
-    let date = document.getElementById("date");   
+    let dayName = document.getElementById("day");
+    let date = document.getElementById("date");  
+    let time = document.getElementById("time"); 
     let city = document.getElementById("city");   
     let region = document.getElementById("region");
     let country = document.getElementById("country"); 
     let lat = document.getElementById("lattitude");
     let long = document.getElementById("longitude");
 
-    d3.json(`add/${step.value}/${day.value}/${date.value}/${city.value}/${region.value}/${country.value}/${lat.value}/${long.value}/`, finished);
-
+    d3.json(`add/${day.value}/${dayName.value}/${date.value}/${time.value}/${city.value}/${region.value}/${country.value}/${lat.value}/${long.value}/`, finished);
+  
     function finished(data){
-        let last = data.steps[data.steps.length-1];
-        console.log(last);
+        
+        let last = data[0];
 
-        step.value = day.value = date.value = city.value = region.value = country.value = lat.value = long.value = '';
+        day.value = dayName.value = date.value = time.value = city.value = region.value = country.value = lat.value = long.value = '';
 
         let stepArea = document.getElementById("stepArea");
+         
         let text = JSON.stringify(last).split(",").join("<br>");
         stepArea.innerHTML = "Successfully Added Step:<br><br>" + text;
-
-       
-    }  
+    }
 }
