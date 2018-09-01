@@ -1060,7 +1060,7 @@
     {
       "Date": "2017-10-05T00:00:00.000Z",
       "Country": "Spain",
-      "Description": "\"Tex mex\"",
+      "Description": "Tex mex",
       "Cost": 9,
       "Category ": "Food"
     },
@@ -2684,7 +2684,7 @@
     {
       "Date": "2017-11-21T00:00:00.000Z",
       "Country": "India",
-      "Description": "\"Djembe lesson\"",
+      "Description": "Djembe lesson",
       "Cost": 4.6,
       "Category ": "Other"
     },
@@ -3379,7 +3379,7 @@
       "Country": "India",
       "Description": "Bfast",
       "Cost": 4,
-      "Category ": "D"
+      "Category ": "Food"
     },
     {
       "Date": "2017-12-10T00:00:00.000Z",
@@ -9168,14 +9168,14 @@
       "Country": "Thailand",
       "Description": "Street food market",
       "Cost": 4,
-      "Category ": ""
+      "Category ": "Food"
     },
     {
       "Date": "2018-04-23T00:00:00.000Z",
       "Country": "Thailand",
       "Description": "circus beers",
       "Cost": 6.5,
-      "Category ": ""
+      "Category ": "Beer"
     },
     {
       "Date": "2018-04-23T00:00:00.000Z",
