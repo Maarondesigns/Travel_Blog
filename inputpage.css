@@ -20,10 +20,22 @@ h2{
   text-decoration: underline;
 }
 
-#stepContainer{
+#stepContainer #passwordContainer{
   box-shadow: 0px 0px 10px red;
 }
 
 #budgetContainer{
   box-shadow: 0px 0px 10px green;
 }
+
+#formDestination {
+  width: 250px;
+  height: 60px;
+  border: dashed 1px black;
+}
+
+#stepArea{
+  max-width: 300px;
+  overflow:hidden;
+}
+

@@ -64,7 +64,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/8df8ba2f-8bb8-49d3-9bec-b91df3a8246c_9334A6F5-A0EF-4DE1-B980-ACA1FF6EEBC8.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957239/World%20Trip/002_Cancun_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957239/World%20Trip/003_Cancun_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957239/World%20Trip/004_Cancun_3.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "America/Cancun",
@@ -99,7 +103,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/db07b935-c7c6-4a52-9d5f-515dde9951c0_A011AEBF-7976-4EAF-9EB0-CA1BE0739460.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957239/World%20Trip/005_NYC_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957239/World%20Trip/006_NYC_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957239/World%20Trip/007_NYC_3.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "America/New_York",
@@ -134,7 +142,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "rain",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/5f6d0f87-d839-4d81-ad76-2fe162c1716c_809E0F6C-5322-4795-B055-0D766B33324B.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957239/World%20Trip/009_Oslo_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957239/World%20Trip/010_Oslo_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957239/World%20Trip/011_Oslo_3.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Oslo",
@@ -169,7 +181,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "cloudy",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/4c6f2bba-110c-4171-b879-c95d8e34b95c_3A43452B-201D-4451-B3E0-ADD88156F191.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957355/World%20Trip/014_H%C3%B8yheimsvik_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957355/World%20Trip/013_H%C3%B8yheimsvik_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957355/World%20Trip/015_H%C3%B8yheimsvik_3.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Oslo",
@@ -204,7 +220,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "rain",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/818ae15e-86e7-495c-9fac-5d5e8005a3f3_835F7624-C145-42F9-8CBF-67BB8E81E471.jpg",
+        "main_media_item_path":  [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957358/World%20Trip/017_N%C3%A6r%C3%B8yfjord_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957358/World%20Trip/018_N%C3%A6r%C3%B8yfjord_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957360/World%20Trip/019_N%C3%A6r%C3%B8yfjord_3.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Oslo",
@@ -239,7 +259,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957365/World%20Trip/021_Vossestrand_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957365/World%20Trip/022_Vossestrand_3.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Oslo",
@@ -274,7 +297,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "rain",
-        "main_media_item_path": null,
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957368/World%20Trip/024_Bergen1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957371/World%20Trip/025_Bergen_2.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Oslo",
@@ -309,8 +335,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "cloudy",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/0e308300-82e3-46f4-b0c9-b99f83c50e47_5D021B04-AC4D-45A8-A14C-13EF4C5B1D86.jpg",
-        "comment_count": 0,
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957371/World%20Trip/027_Stockholm_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957374/World%20Trip/028_Stockhlm_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957375/World%20Trip/029_Stockholm_3.jpg"
+        ],        
+          "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Stockholm",
         "end_time": null
@@ -344,7 +374,7 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/2e5f7700-c91a-46ed-b0de-eb517b373208_3382BAD9-9794-471C-B028-03B2909B9CE8.jpg",
+        "main_media_item_path": ["https://res.cloudinary.com/travel-blog/image/upload/v1536957375/World%20Trip/031_Malmo_1.jpg"],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Stockholm",
@@ -379,7 +409,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/71e93884-c0e8-4abd-b9ff-6176fdf8b3e7_48682EED-2467-43D5-9568-5066782A5ADC.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957377/World%20Trip/034_Copenhagen_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957377/World%20Trip/033_Copenhagen_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957378/World%20Trip/036_Copenhagen_4.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957379/World%20Trip/035_Copenhagen_3.jpg"
+      ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Copenhagen",
@@ -414,7 +449,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/5ae05120-a687-4d2a-8808-e0fdc753d8ec_1D79E9F7-640B-4912-9A22-E1E277CC4596.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957378/World%20Trip/038_Berlin_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957379/World%20Trip/039_Berlin_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957378/World%20Trip/040_Berlin_3.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Berlin",
@@ -449,7 +488,15 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/a61e7d17-69b8-4e61-b46e-d2924e178b59_223506F1-8AA3-4D49-BB35-280F1DCB71B7.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957379/World%20Trip/042_Munich_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957379/World%20Trip/044_Munich_3.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957379/World%20Trip/043_Munich_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957379/World%20Trip/046_Munich.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957379/World%20Trip/045_Munich_4.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957380/World%20Trip/048_Munich.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957381/World%20Trip/047_Munich.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Berlin",
@@ -484,7 +531,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/6c94983b-429c-471a-9370-eca9280cf7d0_2A881568-8D89-4F39-B4D7-6201FE09FDB4.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957380/World%20Trip/c31bfeab-a819-44f4-88a3-fad9d32c5cb6_D523BA87-8C0A-42FC-B5F6-FD424B18957B.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957380/World%20Trip/bcd75747-170c-4f20-945b-561f6446eada_CB1B5C35-44CC-45A1-B465-022136B55B81.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Berlin",
@@ -519,7 +569,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/3faf5a3d-1250-4101-9bb9-0426b5425796_C991D7DB-490B-4508-A4FD-ED47CE86B40F.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957382/World%20Trip/050_Berchtesgaden.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957382/World%20Trip/051_Berchtesgaden.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Berlin",
@@ -554,7 +607,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "rain",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/1760ec7c-e79b-4dbc-84ff-50314c3bf8b5_A758EC5E-E00C-4079-9A82-44708B27E5F0.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957384/World%20Trip/054_Salzburg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957385/World%20Trip/c437601a-7e52-48bf-a0c4-ce5bbac1640b_E33DB6FE-A857-42F5-894C-580470D32555.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957387/World%20Trip/053_Salzburg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957384/World%20Trip/1f4655c9-3dd9-4993-ac58-ffb3ba01eae8_A6DE360B-2CBC-4663-8108-43E502ECBC12.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Vienna",
@@ -589,7 +647,14 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/b450005a-d12b-4a05-a186-3029cda97b5c_B3A52B94-ADD5-4559-8043-2D6E1A3C0594.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957384/World%20Trip/056_Madrid.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957384/World%20Trip/08359d80-d5c3-40db-8bf7-2ad7f12928e8_3EEDEB55-F42C-4905-87DF-10F6A1B975DC.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957388/World%20Trip/7e65d318-7bd1-4427-9b66-3e9ee01fde4d_876C2D3D-6F5E-4257-AD41-BC51D1DC987A.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957386/World%20Trip/75303613-9b73-426e-b497-defb5656d3f8_8F78AE5D-4E4A-4477-B13D-0A56384FA31C.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957385/World%20Trip/361e31c9-5f89-4530-a1d1-0566eeda5bd2_22B97CAC-743A-4099-AADB-8195AB24A6BF.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957385/World%20Trip/1d172991-02fe-48df-8148-534676cf6e7e_41FFB7D9-D313-4795-8243-DEBD84F362A0.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -624,7 +689,14 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/0f2efc75-3fcd-4303-8bc2-5add41510602_6B883EB4-DC33-4D6B-A244-5AF07FFA4FB1.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957386/World%20Trip/059_Lekeitio.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957387/World%20Trip/057_Lekeitio.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957386/World%20Trip/26f2e011-883f-421e-945a-46e4fe19962c_E7FE6EFC-4932-424C-B4A9-76A62D00788E.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957385/World%20Trip/058_Lekeitio.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957387/World%20Trip/2e2e5df9-c495-4ee0-9ce1-27187f6110c2_D7337DFB-F0DC-4D75-A8D5-C88E17B5BF1C.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957387/World%20Trip/cab78ad8-7998-4132-9091-fb745094ef9d_A5F93078-4CD6-42BE-AC95-87C8FBF65D4C.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -659,7 +731,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/058e678e-b482-4d10-a6d1-34da38cf4445_ED44158E-74D7-4786-833D-47ABD7A6681C.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957389/World%20Trip/f6c7abf7-e79b-4cc8-b8cc-8256aaada786_F087AD8B-DBB2-4CCD-9443-F9FD05FEC55C.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957388/World%20Trip/ba2ab1d2-980b-4062-b59e-2ba7e3945725_EA01418E-8631-4A2B-9973-3E1BC6C30F78.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957388/World%20Trip/060_Playa_De_Laga.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957387/World%20Trip/b0863de5-4337-4de4-ae25-7f51a7e151f1_E1DDF138-2555-4983-8106-65CC4F7FA08F.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -694,7 +771,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/6bd32ef7-39ac-4a87-8752-7083eef0035c_B4F6CB19-40BC-4D4F-8401-277EC782DBC1.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957389/World%20Trip/854e8cf3-9c28-49d9-84aa-8dd3aa173ebb_A8ED8C63-0518-48C7-9E3A-25E225BEAF64.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957389/World%20Trip/061_Gaztelugatxe.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957389/World%20Trip/062_Gaztelugatxe.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957394/World%20Trip/cba41ea8-d28a-462a-b82f-d5abcdbdd1bf_AFF8E289-E955-49CA-B2AB-4851D9968E7F.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -729,7 +811,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/e34b575a-93b6-4e9e-a216-a0d8c284784f_D976D786-FA7B-40EE-8D0F-11DA0B0D9475.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957397/World%20Trip/063_Picos_de_Europa_1.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -764,7 +848,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/db0bc41f-a459-4c55-b8c4-8d6938605989_2A3FF3A6-67F5-4A28-BFC8-58C07C72D1B8.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957349/World%20Trip/48abe106-e5c8-494a-bd81-3221f8fcd7df_48249683-99E7-4A8C-9889-B7FD5AAC8027.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957349/World%20Trip/c70ed08e-830a-4aac-92a5-212487ad7612_9874CD76-285F-470E-B68F-7F036FFCD08E.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957348/World%20Trip/065_Oviedo_1.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -799,7 +887,13 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/665aa125-8416-4cb9-a3a0-0b0093159049_9585587A-510C-49BA-8CC3-2B7179B180A2.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957754/World%20Trip/066_Vega_de_Valcarce.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957753/World%20Trip/065_Vega_de_Valcarce.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957756/World%20Trip/1fbd1247-00fa-4fb1-a125-d684474e6947_0C48A928-D976-4397-B1C4-3ABA389D30FB.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957758/World%20Trip/6e54065f-46c4-4a04-9d59-091d7a40a9bd_1C52AFEA-1E3D-4C27-B05F-5BEBDC34D23C.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957760/World%20Trip/b6283aff-7ad6-4e14-b601-e0368385b140_AE7D459D-2BD8-4C84-8CBB-F41BBD447F27.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -834,8 +928,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/f67cb26f-e6ea-48c9-b429-f0092db24b82_FA353BD0-8837-4F29-8029-1B9567B50DA5.jpg",
-        "comment_count": 0,
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957759/World%20Trip/067_Santiago.jpg"
+        ],
+        "comment_count": 0, 
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
         "end_time": null
@@ -869,7 +965,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/a513b7ac-2e7e-4591-9306-77eb54678cae_BD10D4A8-32F5-4679-9F30-37684F05F26D.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957759/World%20Trip/068_Muros.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957759/World%20Trip/778c9673-32a4-4a49-aff7-9efe76108984_D9069E60-23A4-4833-A6EB-DE87988440E7.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -904,7 +1003,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/598a6f56-0da4-44ea-8aa4-29b2bbde6229_A6B7A829-4004-451F-9BEE-E41D741FF8BF.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957759/World%20Trip/880f26d7-dc57-4742-a043-1926d6dc594f_141DF0C8-707D-4DBF-97E5-FB88882A42FB.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -939,7 +1040,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/667a15c1-49e1-466d-941e-06bf573c172f_5DF54AA4-8870-40BC-B75F-BB63099A8C88.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957764/World%20Trip/7bec418b-9aca-40a9-adc7-60f13d2033c5_68222F12-CEA9-4667-AE3B-913B849815E0.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -974,7 +1077,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/27465fcf-2b4d-49e4-9b04-7e085bdc7886_E57349CD-77E8-487E-AE57-D949A8A93126.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957767/World%20Trip/070_Camari%C3%B1as_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957766/World%20Trip/069_Camarainas.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -1009,7 +1115,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/0dea1176-52ea-4245-b358-72f4609c06e0_625C86A5-3DC2-4123-9D32-F7CC72027ECF.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957768/World%20Trip/071_Mux%C3%ADa_1.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -1044,42 +1152,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/701ecc94-456a-446b-974e-a6a6cc32dadb_B31A2081-D166-4086-9E5D-E946C99B71FD.jpg",
-        "comment_count": 0,
-        "fb_publish_status": 0,
-        "timezone_id": "Europe/Madrid",
-        "end_time": null
-      },
-      {
-        "weather_temperature": 9,
-        "creation_time": 1515308761.196953,
-        "trip_id": 372633,
-        "likes": 0,
-        "name": "Ourense",
-        "start_time": 1508031670,
-        "description": "",
-        "location": {
-          "lat": 42.3357893,
-          "detail": "Spain",
-          "uuid": "01959b44-c76a-42b3-9065-585b0169f9ce",
-          "lon": -7.863881,
-          "venue": "",
-          "id": 4212209,
-          "country_code": "ES",
-          "full_detail": "Galicia, Spain",
-          "name": "Ourense"
-        },
-        "is_deleted": false,
-        "views": 2,
-        "id": 3058948,
-        "slug": "ourense",
-        "location_id": 4212209,
-        "uuid": "3153DB07-6619-4F0B-87C0-8255942DB7D3",
-        "type": 0,
-        "supertype": "normal",
-        "open_graph_id": "",
-        "weather_condition": "clear-night",
-        "main_media_item_path": null,
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957771/World%20Trip/072_Ponteareas_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957773/World%20Trip/073_Ponteareas_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957773/World%20Trip/074_Ponteareas_2.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -1114,7 +1191,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/9c3f8d14-7400-4af2-afae-ca3d72d67e2d_CC9CD1D7-835A-464A-A012-49EC13B308FA.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957777/World%20Trip/075_Wildfire_Portugal.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957778/World%20Trip/565a5366-1a95-4095-af48-2b38728fba43_09FCB0CE-581B-476A-87AC-0638168FA5FA.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Lisbon",
@@ -1149,7 +1229,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/573875d5-9083-451c-848d-ed6298cd2a7f_B17C00A9-F7F5-4BDE-94E7-76698BB043A9.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957777/World%20Trip/076_Braga.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Lisbon",
@@ -1184,7 +1266,15 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/808b507c-43b2-47a9-8d3a-408632bb4b80_21AE32EC-F4A2-4CBA-991B-FDAD4FC9BF1C.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957782/World%20Trip/078_Porto_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957781/World%20Trip/079_Porto_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957782/World%20Trip/67723184-00ce-4fe1-b487-5a495e25b048_F6AED6B1-C681-4793-8482-3362B48FA6A0.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957786/World%20Trip/7425fc57-088e-4e91-a027-3eff9b6aa8a9_70FC2938-D5B1-4B6F-9076-31B8B14D57E1.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957789/World%20Trip/9e3ddac8-0a4b-4725-b6f1-be25b0541372_0E8644B7-9E42-46A1-8563-C4082D41FC0A.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957782/World%20Trip/4490d34d-1cd0-40cc-b67d-4ecf909826d7_704F659B-7575-4925-80FC-51BC28AF2BA8.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957788/World%20Trip/94ef652e-b1c8-48ef-8e14-ed104c6432c8_F9AF263A-61EF-43B3-A28A-08A46574AE00.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Lisbon",
@@ -1219,7 +1309,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/41f33bf5-2015-4cec-b15d-53f8f7210b1a_6864567F-1505-4A8D-92B9-4F75DE33141A.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957789/World%20Trip/080_Peniche.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957791/World%20Trip/e9e3aa07-0417-4b30-98d4-846115771f35_666E35F8-F9E7-4A37-9DA9-19B544F9DF2B.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Lisbon",
@@ -1230,7 +1323,7 @@
         "creation_time": 1515316563.191388,
         "trip_id": 372633,
         "likes": 0,
-        "name": "Cascais",
+        "name": "Sintra and Cascais",
         "start_time": 1508486096,
         "description": "",
         "location": {
@@ -1254,7 +1347,14 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/cf7a661e-ab91-44b6-8332-c2fbf060b334_F3C4C1C1-1B4F-411C-9E9B-7C2F3AA43BCF.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957789/World%20Trip/082_Peniche.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957793/World%20Trip/fdbb8dcd-c19e-4eb0-acea-92ea97d4c097_1823CEAA-3011-469A-8144-34320B455F38.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957789/World%20Trip/081_Peniche_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957792/World%20Trip/083_Cascais_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957794/World%20Trip/bf5209ed-8b61-42cf-b59a-146ceceecea2_40958A86-C467-4906-9B40-FFCA718E7802.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957795/World%20Trip/85e3102c-e3c7-48bc-9ff8-d64a09543ab3_6B8E0885-929B-4BB8-BDB0-508ADA4B2D03.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Lisbon",
@@ -1289,7 +1389,15 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/ffcf51df-abd2-4487-b458-d8df944abc99_60FC5D66-F5C2-4E32-8D12-5E37E56FDCE1.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957794/World%20Trip/5439b6b7-c0bb-4769-86c7-af61b2cbe49f_281B25DB-036B-45D0-92E8-2096326189E8.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957794/World%20Trip/084_Lisbon.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957794/World%20Trip/9fd90217-a8d6-40b4-856b-ff231633b92c_6C555380-74B1-4F17-BCA7-9FE056BB4D3C.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957793/World%20Trip/2735ef5f-924f-4b04-ae6a-699365927f8b_4825805A-FF8B-47DF-BDF6-2BC79EFEF18D.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957798/World%20Trip/eb0a2c68-d1db-43a1-b993-2fa6e48f81db_1501E370-A529-459E-8EBE-3EACC904AA64.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957795/World%20Trip/793e2396-7254-4116-b7fe-946079607ee4_FD695BC9-9D21-42A5-910A-153F887D9FFA.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957793/World%20Trip/d2348a7f-5e78-4a93-b1b7-76972dcdec36_7CB4F3D7-53D3-4B10-B995-7CCE908A7A21.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Lisbon",
@@ -1324,7 +1432,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/e7c164b2-6531-423b-a070-87c3ee710f2b_FF185126-DB8A-4D7D-BBB2-CC522576812F.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957798/World%20Trip/086_Seville.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957799/World%20Trip/087_Sevilla_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957799/World%20Trip/088_Sevilla_2.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -1359,7 +1471,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/82f21b1d-4d32-4985-a95a-a920384f6750_CE5DFC1D-F197-4A64-B53C-1F05B77D64C6.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957801/World%20Trip/089_Cadiz_1.jpg"
+      ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -1394,7 +1508,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-night",
-        "main_media_item_path": null,
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957801/World%20Trip/2831b0bf-79f2-47ce-b088-46362864f360_8474A92C-B72D-4BBD-9353-7B5EE8D06307.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -1429,7 +1545,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/df2e5b79-380b-4440-8430-09818c089780_ADC60810-5617-4BC3-AEEF-07F23575E4D9.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957801/World%20Trip/048d4f9f-f8af-4d9d-ae83-b8ed76507548_F5DFB009-7BCD-4234-A819-7C0115D7F3C0.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957802/World%20Trip/091_Tangier.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Africa/Casablanca",
@@ -1464,7 +1583,15 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/838381e2-1253-46f8-9163-35dce8d317b9_1C52908A-604E-4CCF-BE69-FCCA724D843E.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957803/World%20Trip/093_Chefchaouen.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957802/World%20Trip/092_Chefchaouen_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957809/World%20Trip/094_Chefchaouen_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957812/World%20Trip/095_Chefchaouen.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957812/World%20Trip/096_Chefchaouen.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957816/World%20Trip/098_Chefchaouen.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957815/World%20Trip/7ae08de2-b0fb-4b46-9238-fdaa74e8437b_2194F49B-5922-41D4-8470-29BF56FECDDD.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Africa/Casablanca",
@@ -1499,7 +1626,14 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/b9cfc353-e984-4f82-8b4e-1bc2265fc67c_D3950B45-D898-4349-9426-8D636438F148.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957814/World%20Trip/102_Essaouira_4.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957815/World%20Trip/099_Essaouira_5.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957813/World%20Trip/101_Essaouira_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957813/World%20Trip/097_Chefchaouen.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957814/World%20Trip/103_Essouira.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957813/World%20Trip/100_Essaouira_3.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Africa/Casablanca",
@@ -1534,7 +1668,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/4c3d9945-7aef-49f9-9121-00b2206b84b4_64AEB8E9-CAD0-44ED-A79D-C17ABFB386CF.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957814/World%20Trip/104_Marrakesh.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957815/World%20Trip/105_Marrakesh.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Africa/Casablanca",
@@ -1569,7 +1706,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/d5cd70e5-f379-486c-95ca-0310d04a9064_74033D92-24CC-47FF-97BC-C86DDD10DC98.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957815/World%20Trip/107_Valencia.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957816/World%20Trip/108_Valencia.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957818/World%20Trip/1f60b4ef-b599-4224-91b6-dfff55808121_255FC3CB-1440-4F13-BBB5-B8B06CDB4828.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Europe/Madrid",
@@ -1604,7 +1745,13 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "fog",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/7f89d299-932e-442f-acf4-2620ab9085a2_801C92C3-3948-473D-91AC-E51A68535F12.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957819/World%20Trip/110_New_Delhi.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957819/World%20Trip/111_New_Delhi.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957819/World%20Trip/112_New_Delhi.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957821/World%20Trip/87e5739c-9557-4056-8eb6-e3cbdb2b3a60_D30FDFA6-81F2-4207-AD2D-FC68479DB319.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957821/World%20Trip/407ac98e-1d7c-4c14-9f3e-12c6fca6d6e9_3319C37D-3A2C-4FC9-BD8C-1411AD2D272C.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Calcutta",
@@ -1639,7 +1786,22 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "fog",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/f63ddcf5-2aa2-4dc1-b95e-d0e97501af82_96DB4B52-7756-4430-A73E-50EF0AEB58CE.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957823/World%20Trip/113_Rishikesh_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957824/World%20Trip/114_Rishikesh.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957824/World%20Trip/115_Rishikesh_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957824/World%20Trip/119_Rishikesh.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957824/World%20Trip/116_Rishikesh.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957825/World%20Trip/117_Rishikesh.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957824/World%20Trip/118_Rishikesh.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957825/World%20Trip/120_Rishikesh_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957829/World%20Trip/120_Rishikesh.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957831/World%20Trip/121_Rishikesh.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957835/World%20Trip/3de68491-498f-4790-bcbb-c8d7cbe22c51_AE41FF33-CFAF-492A-913B-5C5C067B4B21.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957835/World%20Trip/122_Rishikesh_3.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957835/World%20Trip/123_Rishikesh.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957835/World%20Trip/124_Rishikesh.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Calcutta",
@@ -1674,7 +1836,13 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "fog",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/6215399e-d4c5-488b-9806-d6275272b538_7584D78B-56E1-4759-A951-89FD840611B8.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957842/World%20Trip/127_Agra_4.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957839/World%20Trip/125_Agra_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957842/World%20Trip/126_Agra_3.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957867/World%20Trip/130_Agra.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957867/World%20Trip/129_Agra_1.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Calcutta",
@@ -1709,7 +1877,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "fog",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/028c2271-eb6a-4040-bee6-5c98aa6445ac_720C6E6C-B83F-4CE2-A3A1-BE9FF9BA0D36.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957868/World%20Trip/131_Jaipur_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957870/World%20Trip/132_Jaipur.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957873/World%20Trip/133_Jaipur_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957874/World%20Trip/134_Jaipur_4.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Calcutta",
@@ -1744,7 +1917,20 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "fog",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/f1cd5a3a-c45e-4723-84c8-f2c2cdfa8621_1D4095C1-4125-4B32-A209-8D6EA715D7C0.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957882/World%20Trip/138_Pushkar.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957895/World%20Trip/8453e52d-e118-4b2d-a66a-d159de31f266_68220BE5-B9CA-47E2-945C-4CC32153AF9B.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957875/World%20Trip/135_Pushkar_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957874/World%20Trip/137_Pushkar.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957875/World%20Trip/136_Pushkar.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957885/World%20Trip/28befff0-cb4e-4d48-92db-f10ca16b041c_576C384E-315C-4DDA-9010-C15628961467.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957886/World%20Trip/4e3acae2-e303-41af-832b-0dcebec3bc16_16CBED6A-C932-4E77-89BC-5D19543213A7.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957885/World%20Trip/6e1aa0a2-d002-48b0-9b6e-ca7d4ab57f3f_E69315DC-4E54-4889-92EC-3493204A55C2.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957882/World%20Trip/139_Pushkar_4.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957884/World%20Trip/141_Pushkar_3.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957884/World%20Trip/140_Pushkar_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957895/World%20Trip/f5363224-c752-4ea3-843a-cd465037ae3d_57846BD5-291B-40F6-9EB2-424A034F6A84.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Calcutta",
@@ -1779,7 +1965,19 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-night",
-        "main_media_item_path": "",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957896/World%20Trip/145_Jaisalmer.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957896/World%20Trip/143_Jaisalmer.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957897/World%20Trip/142_Jaisalmer.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957897/World%20Trip/144_Jaisalmer.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957905/World%20Trip/146_Jaisalmer.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957910/World%20Trip/148_Jaisalmer.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957906/World%20Trip/147_Jaisalmer.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957911/World%20Trip/150_Jaisalmer_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957911/World%20Trip/149_Jaisalmer.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957896/World%20Trip/a5869669-fa39-4f8f-9f66-8cc5ae8802ed_A6AAAB8C-A9E8-4AD2-84FD-ADBE89D6C63E.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957897/World%20Trip/ff941c47-d6cc-4e5b-a7ce-b7badc6b2549_2358C793-269B-4DA8-A242-F1F164072461.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Calcutta",
@@ -1814,7 +2012,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "fog",
-        "main_media_item_path": null,
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957911/World%20Trip/151_Ahmedabad_1.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Calcutta",
@@ -1825,7 +2025,7 @@
         "creation_time": 1515318026.698182,
         "trip_id": 372633,
         "likes": 0,
-        "name": "Agonda",
+        "name": "Agonda and Cola Beach",
         "start_time": 1512699988,
         "description": "",
         "location": {
@@ -1849,7 +2049,50 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957912/World%20Trip/152_Agonda.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957919/World%20Trip/155_Cola_Beach.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957923/World%20Trip/37076afb-984c-4965-8c94-85729f73737f_2A1C8D85-F309-4559-8AF3-201D26EBD63C.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957918/World%20Trip/153_Agonda.jpg"
+        ],
+        "comment_count": 0,
+        "fb_publish_status": 0,
+        "timezone_id": "Asia/Calcutta",
+        "end_time": null
+      },
+      {
+        "weather_temperature": 17,
+        "creation_time": 1515318026.698182,
+        "trip_id": 372633,
+        "likes": 0,
+        "name": "Cabo de Rama",
+        "start_time": 1513045588,
+        "description": "",
+        "location": {
+          "lat": 15.102278,
+          "detail": "India",
+          "uuid": "86f1c341-7a16-4b7c-8b6a-1b46637fb5d9",
+          "lon": 73.925757,
+          "venue": "",
+          "id": 4213807,
+          "country_code": "IN",
+          "full_detail": "Goa, India",
+          "name": "Cabo de Rama"
+        },
+        "is_deleted": false,
+        "views": 0,
+        "id": 3060284,
+        "slug": "cola",
+        "location_id": 4213807,
+        "uuid": "3E9F75CD-EE5E-4B6B-A0C9-58A828ABC5D3",
+        "type": 0,
+        "supertype": "normal",
+        "open_graph_id": "",
+        "weather_condition": "clear-day",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957919/World%20Trip/154_Cola_Beach.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957921/World%20Trip/156_Cola_Beach_1.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Calcutta",
@@ -1884,7 +2127,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957930/World%20Trip/dedbff6f-b0e9-4fb1-ba0c-9e4b6bf55d54_E6D2AB91-208A-4011-9FDA-66D5658CAC76.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957927/World%20Trip/c57574ae-8d6b-4e6d-9554-14ac79a6db4d_105BE3A0-36A4-4FEB-B351-F266728B963F.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957924/World%20Trip/bef80f8c-928a-43ab-90ab-770b13178f2f_C267EFF5-8973-419B-A21D-1543008B2042.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Calcutta",
@@ -1919,7 +2166,13 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957931/World%20Trip/159_Hampi_3.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957930/World%20Trip/157_Hampi.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957938/World%20Trip/161_Hampi_4.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957938/World%20Trip/160_Hampi.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957931/World%20Trip/158_Hampi_1.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Calcutta",
@@ -1954,7 +2207,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": null,
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957939/World%20Trip/3df1a353-d3af-4e3c-88bf-9c82c9ffdef8_8F36E9C0-6E27-448D-9486-2B0415DAC6D2.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Calcutta",
@@ -1989,7 +2244,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957939/World%20Trip/162_Kochi.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957939/World%20Trip/163_Kochi_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957940/World%20Trip/164_Kochi_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957939/World%20Trip/22d9f64e-a0ae-4993-ab02-9bcc22882bab_4C06DA5A-F35F-4621-ADE1-4FAF58F94816.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Calcutta",
@@ -2024,7 +2284,13 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957949/World%20Trip/166_Hanoi_4.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957953/World%20Trip/168_Hanoi_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957952/World%20Trip/167_Hanoi.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957953/World%20Trip/172_Hanoi_6.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957953/World%20Trip/ce91820e-c8b7-459d-b3fa-5316bda2a71d_9B937086-4E04-494A-B4FB-360DA452C8AE.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2059,42 +2325,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "",
-        "comment_count": 0,
-        "fb_publish_status": 0,
-        "timezone_id": "Asia/Saigon",
-        "end_time": null
-      },
-      {
-        "weather_temperature": 21,
-        "creation_time": 1515318255.549267,
-        "trip_id": 372633,
-        "likes": 0,
-        "name": "",
-        "start_time": 1515227201.091684,
-        "description": "",
-        "location": {
-          "lat": 20.4984765825984,
-          "detail": "Vietnam",
-          "uuid": "c9cc20a9-1bf4-4162-bf52-17abbb6c9bf5",
-          "lon": 105.093565788218,
-          "venue": "",
-          "id": 4213858,
-          "country_code": "VN",
-          "full_detail": "Thanh Hoá, Vietnam",
-          "name": "Thành Sơn"
-        },
-        "is_deleted": false,
-        "views": 0,
-        "id": 3060322,
-        "slug": "thanh-son",
-        "location_id": 4213858,
-        "uuid": "C9121C8D-4643-4912-9396-E30D928CCAE9",
-        "type": 0,
-        "supertype": "normal",
-        "open_graph_id": "",
-        "weather_condition": "cloudy",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/06b8c6f6-c3bc-49dd-816f-9e367d2eacfa_C7EA450A-3E08-43B4-9D25-F38CDE89D86D.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536996344/World%20Trip/c3172eda-242e-4fa3-89d1-a554be6aca85_6425C950-3CE3-4CF8-A87E-2567F656A560.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536996344/World%20Trip/d2e6b56f-5e8f-46ec-be25-d206f2ce5fe4_3C39146B-2B22-4F4D-B7CC-463344380C3B.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957954/World%20Trip/173_Ninh_Binh.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957962/World%20Trip/174_Ninh_Binh.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2117,7 +2353,7 @@
           "id": 4213862,
           "country_code": "VN",
           "full_detail": "Hòa Bình, Vietnam",
-          "name": "Chiềng Châu"
+          "name": "Mai Châu"
         },
         "is_deleted": false,
         "views": 0,
@@ -2129,7 +2365,14 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "rain",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/c0120c1d-693e-4054-b342-8196458620f4_1F0DDD02-7AEF-4AEF-9038-5AEE1FBF5FD4.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957967/World%20Trip/176_Mai_Chau.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957963/World%20Trip/175_Mai_Chau.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957968/World%20Trip/178_Mai_Chau_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957968/World%20Trip/b0d0e0f4-9bf0-4a50-b7cf-864697e73d91_B3301F1A-D82C-4A0E-AA84-3FA55DC1568D.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957967/World%20Trip/7182e952-0bf0-4560-b323-96e65cb9cd97_13C89756-6E4C-4421-8B36-9074CD210FB3.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957973/World%20Trip/177_Mai_Chau_2.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2152,7 +2395,7 @@
           "id": 4225223,
           "country_code": "VN",
           "full_detail": "Sơn La, Vietnam",
-          "name": "tt. Mộc Châu"
+          "name": "Mộc Châu"
         },
         "is_deleted": false,
         "views": 0,
@@ -2164,7 +2407,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "rain",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/27e8692d-88bd-4edc-a1dc-82d8fd42a1c7_706E73DD-54B7-41E0-80B1-06744040357B.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957978/World%20Trip/5b3ca359-f455-49b5-aaae-fbab880353cc_245FD8F2-87A5-4094-B197-DF5E81AA41A6.jpg.jpg"
+      ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2199,7 +2444,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "cloudy",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/4ccf9d2e-c9c1-43bc-b48a-0facbbf8fdfe_29ABF460-07AD-45F6-A813-26E7251F2599.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957970/World%20Trip/179_Quy_Huong.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2222,7 +2469,7 @@
           "id": 4261220,
           "country_code": "VN",
           "full_detail": "Sơn La, Vietnam",
-          "name": "tt. Phù Yên"
+          "name": "Phù Yên"
         },
         "is_deleted": false,
         "views": 0,
@@ -2234,7 +2481,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "cloudy",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/53abc3c3-9c94-4d77-90f3-16e06c4f58cc_9B401C11-68C6-4E6F-B145-B7F5E34870C9.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957980/World%20Trip/ccc1f157-aed4-481a-9f7a-b553873a93e1_53550836-2E7E-454A-8CC1-DBE80BE4CC03.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2257,7 +2506,7 @@
           "id": 4274724,
           "country_code": "VN",
           "full_detail": "Yên Bái, Vietnam",
-          "name": "Púng Luông"
+          "name": "La Pán Tẩn"
         },
         "is_deleted": false,
         "views": 0,
@@ -2269,42 +2518,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/b17e22d4-d70b-4c0b-8113-a209cff0660d_208117E2-91C4-4A17-9E37-19F8D1E77428.jpg",
-        "comment_count": 0,
-        "fb_publish_status": 0,
-        "timezone_id": "Asia/Saigon",
-        "end_time": null
-      },
-      {
-        "weather_temperature": 10,
-        "creation_time": 1515809167.137031,
-        "trip_id": 372633,
-        "likes": 0,
-        "name": "The road to Sa Pa",
-        "start_time": 1515741113.102898,
-        "description": "",
-        "location": {
-          "lat": 22.3522130912378,
-          "detail": "Vietnam",
-          "uuid": "a07cf2f2-e62a-4e9f-a6cd-c2aec1159e4b",
-          "lon": 103.693421250306,
-          "venue": "",
-          "id": 4291497,
-          "country_code": "VN",
-          "full_detail": "Lai Châu, Vietnam",
-          "name": "Sơn Bình"
-        },
-        "is_deleted": false,
-        "views": 0,
-        "id": 3119534,
-        "slug": "son-binh",
-        "location_id": 4291497,
-        "uuid": "9F48FF54-2B82-49C0-9917-019C78352AA7",
-        "type": 0,
-        "supertype": "normal",
-        "open_graph_id": "",
-        "weather_condition": "cloudy",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/1da76985-644b-4ef0-bf93-25921723a634_BCAEF25D-B9FE-4CD7-B082-45AC4B6B83FE.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957986/World%20Trip/181_La_Pan_Tan.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957986/World%20Trip/180_La_Pan_Tan.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957980/World%20Trip/148d94d7-7667-4e9c-8d89-49b09833f6ba_21902DE0-E346-4EDF-BF3B-8538E2A6B131.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2327,7 +2545,7 @@
           "id": 4279208,
           "country_code": "VN",
           "full_detail": "Lào Cai, Vietnam",
-          "name": "tt. Sa Pa"
+          "name": "Sa Pa"
         },
         "is_deleted": false,
         "views": 0,
@@ -2339,7 +2557,15 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "cloudy",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/9cfc9766-1b8d-43f2-aeda-9b3310a7a361_6444F429-DD7D-4D71-93FC-9891A8C30331.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957986/World%20Trip/183_Road_to_Sa_Pa.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957988/World%20Trip/184_Road_to_Sa_Pa.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957988/World%20Trip/c5b7d058-315d-44ed-8061-0daedf848196_ED28F836-356F-4D71-93C5-6E8061FBFD67.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957987/World%20Trip/182_Road_to_Sa_Pa.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957988/World%20Trip/e5c12fcc-3002-4e84-872e-0dc1691e4929_69B77BED-A32F-46F8-990E-BF088AD4E06A.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957987/World%20Trip/92a6947f-a7ae-4dab-bcff-d47f3701cd2c_3951D20F-EDD1-4067-823A-3FBB436D3AA2.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958000/World%20Trip/185_Road_to_Sa_Pa.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2374,7 +2600,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/39c123b7-52a7-4965-a0f9-0cbaae0f62b1_B47544EE-468C-49ED-A960-E759C2CA384E.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958001/World%20Trip/187_L%C3%A0o_Cai_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957999/World%20Trip/407dfa09-e6a0-4f1b-81b2-432530069d22_41364049-F41F-4A2E-8DDA-BB22D9233404.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957997/World%20Trip/186_Lao_Cai.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2397,7 +2627,7 @@
           "id": 4362343,
           "country_code": "VN",
           "full_detail": "Hà Giang, Vietnam",
-          "name": "tt. Nông Trường Việt Lâm"
+          "name": "Nông Trường"
         },
         "is_deleted": false,
         "views": 0,
@@ -2409,7 +2639,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/e4c4850c-2747-4541-a9e0-1e2e05ca271b_CD174B26-B54C-43D0-8D1B-971A638321B5.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957998/World%20Trip/87a66e69-8ea9-4062-ad17-faa70e7d9c09_FB37FB91-5A3C-4A3E-A072-2B3A31DF1E3C.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2432,7 +2664,7 @@
           "id": 4362348,
           "country_code": "VN",
           "full_detail": "Hà Giang, Vietnam",
-          "name": "Thành phố Hà Giang"
+          "name": "Hà Giang"
         },
         "is_deleted": false,
         "views": 0,
@@ -2444,7 +2676,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/8a52ed49-06d0-45c4-b109-70d74ac5aa85_E12B173E-E959-4732-B409-19EAA8E54C1C.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957999/World%20Trip/189_Ha_Giang_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957998/World%20Trip/188_Ha_Giang.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957999/World%20Trip/d1eaf43f-9f1d-4daf-a6ba-ad02765814c0_B50473D3-BF32-4DDE-BFC3-40A8C58354B2.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958000/World%20Trip/e1d4ed9c-2d37-4703-b35f-fb64eb76f7cb_7153562A-68E4-454F-8A75-E23CA5968E5E.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2479,7 +2716,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/9a381e20-bfcb-4c09-bb77-b051374b0650_77897D9E-33FA-4EAE-9398-59FBB34BBD2B.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958000/World%20Trip/37e3d60c-e314-4ffd-a105-57145119deda_1895D065-934A-4F75-A219-CA1B217E52AF.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536957999/World%20Trip/907cdde0-2bec-4681-abab-051cba350cb2_F27CA7E3-DE1F-4402-ACD5-A438EE9E720C.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2502,7 +2742,7 @@
           "id": 4430384,
           "country_code": "VN",
           "full_detail": "Hà Giang, Vietnam",
-          "name": "tt. Yên Minh"
+          "name": "Yên Minh"
         },
         "is_deleted": false,
         "views": 1,
@@ -2514,7 +2754,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/1d26b2d1-1a71-4f29-a449-b138c95a0186_8896007A-EB8D-43C8-AA96-A7895F995C48.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958013/World%20Trip/190_Y%C3%AAn_Minh_1.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2549,7 +2791,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/ca327581-1957-4555-a81a-e3129706e5ba_50719875-C4EA-4933-A829-66CF1339C60E.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958013/World%20Trip/193_Lung_Cu.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958013/World%20Trip/194_Lung_Cu.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958013/World%20Trip/192_Lung_Cu.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958014/World%20Trip/191_L%C5%A9ng_C%C3%BA_1.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2572,7 +2819,7 @@
           "id": 4430385,
           "country_code": "VN",
           "full_detail": "Hà Giang, Vietnam",
-          "name": "tt. Đồng Văn"
+          "name": "Đồng Văn"
         },
         "is_deleted": false,
         "views": 0,
@@ -2584,7 +2831,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/3cf61df6-5b3f-4fbe-829f-6b507c00c891_8A6FAA4F-9AB2-4974-8AB3-651846140807.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958013/World%20Trip/195_M%C3%A8o_V%E1%BA%A1c_1.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2607,7 +2856,7 @@
           "id": 4463201,
           "country_code": "VN",
           "full_detail": "Hà Giang, Vietnam",
-          "name": "tt. Mèo Vạc"
+          "name": "Mèo Vạc"
         },
         "is_deleted": false,
         "views": 0,
@@ -2619,7 +2868,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/50a1e5df-64e8-4fec-b88a-7844782b9683_EA91A53F-1FE1-45C5-9F0E-9D03C08D3A77.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958023/World%20Trip/676558e0-42fa-474c-960e-c4f021b1260d_8147157C-A286-42CB-A10D-32B4957E3FF0.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958029/World%20Trip/da16f772-887c-425d-bfaa-e1c27d940f1a_E68E6ECB-2B8B-45EB-8285-9C575CAFDC7E.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958028/World%20Trip/878b87e8-7061-4796-bc94-84d843d1d8ac_45A59B7C-BE9F-486A-A52C-9BB13EF9EACB.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2654,7 +2907,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/b3194588-443e-4451-9751-c68f1fd13721_801DA54D-28B4-4CC6-B656-986D55D87D43.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958029/World%20Trip/196_B%E1%BA%A3o_L%E1%BA%A1c_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958031/World%20Trip/197_Bao_Lac.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2689,7 +2945,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/52564fa6-a96a-448f-a126-26800c32cbef_D2997D4F-6A95-474B-86EE-A12CFEF11692.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958031/World%20Trip/389c0d9d-1da9-475d-98ad-b20db865e974_E9648859-2C5D-40C8-846F-FE46FF9981D9.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2705,14 +2963,14 @@
         "description": "",
         "location": {
           "lat": 22.8548420872752,
-          "detail": "China",
+          "detail": "Vietnam",
           "uuid": "94de8930-66ac-4da3-9146-0bc8c9b17025",
           "lon": 106.723784431914,
           "venue": "",
           "id": 4492610,
           "country_code": "CN",
           "full_detail": "Guangxi, China",
-          "name": "Chongzuo"
+          "name": "Ban Gioc Waterfall"
         },
         "is_deleted": false,
         "views": 2,
@@ -2724,7 +2982,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/d0a43287-4ac3-485b-aba5-f83114a49e77_3445DF3F-31F9-4FB9-95A7-5E96E205AEE7.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958038/World%20Trip/198_Ban_Gioc_Waterfall_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958039/World%20Trip/199_Ban_Gioc_Waterfall_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958044/World%20Trip/f58b5335-0800-46f5-9edc-9eb85ca4582a_06DA469A-92C4-4E33-978C-14245A98A7DB.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958039/World%20Trip/7ac9ddd9-a1de-49bd-b2fb-c1fa74d6f603_D9BD6AC8-DE61-4F65-89F8-B3A9AFB08FFF.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2747,7 +3010,7 @@
           "id": 4492597,
           "country_code": "VN",
           "full_detail": "Bắc Kạn, Vietnam",
-          "name": "Nam Mẫu"
+          "name": "Ba Be Lake"
         },
         "is_deleted": false,
         "views": 0,
@@ -2759,7 +3022,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/e931edef-a218-416f-9f1f-caba96471262_B66A2D76-5A06-4F74-A293-321BC2C3950D.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958046/World%20Trip/561e921a-2a47-4665-adc1-d44f0d6b604c_1AE27075-9278-4D8A-BF63-2C4210491CB5.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958052/World%20Trip/9e572e2f-1b53-4a57-931d-1ecb396439eb_09E83128-C2B7-44DA-A099-A605B3B5CB5C.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958047/World%20Trip/7de74617-09d9-4531-a304-d99488223bc0_1A38987B-0F9C-4318-ABAC-CC3328DC7335.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958046/World%20Trip/73ce1e02-13f2-4ffb-aff3-ce0b77d429d4_3881CE31-4FE7-41DF-A688-D4D41381D379.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2794,7 +3062,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/af146e3d-2697-45f5-80b6-64a57ccf4a23_33DBB905-3B41-4A36-BD68-33426445BC3A.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958053/World%20Trip/169_Hanoi_5.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958053/World%20Trip/171_Hanoi_3.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958054/World%20Trip/170_Hanoi_2.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2817,7 +3089,7 @@
           "id": 4626425,
           "country_code": "VN",
           "full_detail": "Hà Nội, Vietnam",
-          "name": "Vĩnh Tuy"
+          "name": "Bike accident"
         },
         "is_deleted": false,
         "views": 0,
@@ -2829,7 +3101,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": null,
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958053/World%20Trip/074fae87-b4e3-430d-8329-37c211974555_B25959D7-01D5-4E15-8932-E27A0DA9843C.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958053/World%20Trip/c1678c87-4814-42f6-8ff2-0f0b99224112_0CC55792-058C-4CF3-828D-4338FB6D291A.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958053/World%20Trip/fb71e77a-b467-4424-be54-94c5ea3e7cda_CD3A37E6-0B64-4CDB-B42E-6B72718D654C.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2840,7 +3116,7 @@
         "creation_time": 1517583819.962853,
         "trip_id": 372633,
         "likes": 0,
-        "name": "Cat Ba Island ",
+        "name": "Cat Ba Island",
         "start_time": 1517497895.474526,
         "description": "",
         "location": {
@@ -2852,7 +3128,7 @@
           "id": 4616672,
           "country_code": "VN",
           "full_detail": "Hải Phòng, Vietnam",
-          "name": "Cát Hải"
+          "name": "Cat Ba Island"
         },
         "is_deleted": false,
         "views": 2,
@@ -2864,7 +3140,13 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "cloudy",
-        "main_media_item_path": "",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958060/World%20Trip/c79ac0bc-5678-4f8d-ae65-bf7da84fbe62_570CA857-C128-46C7-B802-EE59147477CD.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958055/World%20Trip/201_Cat_Ba_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958054/World%20Trip/200_Cat_Ba_Island_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958055/World%20Trip/70951e3e-c2dc-4723-86fb-44926547ba45_D63618D0-5348-48A7-A8AB-9DCE5707A766.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958055/World%20Trip/202_Cat_Ba.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2887,7 +3169,7 @@
           "id": 4626374,
           "country_code": "VN",
           "full_detail": "Hải Phòng, Vietnam",
-          "name": "Gia Luận"
+          "name": "Green Ladder"
         },
         "is_deleted": false,
         "views": 0,
@@ -2899,7 +3181,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "cloudy",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/bb5b563a-cf42-4ffb-9ef3-00c9b0718a92_14FCA296-A2E9-4543-8065-D714CD0B38E0.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958063/World%20Trip/601d812c-0e5c-4674-b89c-4fb8f015828a_18395AB5-8CDE-42FA-A7F4-1A185E9C7D24.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958064/World%20Trip/e80db2a0-e875-4c2f-af00-b36f50ce615d_E9109AEB-591C-4BF2-B437-9297996A17E6.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958063/World%20Trip/5fb0435b-3c64-4e8d-92d2-903cdba53a1c_189858AC-30D8-4B75-937C-8EC47F57D8DE.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2922,7 +3208,7 @@
           "id": 4626417,
           "country_code": "VN",
           "full_detail": "Hải Phòng, Vietnam",
-          "name": "Việt Hải"
+          "name": "Ha Long Bay Boat"
         },
         "is_deleted": false,
         "views": 0,
@@ -2934,7 +3220,15 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "cloudy",
-        "main_media_item_path": "",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958064/World%20Trip/203_Ha_Long_Bay_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958067/World%20Trip/205_Ha_Long_Bay.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958067/World%20Trip/204_Ha_Long_Bay.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958068/World%20Trip/206_Ha_Long_Bay.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958071/World%20Trip/85408d4e-cdb4-41b4-804d-84cf388de40c_B72EC7D2-56EE-4925-A934-12BABD87CAB5.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958068/World%20Trip/5a76ca51-19d6-48b2-93fd-93e9cd8b71b1_01887932-B1E1-4CF5-B6B2-ACDAA259CC6C.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958072/World%20Trip/d7555e98-5e34-4a77-9b7f-151650c48b28_AB5D8928-C5EF-4FBB-BE09-1E167E9EDC20.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2969,7 +3263,13 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958075/World%20Trip/2047f17c-7cb0-4435-813f-e6c4589a6b6d_E2E74A49-F99C-4D7A-BCBB-8A26CDBB5499.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958075/World%20Trip/23a5d309-26ba-4258-85af-60a18dfc5b13_92CF091F-111A-48A8-AE4B-92EBD9C61A2E.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958072/World%20Trip/131f9b9b-debd-4f43-8145-d76a2bc1fb84_A0FE7EF5-D20C-4CA4-94AD-B74DAD41B17D.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958076/World%20Trip/57570328-55ef-478b-831b-7a4377a46bf4_E88E0532-9655-42EC-8CED-7BA903B38206.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958076/World%20Trip/723edb24-2fe5-4aa9-b480-db83df88c816_1EB7072D-7F63-4061-BB85-7D1006FC923A.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -2992,7 +3292,7 @@
           "id": 4677118,
           "country_code": "VN",
           "full_detail": "Hà Tĩnh, Vietnam",
-          "name": "tt. Phố Châu"
+          "name": "Phố Châu"
         },
         "is_deleted": false,
         "views": 0,
@@ -3004,7 +3304,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": null,
+        "main_media_item_path": [
+        "https://res.cloudinary.com/travel-blog/image/upload/v1536958079/World%20Trip/208_Ph%E1%BB%91_Ch%C3%A2u_1.jpg",
+        "https://res.cloudinary.com/travel-blog/image/upload/v1536958080/World%20Trip/cf11af83-ad4d-429d-8dea-f5d1fba5ed8d_D41DDE38-0EE0-4F40-836D-5D624BE5ECDB.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3027,7 +3330,7 @@
           "id": 4703009,
           "country_code": "VN",
           "full_detail": "Quảng Bình, Vietnam",
-          "name": "Sơn Trạch"
+          "name": "Phong Nha"
         },
         "is_deleted": false,
         "views": 0,
@@ -3039,7 +3342,14 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958082/World%20Trip/0c31c17f-9e99-4401-9a3a-343f3bb1a20c_BA262293-1F39-453B-B6F5-19BECA3D66B3.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958083/World%20Trip/209_Phong_Nha.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958085/World%20Trip/210_Phong_Nha.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958085/World%20Trip/211_Phong_Nha.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958088/World%20Trip/70763e15-ac2d-4393-9037-8a9c223a90f2_DB26F80E-B2F8-4017-935F-CFD608E83FF3.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958086/World%20Trip/38553819-ea3e-413d-bb3e-ef87ceebc1dd_3D97370A-C725-4FCB-B83B-674A6FAC1F82.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3062,7 +3372,7 @@
           "id": 4709371,
           "country_code": "VN",
           "full_detail": "Quảng Bình, Vietnam",
-          "name": "Sơn Trạch"
+          "name": "Paradise Cave"
         },
         "is_deleted": false,
         "views": 0,
@@ -3074,7 +3384,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": null,
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958089/World%20Trip/213_Paradise_Cave.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958089/World%20Trip/212_Paradise_Cave.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3085,7 +3398,7 @@
         "creation_time": 1518431717.963879,
         "trip_id": 372633,
         "likes": 0,
-        "name": "Vinh Moc Tunnels ",
+        "name": "Vinh Moc Tunnels",
         "start_time": 1518323755.66431,
         "description": "",
         "location": {
@@ -3097,7 +3410,7 @@
           "id": 4752931,
           "country_code": "VN",
           "full_detail": "Quảng Trị, Vietnam",
-          "name": "Vĩnh Thạch"
+          "name": "Vinh Moc Tunnels"
         },
         "is_deleted": false,
         "views": 0,
@@ -3109,7 +3422,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "cloudy",
-        "main_media_item_path": null,
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958092/World%20Trip/214_Vinh_Moc_Tunnels_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958092/World%20Trip/66c5d5d8-ea0d-4e2c-b533-16f83886b80d_EF447FE3-59E5-40A6-A8FE-1D97BB8E2D30.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958093/World%20Trip/852ee2ba-4c2a-40f2-abbe-8dee7b066ca3_A6696017-2FE5-42F2-878E-B8367763EE52.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958093/World%20Trip/8cc10f20-6558-4604-b729-28a23f78c956_9CDE0E0C-5D3C-4D27-9419-99035BAA9B39.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3132,7 +3450,7 @@
           "id": 4752932,
           "country_code": "VN",
           "full_detail": "Thừa Thiên Huế, Vietnam",
-          "name": "Thành phố Huế"
+          "name": "Huế"
         },
         "is_deleted": false,
         "views": 0,
@@ -3144,7 +3462,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-night",
-        "main_media_item_path": "",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958095/World%20Trip/215_Hue_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958095/World%20Trip/2d90f0f6-8ea4-4d4f-89d7-dbb2d82e2e86_271D20F2-7AA7-4731-A124-83559547165C.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958096/World%20Trip/da78b7ac-24e3-482f-9609-b1a62a6ee348_CF493AF7-DEB7-407B-A640-F3B7BEF1B390.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958096/World%20Trip/ea398b6c-a17b-4f99-b760-361c9767fa5e_E4A29759-298E-4EEE-A9C8-0B057ED6DCD0.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3167,7 +3490,7 @@
           "id": 4911267,
           "country_code": "VN",
           "full_detail": "Thua Thien Hue, Vietnam",
-          "name": "Phú Lộc"
+          "name": "Hải Vân Pass"
         },
         "is_deleted": false,
         "views": 0,
@@ -3179,7 +3502,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/d792ee85-3225-4ac0-b0e3-dd74f8d7ecc3_4B0E5EFE-D9A8-42CA-BAB7-9AAA48A4A156.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958099/World%20Trip/216_Hai_Van_Pass.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958100/World%20Trip/99c5c15a-546d-44ae-806d-c912c3cb4e62_9E47E52D-7402-46ED-82EE-7173CEB455FD.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3214,7 +3540,15 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/5d42941a-d546-47e3-ba27-2b4d3cfcb427_C6D9BD93-A018-4BD2-852A-32EDB1C107CD.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958104/World%20Trip/3ae18626-5956-427d-a451-baeeb5355f18_2B09D595-1F4A-42A5-96ED-BA9B13FB6987.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958100/World%20Trip/217_H%E1%BB%99i_An_3.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958103/World%20Trip/218_Hoi_An_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958104/World%20Trip/219_H%E1%BB%99i_An_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958108/World%20Trip/9782d10c-fcb0-4937-b851-34b12297c72a_D9698873-47BD-47F3-BC36-16EFCEA650DC.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958108/World%20Trip/ed6f9471-0717-477d-a5c0-49ebbf405f43_2B637D01-8452-489E-A4E5-9BFEDA87072A.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958108/World%20Trip/9cf357b0-a00b-4529-9a9c-42cd700642fc_9DD0171C-6127-44F1-A6B3-D16533B706A6.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3237,7 +3571,7 @@
           "id": 4857025,
           "country_code": "VN",
           "full_detail": "Kon Tum, Vietnam",
-          "name": "tt. Đăk Glei"
+          "name": "Đăk Glei"
         },
         "is_deleted": false,
         "views": 0,
@@ -3249,7 +3583,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "unknown",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/7b0ed353-4f56-4a69-9cd1-a24dc638881e_09AB6024-7668-4BA8-BEE5-C70418B33B1F.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958109/World%20Trip/03f3965d-1074-423c-9959-5132d7e110bc_18808FE0-2354-4A70-9A26-DCBFA8D6646D.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3284,7 +3620,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "unknown",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/d10216fc-6d83-4747-9e98-d1bb2988e6a1_75F02806-8384-4DFA-ADB3-22FBF1161C46.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958112/World%20Trip/220_Pleiku_1.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3319,7 +3657,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "rain",
-        "main_media_item_path": null,
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958113/World%20Trip/d1de7cea-558a-4e6f-af7e-4a58338d29ae_FF8BCA70-E877-4289-9B60-8C897E113534.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3354,7 +3694,15 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/f563ffd0-2162-4faf-a034-6ad76b98c3f4_165A726E-1E70-433E-B5F1-EB65ACFC0822.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958119/World%20Trip/223.3_Dalat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958119/World%20Trip/223.2_Dalat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958122/World%20Trip/IMG_0646.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958118/World%20Trip/223.1_Dalat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958113/World%20Trip/221_Dalat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958115/World%20Trip/222_Dalat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958116/World%20Trip/223_Dalat.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3362,11 +3710,11 @@
       },
       {
         "weather_temperature": 29,
-        "creation_time": 1519538788.57041,
+        "creation_time": 1519887788.57041,
         "trip_id": 372633,
         "likes": 0,
         "name": "Mui Ne ",
-        "start_time": 1519537205.204022,
+        "start_time": 1519887205,
         "description": "",
         "location": {
           "lat": 10.94870878605,
@@ -3377,7 +3725,7 @@
           "id": 4931571,
           "country_code": "VN",
           "full_detail": "Bình Thuận Province, Vietnam",
-          "name": "Phan Thiet"
+          "name": "Mui Ne"
         },
         "is_deleted": false,
         "views": 0,
@@ -3389,42 +3737,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": null,
-        "comment_count": 0,
-        "fb_publish_status": 0,
-        "timezone_id": "Asia/Saigon",
-        "end_time": null
-      },
-      {
-        "weather_temperature": 28,
-        "creation_time": 1520258408.359368,
-        "trip_id": 372633,
-        "likes": 0,
-        "name": "Sand Dunes",
-        "start_time": 1519634076.03823,
-        "description": "",
-        "location": {
-          "lat": 11.0676776804133,
-          "detail": "Vietnam",
-          "uuid": "a5da5e82-5f77-4f86-a229-687d5100f861",
-          "lon": 108.427575901252,
-          "venue": "",
-          "id": 5050871,
-          "country_code": "VN",
-          "full_detail": "Bình Thuận, Vietnam",
-          "name": "Hòa Thắng"
-        },
-        "is_deleted": false,
-        "views": 0,
-        "id": 3711471,
-        "slug": "hoa-thang",
-        "location_id": 5050871,
-        "uuid": "FEAB1641-196D-498E-B389-1D23D1F5DDAB",
-        "type": 0,
-        "supertype": "normal",
-        "open_graph_id": "",
-        "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/2e0abb98-e05f-4621-8f82-239106233faf_30136F1C-181C-49FE-96BC-DE39C1FEB0B3.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958123/World%20Trip/225_Mui_Ne.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958122/World%20Trip/224_Mui_Ne.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958124/World%20Trip/b761f770-98c3-4882-815e-489796c33f5f_156C1C51-B33D-42E2-AADA-0AE4C3D056F5.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3459,42 +3776,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": null,
-        "comment_count": 0,
-        "fb_publish_status": 0,
-        "timezone_id": "Asia/Saigon",
-        "end_time": null
-      },
-      {
-        "weather_temperature": 32,
-        "creation_time": 1520660675.319638,
-        "trip_id": 372633,
-        "likes": 0,
-        "name": "",
-        "start_time": 1520660597.896715,
-        "description": "",
-        "location": {
-          "lat": 10.7661776216419,
-          "detail": "Vietnam",
-          "uuid": "e21aafff-06c2-44ae-8db8-b36a9a603128",
-          "lon": 106.689497017561,
-          "venue": "",
-          "id": 5112773,
-          "country_code": "VN",
-          "full_detail": "Ho Chi Minh City, Vietnam",
-          "name": "Ho Chi Minh City"
-        },
-        "is_deleted": false,
-        "views": 0,
-        "id": 3762075,
-        "slug": "ho-chi-minh-city",
-        "location_id": 5112773,
-        "uuid": "CE152D54-39EE-4D41-A8EB-36216646E7CC",
-        "type": 0,
-        "supertype": "normal",
-        "open_graph_id": "",
-        "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/2cecdfa2-4e86-4b9e-be64-a91d9d4bcb11_21AF5051-D522-434C-8790-E3FFCD3E5590.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958128/World%20Trip/228_Ho_Chi_Minh_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958127/World%20Trip/226_Ho_Chi_Minh.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958127/World%20Trip/227_Ho_Chi_Minh.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958131/World%20Trip/fed83fda-2d99-467f-98d3-f750859c38dc_CD60DE78-E1A7-42E0-B280-78750236D7F6.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Saigon",
@@ -3529,7 +3816,13 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/38ab3eb9-2be4-442f-aca6-c41e7e65d756_D0F1D8F7-B938-48F2-BF46-4A47DF6EB803.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958135/World%20Trip/231_Phnom_Penh_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958137/World%20Trip/4ea1f245-9a24-4a42-9955-c1a64acb0a8b_24D4B9D0-8D24-4236-920C-E2EAF4CFADE7.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958134/World%20Trip/230_Phnom_Penh_3.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958137/World%20Trip/232_Phnom_Penh_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958138/World%20Trip/5ca1b89b-59ed-4222-b318-d3c2f1ac352b_986D040C-DD70-4BF5-8125-045E9B267CF4.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Phnom_Penh",
@@ -3552,7 +3845,7 @@
           "id": 5309353,
           "country_code": "KH",
           "full_detail": "Kampot Province, Cambodia",
-          "name": "Tuek Chhou"
+          "name": "Kampot"
         },
         "is_deleted": false,
         "views": 0,
@@ -3564,7 +3857,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/93192c7a-7294-469e-a444-aa2957b2f1d7_A4F4A066-09A4-4BBC-B746-AE66CAB39766.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958141/World%20Trip/74ab606a-3fc4-48d9-a8ef-f69c3c04e07c_00011E5C-514C-4103-BC71-B203C14701CA.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958141/World%20Trip/233_Kampot.jpg",
+          "https://res.cloudinary.com/travel-blog/video/upload/v1536958162/World%20Trip/234_Kampot.mp4"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Phnom_Penh",
@@ -3587,7 +3884,7 @@
           "id": 5309380,
           "country_code": "KH",
           "full_detail": "Kampot Province, Cambodia",
-          "name": "Tuek Chhou"
+          "name": "Bokor Nat Park"
         },
         "is_deleted": false,
         "views": 0,
@@ -3599,7 +3896,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/71419c8e-d132-430a-aaac-0a769a9451fd_1C8D1165-62A6-4020-861F-9C3E978640EB.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958141/World%20Trip/235_Bokor_Nat_Park.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Phnom_Penh",
@@ -3622,7 +3921,7 @@
           "id": 5309354,
           "country_code": "KH",
           "full_detail": "Kep Province, Cambodia",
-          "name": "Krong Kaeb"
+          "name": "Kep"
         },
         "is_deleted": false,
         "views": 0,
@@ -3634,7 +3933,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/97cf4831-e452-4e29-a75e-420b3462d86f_FF6EBB68-1F97-466F-87D3-4A560831DB8F.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958142/World%20Trip/236_Kep.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958141/World%20Trip/1b1b19fb-d6a9-4be8-8866-6bffad1a5570_8B6F0F50-1F76-41E6-A536-0AFD6B358AF5.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Phnom_Penh",
@@ -3646,7 +3948,7 @@
         "trip_id": 372633,
         "likes": 0,
         "name": "Koh Rong",
-        "start_time": 1522013490.13084,
+        "start_time": 1521840690,
         "description": "",
         "location": {
           "lat": 10.6848770426686,
@@ -3657,7 +3959,7 @@
           "id": 5505132,
           "country_code": "KH",
           "full_detail": "Sihanoukville, Cambodia",
-          "name": "Krong Preah Sihanouk"
+          "name": "Koh Rong"
         },
         "is_deleted": false,
         "views": 0,
@@ -3669,7 +3971,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/238cb524-db74-4b68-aa56-305ead34b4f5_9B808537-C1A5-41C5-B222-B4312EC229CE.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958147/World%20Trip/237_Koh_Rong.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Phnom_Penh",
@@ -3681,7 +3985,7 @@
         "trip_id": 372633,
         "likes": 0,
         "name": "Koh Rong Samloem",
-        "start_time": 1522405255.03,
+        "start_time": 1522059655,
         "description": "",
         "location": {
           "lat": 10.6212405441428,
@@ -3692,7 +3996,7 @@
           "id": 5505156,
           "country_code": "KH",
           "full_detail": "Sihanoukville, Cambodia",
-          "name": "Krong Preah Sihanouk"
+          "name": "Koh Rong Samloem"
         },
         "is_deleted": false,
         "views": 0,
@@ -3704,7 +4008,15 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/444f120a-eed9-46ec-9f9b-c37476419bbf_B8B015E2-5DB3-46B5-A40C-D531156DC01E.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958153/World%20Trip/240_Koh_Rong_Samloem_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958149/World%20Trip/239_Koh_Rong_Samloem.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958148/World%20Trip/238_Koh_Rong_Samloem_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958153/World%20Trip/241_Koh_Rong_Samloem.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958154/World%20Trip/5a070afa-1742-4486-9469-2e9f625f97f3_42E1D925-E0C4-4E8E-A77A-C4F30A33262B.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958159/World%20Trip/f814a503-845f-41a4-9b20-ae4a02507884_747CE393-2C80-4D34-A4DB-6A28AAEB472B.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958162/World%20Trip/a1dbe4c5-e7e4-4104-816d-0b5ba30d6a33_5C552AAA-0A52-4C2E-A2E4-2F469252AEDF.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Phnom_Penh",
@@ -3716,7 +4028,7 @@
         "trip_id": 372633,
         "likes": 0,
         "name": "Otres Beach",
-        "start_time": 1522568368.097507,
+        "start_time": 1522654768,
         "description": "",
         "location": {
           "lat": 10.5705990968371,
@@ -3727,7 +4039,7 @@
           "id": 5659520,
           "country_code": "KH",
           "full_detail": "Sihanoukville, Cambodia",
-          "name": "Krong Preah Sihanouk"
+          "name": "Sihanoukville"
         },
         "is_deleted": false,
         "views": 0,
@@ -3739,7 +4051,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/8b662711-1984-47e0-87bb-22247723fcba_DFB7CC41-41F4-4C4A-8F8A-E4055F154F29.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958161/World%20Trip/28f49a3c-7a8b-4f53-8f52-a623b21eae51_33F0FCC5-6285-48C4-806C-7BED181B19A8.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Phnom_Penh",
@@ -3751,7 +4065,7 @@
         "trip_id": 372633,
         "likes": 0,
         "name": "Osoam Cardamom Community",
-        "start_time": 1522983086.053214,
+        "start_time": 1522810286,
         "description": "",
         "location": {
           "lat": 12.0783044910171,
@@ -3762,7 +4076,7 @@
           "id": 5659521,
           "country_code": "KH",
           "full_detail": "Pursat Province, Cambodia",
-          "name": "Veal Veaeng"
+          "name": "Osoam Cardamom"
         },
         "is_deleted": false,
         "views": 0,
@@ -3774,7 +4088,15 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/a4fd44f6-e5e4-4e17-9d8d-82f47320c1eb_D11B6AA1-3BE9-480C-AF4B-50B631C28B9D.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958168/World%20Trip/244_Osoam_Cardamom_Community.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958167/World%20Trip/243_Osoam_Cardamom_Community.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958168/World%20Trip/245_Osoam_Cardamom_Community.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958172/World%20Trip/f4d2ab89-118d-4aab-b418-87d8ba62f6ee_5F79937B-9748-42B3-92BC-B6F99DF946B0.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958172/World%20Trip/4d56aa4b-a0fe-40b7-a3c3-64832e0ecdf2_A198C89E-8D32-4A76-A8DA-129F8E9E4417.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958171/World%20Trip/246_Osoam_Cardamom_Community.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958162/World%20Trip/242_Osoam_Cardamom_Community_1.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Phnom_Penh",
@@ -3797,7 +4119,7 @@
           "id": 5659522,
           "country_code": "KH",
           "full_detail": "Siem Reap Province, Cambodia",
-          "name": "Krong Siem Reap"
+          "name": "Siem Reap"
         },
         "is_deleted": false,
         "views": 0,
@@ -3809,45 +4131,20 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": null,
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958188/World%20Trip/251_Angkor_Wat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958192/World%20Trip/250_Angkor_Wat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958183/World%20Trip/247_Angkor_Wat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958182/World%20Trip/248_Angkor_Wat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958195/World%20Trip/249_Angkor_Wat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958203/World%20Trip/254_Angkor_Wat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958205/World%20Trip/255_Angkor_Wat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958217/World%20Trip/252_Angkor_Wat.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958204/World%20Trip/253_Angkor_Wat.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Phnom_Penh",
-        "end_time": null
-      },
-      {
-        "weather_temperature": 34,
-        "creation_time": 1523431527.095508,
-        "trip_id": 372633,
-        "likes": 0,
-        "name": "",
-        "start_time": 1523431517.110444,
-        "description": "",
-        "location": {
-          "lat": 13.7590628259029,
-          "detail": "Thailand",
-          "uuid": "bfbc47ab-e4fc-43fd-9645-6dfcfbf6a7bb",
-          "lon": 100.49604780815,
-          "venue": "",
-          "id": 5684733,
-          "country_code": "TH",
-          "full_detail": "Thailand",
-          "name": "Bangkok"
-        },
-        "is_deleted": false,
-        "views": 0,
-        "id": 4208422,
-        "slug": "bangkok",
-        "location_id": 5684733,
-        "uuid": "EC9DCB7A-B385-4194-9A1F-2EC9BE1C99D7",
-        "type": 0,
-        "supertype": "normal",
-        "open_graph_id": "",
-        "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": null,
-        "comment_count": 0,
-        "fb_publish_status": 0,
-        "timezone_id": "Asia/Bangkok",
         "end_time": null
       },
       {
@@ -3856,7 +4153,7 @@
         "trip_id": 372633,
         "likes": 0,
         "name": "Chiang Mai",
-        "start_time": 1523902684.895226,
+        "start_time": 1523643484,
         "description": "",
         "location": {
           "lat": 18.7957664166121,
@@ -3879,7 +4176,15 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "rain",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/0989081b-a4ee-4427-bd9e-de82b7f09d85_42978D1A-393E-485C-B243-265D674CB930.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958212/World%20Trip/261_Chiang_Mai.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958221/World%20Trip/263_Chiang_Mai.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958222/World%20Trip/262_Chiang_Mai.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958219/World%20Trip/264_Chiang_Mai.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958202/World%20Trip/257_Chiang_Mai.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958204/World%20Trip/259_Chiang_Mai.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958203/World%20Trip/258_Chiang_Mai.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Bangkok",
@@ -3902,7 +4207,7 @@
           "id": 5814990,
           "country_code": "TH",
           "full_detail": "Chiang Rai, Thailand",
-          "name": "Mueang Chiang Rai"
+          "name": "Chiang Rai"
         },
         "is_deleted": false,
         "views": 0,
@@ -3914,7 +4219,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/2b4342ab-60c0-4de7-a58f-a4b6c7cba468_3836E608-349A-40AC-B551-FF2B1E06145F.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958221/World%20Trip/0764bcf8-0e82-4c48-af4e-91bc6588d507_AC3101D4-E84A-4298-875D-175BD30A2383.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958222/World%20Trip/47c234a2-0d70-42f9-97c6-74b4b0a1c187_CADCE3F4-2FB3-4F79-8A76-05A628AD89B6.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Bangkok",
@@ -3926,7 +4234,7 @@
         "trip_id": 372633,
         "likes": 0,
         "name": "Pai",
-        "start_time": 1524318304.09981,
+        "start_time": 1524232304,
         "description": "",
         "location": {
           "lat": 19.3515101960109,
@@ -3937,7 +4245,7 @@
           "id": 5876010,
           "country_code": "TH",
           "full_detail": "Mae Hong Son, Thailand",
-          "name": "Mae Hi"
+          "name": "Pai"
         },
         "is_deleted": false,
         "views": 0,
@@ -3949,7 +4257,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/db76a88c-4882-4090-938a-c45659dc746d_B25BEF26-0414-4B37-977B-32A54E57A763.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958223/World%20Trip/Pai_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958223/World%20Trip/e7422d6d-b8df-413e-a073-04082e97f386_4B970015-6464-43F1-9C8A-899CBC38F530.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958223/World%20Trip/9c5e90f5-daea-4abc-af8e-2eda2b48817e_4075CA82-AFAA-481B-9B60-75C42B340BAB.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Bangkok",
@@ -3972,7 +4284,7 @@
           "id": 6003166,
           "country_code": "TH",
           "full_detail": "Chumphon, Thailand",
-          "name": "Tha Taphao"
+          "name": "Chumphon"
         },
         "is_deleted": false,
         "views": 0,
@@ -3984,7 +4296,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/0057cccb-8bf0-403c-b773-3ccb18a2f9f6_F38D75DA-CC77-4647-A6D4-7AC3AE5AD896.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958231/World%20Trip/Chumphon.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Bangkok",
@@ -4019,7 +4333,16 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/69e027ef-a435-4fb4-915e-740cb3df9adb_E94232E0-CD0D-4CA9-A842-63B1364111CE.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1537057637/272_Ko_Tao_small.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1537057638/273_Ko_Tao_small.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1537057634/270_Ko_Tao_small.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1537057633/274_Ko_Tao_small.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1537057633/269_Ko_Tao_small.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1537057559/World%20Trip/c8p1p2dhhw3wep3kjpgu.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958234/World%20Trip/267_Ko_Tao.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958234/World%20Trip/266_Ko_Tao.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Bangkok",
@@ -4042,7 +4365,7 @@
           "id": 6112816,
           "country_code": "TH",
           "full_detail": "Surat Thani, Thailand",
-          "name": "Ban Tai"
+          "name": "Koh Pha Ngan"
         },
         "is_deleted": false,
         "views": 0,
@@ -4054,7 +4377,12 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/1c642206-a68e-48e1-9d51-5c4c404ce4b9_833FDE47-23FD-41EF-AF04-A684CDEE61E2.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958292/World%20Trip/8d0c30c9-e097-444d-95a6-2e2b2894abd2_B4F91D21-1E7D-403A-BC87-2660F761D838.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958283/World%20Trip/0f9de0b2-4b96-4aa8-83be-00ed3b32cde8_C6885D61-CA25-4A45-9590-7DA1236C0E3A.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958307/World%20Trip/ea63cb94-21be-403a-8e04-d77431f44a00_9C272EDC-7E62-490B-A7F0-9CD4C05F8A33.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958300/World%20Trip/9770febc-d323-4c3d-addf-0a41aee55aa5_DD35A7A8-26EC-4FD3-B0CE-F4F05B013C03.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Bangkok",
@@ -4077,7 +4405,7 @@
           "id": 6112817,
           "country_code": "TH",
           "full_detail": "Krabi, Thailand",
-          "name": "Pak Nam"
+          "name": "Krabi"
         },
         "is_deleted": false,
         "views": 0,
@@ -4089,7 +4417,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/0038347b-66f1-41da-9bc8-f58136ff6ed8_51585396-AB19-4E81-AC32-70312675C686.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958313/World%20Trip/b8b3af9b-3d28-4c20-aff9-21c0d223bc81_1BADA7FB-721B-4E56-8D97-DF0BC5C28FCA.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Bangkok",
@@ -4124,7 +4454,11 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/19d0a1c1-7a8d-422c-a991-c7a50164a355_4911341B-3EDC-473E-AACB-6F5CFF073573.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958320/World%20Trip/84e157b5-3265-4de0-8573-ec2e74ba09de_E47C036A-4E38-40F1-98A6-B68B113CE995.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958321/World%20Trip/aa796306-9622-412f-bbc6-7cb9f23d378e_1902FECD-DA77-4BAF-99AD-663EA3F515D1.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958317/World%20Trip/51875590-84ae-44a0-96ed-6f5262d6a03e_BD45F9FB-39D4-4CD9-A582-F380C34C7C6B.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Bangkok",
@@ -4147,7 +4481,7 @@
           "id": 6112948,
           "country_code": "TH",
           "full_detail": "Krabi, Thailand",
-          "name": "Ao Nang"
+          "name": "Tonsai Beach"
         },
         "is_deleted": false,
         "views": 0,
@@ -4159,42 +4493,16 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/d47fa01f-ec52-4d72-ac05-856f24d54fdd_74C3659C-2141-4C67-BEDE-6779A9E478F6.jpg",
-        "comment_count": 0,
-        "fb_publish_status": 0,
-        "timezone_id": "Asia/Bangkok",
-        "end_time": null
-      },
-      {
-        "weather_temperature": 26,
-        "creation_time": 1525677538.140963,
-        "trip_id": 372633,
-        "likes": 0,
-        "name": "Outside Krabi",
-        "start_time": 1525612511.425322,
-        "description": "",
-        "location": {
-          "lat": 8.09953603185991,
-          "detail": "Thailand",
-          "uuid": "a001e541-15b1-4bc1-ad10-7c46fda0c756",
-          "lon": 98.8843987532894,
-          "venue": "",
-          "id": 6112949,
-          "country_code": "TH",
-          "full_detail": "Krabi, Thailand",
-          "name": "Pak Nam"
-        },
-        "is_deleted": false,
-        "views": 0,
-        "id": 4597467,
-        "slug": "pak-nam",
-        "location_id": 6112949,
-        "uuid": "D67A6729-0380-4DA5-949B-B85D65C18576",
-        "type": 0,
-        "supertype": "normal",
-        "open_graph_id": "",
-        "weather_condition": "partly-cloudy-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/d4af4f9e-3352-419b-800f-c62fc43bb4b1_DBF115B0-2F94-4F4A-BC62-AD5EDE133740.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958326/World%20Trip/276_Tonsai_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958323/World%20Trip/275_Tonsai.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958329/World%20Trip/278_Tonsai.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958327/World%20Trip/277_Tonsai.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958327/World%20Trip/a333a3f8-b1b3-42ce-9247-105e4ff9cad6_8B2CE25D-70F9-488A-9810-3CE2D1051C69.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958329/World%20Trip/279_Tonsai.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958328/World%20Trip/e4aef597-f5c8-433f-87ad-ddc51fe0c62a_74B76EEA-8EB8-4633-AE26-82041F48413C.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958330/World%20Trip/280_Tonsai.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Bangkok",
@@ -4229,7 +4537,9 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "partly-cloudy-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/1c32eb5c-5eba-4dc9-9d1b-26a8dcdbabf1_A4A02B70-EB72-4235-83AC-8003B8F6900C.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958329/World%20Trip/af64e139-832a-48f7-ae2c-997d1430197c_C5D2A359-6139-4C2D-8435-DC0F9735BD75.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "Asia/Bangkok",
@@ -4264,7 +4574,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/899f58a6-0ed0-4b52-99b4-dc2ea947a013_247085D2-21E8-429D-82BC-7AEBFEAD7355.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958331/World%20Trip/8fabc958-e1ea-4856-ac3c-c1fe45c3b373_6A299C8A-1763-4E58-B075-208E9E278360.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958335/World%20Trip/8213f4b7-9818-47aa-8b0f-6e7946114679_C8F0AC67-8588-4470-A461-50FC6C63A657.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "America/Los_Angeles",
@@ -4299,7 +4612,10 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-day",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/84051574-ae4e-431b-a2c2-7ccf22a6aa19_5B79CC1D-D205-42B7-9CE7-1C1611451A57.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958335/World%20Trip/aed4af99-6343-4714-b6cd-9b53d59ed789_D22463AC-BAA1-4AF3-A5DE-725D07F17371.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958336/World%20Trip/8ad11029-5a8c-4f82-8a3b-7d99a02ca8ac_2A041AF2-5005-4D30-B499-1B61E1D913BE.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "America/Los_Angeles",
@@ -4322,7 +4638,7 @@
           "id": 6271876,
           "country_code": "US",
           "full_detail": "California, United States",
-          "name": "Yucca Valley"
+          "name": "Joshua Tree"
         },
         "is_deleted": false,
         "views": 0,
@@ -4334,7 +4650,13 @@
         "supertype": "normal",
         "open_graph_id": "",
         "weather_condition": "clear-night",
-        "main_media_item_path": "https://polarsteps.s3.amazonaws.com/u_381791/1c1c3563-d894-453e-a4c0-c7b9bc0486a2_0DB9AFD0-F1AD-400A-96A7-E8FA827BF66E.jpg",
+        "main_media_item_path": [
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958341/World%20Trip/283_Joshua_Tree.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958336/World%20Trip/282_Joshua_Tree_2.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958342/World%20Trip/da16e43f-0951-44eb-b207-da7b1ff94777_17C51007-CC68-45D6-A9B2-5FB0B476EB3D.jpg.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958336/World%20Trip/281_Joshua_Tree_1.jpg",
+          "https://res.cloudinary.com/travel-blog/image/upload/v1536958342/World%20Trip/63e086ab-2915-431a-b10e-d1d0cb5ae6ed_74AAEDA8-1FD8-4629-902B-067A0F3B19EE.jpg.jpg"
+        ],
         "comment_count": 0,
         "fb_publish_status": 0,
         "timezone_id": "America/Los_Angeles",

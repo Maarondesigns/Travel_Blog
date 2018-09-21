@@ -24,6 +24,48 @@ let time = document.getElementById("time");
 time.value = timeFormat;
 }
 
+function makeForm(){
+    
+    let password = document.getElementById("password");
+
+    if(password.value.length>10){
+
+        d3.json(`/input/${password.value}`)
+        .then( (data) => {
+            if (data.password === password.value){
+                d3.select("#photoForm").attr("action", `/uploadphoto/${data.password}`);
+                d3.select("#photoForm")
+                .append("input")
+                .attr("type", "submit")
+                .attr("Value", "Upload Photos");
+                d3.select("#stepContainer")
+                .append("br");
+                d3.select("#stepContainer")
+                .append("button")
+                .attr("id", "stepSubmit")
+                .attr("onclick", "submitJSON()")
+                .html("Submit Step");
+                d3.select("#stepContainer")
+                .append("br");
+                d3.select("#stepContainer")
+                .append("pre")
+                .attr("id", "stepArea");
+                d3.select("#passwordContainer")
+                .style("display", "none");
+            }
+        })
+    }
+}
+
+function onLoadHandler(){
+    let iframeHTML = document.getElementById("formDestination").contentWindow.document.body.innerText;
+    if(iframeHTML === "[]" || iframeHTML === "[object Object]"){
+        document.getElementById("formDestination").contentWindow.document.body.innerHTML = "There was an error.";
+    }
+
+ 
+}
+
 function getCityInfo(){
     
     let lat = document.getElementById("lattitude");
@@ -31,12 +73,21 @@ function getCityInfo(){
     let city = document.getElementById("city");  
     let region = document.getElementById("region");
     let country = document.getElementById("country");  
+    let password = document.getElementById("password");
+
+    if(city.value.length <= 3){
+   d3.select("#autoContainer").remove();
+    }
 
 if (city.value.length>3){
-    d3.json(`https://api.mapbox.com/geocoding/v5/mapbox.places/${city.value}.json?access_token=pk.eyJ1IjoiZGUtZmluZS1hcnQiLCJhIjoidFJyclFabyJ9.sBXgFmwT-4dhGAevwEmKuA`, showData);
-}
-    function showData(data){
-         
+
+    
+
+    d3.json(`/mapbox/${password.value}`).then( (data) => {
+        
+    d3.json(`https://api.mapbox.com/geocoding/v5/mapbox.places/${city.value}.json?access_token=${data.token}`)
+    .then(function (data){
+ 
         let y = document.getElementById("city").getBoundingClientRect().top;
 
         d3.selectAll("#autoContainer").remove();
@@ -91,12 +142,13 @@ if (city.value.length>3){
          d3.selectAll("#autoContainer").remove();
 
         }
-    }
+    });
+});
+}
 }
 
 function submitJSON(){
     
-    let day = document.getElementById("day_of_trip");
     let dayName = document.getElementById("day");
     let date = document.getElementById("date");  
     let time = document.getElementById("time"); 
@@ -105,18 +157,41 @@ function submitJSON(){
     let country = document.getElementById("country"); 
     let lat = document.getElementById("lattitude");
     let long = document.getElementById("longitude");
+    let password = document.getElementById("password");
+    let iFrameText = document.getElementById("formDestination").contentWindow.document.body.innerText;
+    let textSplit = iFrameText.split(/\"/);
+    let imageURL = textSplit.filter( (x) => x.length > 1);
 
-    d3.json(`add/${day.value}/${dayName.value}/${date.value}/${time.value}/${city.value}/${region.value}/${country.value}/${lat.value}/${long.value}/`, finished);
-  
-    function finished(data){
-        
-        let last = data[0];
+  d3.json(`/add`, {
+      method: "POST",
+      body: JSON.stringify({
+  "dayName": dayName.value,
+  "date": date.value,
+  "time": time.value,
+  "city": city.value,
+  "region": region.value,
+  "country": country.value,
+  "lattitude": Number(lat.value),
+  "longitude": Number(long.value),
+  "image": imageURL,
+  "password": password.value
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+  })
+  .then(json => {
+    let stepArea = document.getElementById("stepArea");
+    let text = JSON.stringify(json, null, 4);
 
-        day.value = dayName.value = date.value = time.value = city.value = region.value = country.value = lat.value = long.value = '';
+    stepArea.innerHTML = "Successfully Added Step:<br><br>" + text;
+    
+    day.value = dayName.value = date.value = time.value = city.value = region.value = country.value = lat.value = long.value = password.value = '';
+    document.getElementById('formDestination').contentDocument.location.reload(true);
 
-        let stepArea = document.getElementById("stepArea");
-         
-        let text = JSON.stringify(last).split(",").join("<br>");
-        stepArea.innerHTML = "Successfully Added Step:<br><br>" + text;
-    }
+  }, error => {
+    let stepArea = document.getElementById("stepArea");
+    stepArea.innerHTML = "All fields must be filled in correct format.";
+  });
+
 }

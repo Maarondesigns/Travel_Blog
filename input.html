@@ -9,12 +9,11 @@
 </head>
 <body>
      <script src="https://d3js.org/d3.v4.min.js"></script>
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+     <script src="https://unpkg.com/d3-fetch"></script>
      <script src="/myApp.js"></script>
      <div id="stepContainer" class="container">
      <h2>Add Journey Step</h2>
-       Day of Trip:<br>
-       <input id="day_of_trip">
-            <br>
        Day:<br>
        <input id="day">
        <br>
@@ -38,13 +37,21 @@
        <br>
        Longitude:<br>
        <input id="longitude">
-       <br><br>
-       <button id="stepSubmit" onclick="submitJSON()">Submit</button>
+       <br>
+       Photo: <br>
 
-       <br><br>
-       <div id="stepArea"></div>
-       <br><br>
+       <form id="photoForm"  method="post" target="formDestination" enctype="multipart/form-data">
+        <input type='file' name='image' id="photoUpload" multiple/><br>
+
+      </form>
+       <br>
+      <iframe name="formDestination" id="formDestination" onload="onLoadHandler()"></iframe>
+   
       </div>
+      <div id="passwordContainer" class="container">
+             Password:<br>
+       <input id="password" type="password" oninput="makeForm()">
+    </div>
 <!--       
     <div id="budgetContainer" class="container">
        <h2>Add Budget Step</h2>

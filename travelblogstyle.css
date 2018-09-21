@@ -1,69 +1,65 @@
-
-
 /* html{
   overflow: hidden;
 } */
 
-body{
+body {
   margin: 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
-#fullscreen{
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  height: 26px;
-  width: 26px;
-  background-color: white;
-  cursor: pointer;
+a {
+  color: #9aafd1;
+  background-color: transparent;
+  text-decoration: underline;
 }
-#fs1, #fs2{
-  position: absolute;
-  height: 27px;
-  width: 13px;
-  background-color: black;
-}
-#fs1{
-  transform: translate(6.5px, 0);
-}
-#fs2{
-  transform: rotate(90deg);
-}
-#fs3{
-  position: absolute;
-  transform: translate(-4px,3px);
-  height: 21px;
-  width: 21px;
-  background-color: black;
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
-#background{
+#background {
   position: fixed;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   margin: 0;
   z-index: -1;
 }
-#showMenu{
+
+#showMenu,
+#showControls {
   position: absolute;
-  top: 10px;
-  left: 20px;
-  padding: 10px;
-  border-radius: 4px;
+  top: 50%;
+  border-style: solid;
+  padding: 30px 5px;
+  border-width: 1px 4px 1px 0;
+  border-radius: 0 120px 120px 0;
   cursor: pointer;
-  font: bold 14px verdana;
+  font: bold 12px verdana;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  z-index: 10;
 }
-#buttonsMenu{
+#showMenu {
+  left: 0;
+}
+#showControls {
+  right: 0;
+  border-width: 1px 0 1px 4px;
+  border-radius: 120px 0 0 120px;
+  padding: 20px 5px;
+}
+#buttonsMenu {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  box-shadow: 0 0 10px white;
+  top: 50%;
+  left: 0;
   padding: 10px;
-  border-radius: 4px;
-  visibility: hidden;
+  border-width: 1px 4px 1px 0;
+  border-style: solid;
+  border-radius: 0 10px 10px 0;
 }
-#themeButton{
+#themeButton {
   padding: 5px;
   cursor: pointer;
   font-family: verdana;
@@ -71,61 +67,135 @@ body{
   text-align: center;
   margin-bottom: 10px;
 }
-#themeButton:hover{
+#themeButton:hover {
   box-shadow: 0 0 10px #9aafd1;
 }
-#buttonOfDoom{
+#buttonOfDoom {
   padding: 5px;
-    cursor: pointer;
-    color: white;
-    font-family: verdana;
-    border-radius: 4px;
-    text-align: center;
+  cursor: pointer;
+  /* color: white; */
+  font-family: verdana;
+  border-radius: 4px;
+  text-align: center;
   margin-bottom: 10px;
-  }
-  #buttonOfDoom:hover{
-    box-shadow: 0 0 10px #9aafd1;
-  }
-
-#hideIceland{
-  padding: 5px;
-  cursor: pointer;
-  font-family: verdana;
-  border-radius: 4px;
-  text-align: center;
 }
-  #hideIceland:hover{
-    box-shadow: 0 0 10px #9aafd1;
-  }
-
-#hideWorldTrip{
-  padding: 5px;
-  cursor: pointer;
-  font-family: verdana;
-  border-radius: 4px;
-  text-align: center;
-}
-  #hideWorldTrip:hover{
-    box-shadow: 0 0 10px #9aafd1;
-  }
-
-  #closeMenu:hover{
-    animation-name: growButton;
-    animation-duration: .5s;
-  animation-iteration-count: infinite;
-  }
-@keyframes growButton{
-  0% {transform: scale(1);}
-  50% {transform: scale(1.2);}
-  100% {transform: scale(1);}
+#buttonOfDoom:hover {
+  box-shadow: 0 0 10px #9aafd1;
 }
 
-#zoom{
+#projectionHelp {
   position: absolute;
-  top: 90%;
-  left: 25px;
+  border: solid 1px white;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(100, 100, 100, 0.5);
+  font: 10px verdana;
+  transform: translate(170px, 4px);
+  z-index: 99;
 }
-#zoomIn, #zoomOut{
+
+#projectionHelp:hover {
+  background-color: red;
+}
+
+#projectionDescription {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  border: dashed 1px white;
+  border-radius: 4px;
+  background-color: rgba(100, 100, 100, 0.7);
+  padding: 10px;
+  font: 14px verdana;
+  color: white;
+}
+
+#viewIceland,
+#viewWorldTrip,
+#viewAllTrips {
+  padding: 5px;
+  cursor: pointer;
+  font-family: verdana;
+  border-radius: 4px;
+  text-align: center;
+}
+#viewIceland:hover,
+#viewWorldTrip:hover,
+#viewAllTrips:hover {
+  box-shadow: 0 0 10px #9aafd1;
+}
+
+/* #closeMenu:hover {
+  animation-name: growButton;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+} */
+@keyframes growButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#controls {
+  top: 50%;
+  right: 0;
+  position: absolute;
+  border-width: 1px 0 1px 4px;
+  border-style: solid;
+  border-color: white;
+  padding: 80px 0px 25px 10px;
+  border-radius: 20px 0 0 20px;
+  background-color: rgb(170, 170, 170);
+  transform: translateY(-50%);
+  color: white;
+}
+#fullscreen {
+  position: absolute;
+  top: 15px;
+  height: 26px;
+  width: 26px;
+  cursor: pointer;
+  display: flex;
+}
+#fs1,
+#fs2,
+#fs3,
+#fs4 {
+  position: absolute;
+  border-width: 2px 0 0 2px;
+  border-style: solid;
+  border-color: white;
+  height: 6px;
+  width: 6px;
+}
+#fs2 {
+  right: 0;
+  border-width: 2px 2px 0 0;
+}
+#fs3 {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+#fs4 {
+  bottom: 0;
+  border-width: 0 0 2px 2px;
+}
+/* #zoom {
+  position: absolute;
+  top: 80%;
+  left: 25px;
+} */
+#zoomIn,
+#zoomOut {
   height: 25px;
   width: 25px;
   color: white;
@@ -135,41 +205,272 @@ body{
   font: bold 16px verdana;
   cursor: pointer;
 }
-#zoomIn:hover, #zoomOut:hover{
+#zoomIn:hover,
+#zoomOut:hover {
   background-color: gray;
 }
 
-
-.land{
-	fill: #262626;
-  opacity: .7;
+#zoomInput {
+  height: 25px;
+  width: 25px;
+  border: solid 1px black;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 6px 2px rgb(66, 146, 198) inset;
+  text-align: center;
+  font: regular 12px verdana;
 }
-.landHover{
-  fill: lightgray;
-  stroke: #92c0dd;
+
+#tripControls {
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  border-top: dashed 1px white;
+  border-bottom: dashed 1px white;
+  background-color: rgba(154, 175, 209, 0.7);
+  top: 90%;
+  align-items: center;
+  display: flex;
+}
+.slider {
+  -webkit-appearance: none;
+  position: absolute;
+  left: 12.5%;
+  width: 75%;
+  background: rgba(0, 0, 0, 0);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  z-index: 99;
+}
+
+.slider-background-container {
+  position: absolute;
+  left: 13.2%;
+  width: 75%;
+  height: 6px;
+  display: flex;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 25px;
+  /* background: white;
+  border: solid 2px rgb(66, 146, 198); */
+  cursor: pointer;
+}
+.slider::-ms-thumb {
+  appearance: none;
+  /* background: white;
+  border: solid 2px rgb(66, 146, 198); */
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: rgba(66, 146, 198, 0);
+  cursor: pointer;
+}
+.slider::-moz-range-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#slider-United-States {
+  background-color: #9e0142;
+}
+#slider-Mexico {
+  background-color: yellow;
+}
+#slider-Norway {
+  background-color: #d53e4f;
+}
+#slider-Sweden {
+  background-color: #f46d43;
+}
+#slider-Denmark {
+  background-color: #fdae61;
+}
+#slider-Germany {
+  background-color: #fee08b;
+}
+#slider-Austria {
+  background-color: #ffb5fc;
+}
+#slider-Spain {
+  background-color: #e6f598;
+}
+#slider-Portugal {
+  background-color: #abdda4;
+}
+#slider-Morocco {
+  background-color: #66c2a5;
+}
+#slider-India {
+  background-color: #3288bd;
+}
+#slider-Vietnam {
+  background-color: #5e4fa2;
+}
+#slider-China {
+  background-color: red;
+}
+#slider-Cambodia {
+  background-color: green;
+}
+#slider-Thailand {
+  background-color: blue;
+}
+#sliderLegendButton {
+  position: absolute;
+  right: 8%;
+  border: solid 1px black;
+  background-color: white;
+  display: flex;
+  cursor: pointer;
+}
+#sliderLegend {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+#sliderLegTitle {
+  text-transform: uppercase;
+  font: bold 16px verdana;
+  text-align: center;
+  border-bottom: dashed 1px black;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+#animationButton {
+  position: absolute;
+  left: 9.5%;
+  border-radius: 50%;
+  display: flex;
+  /* padding: 3px 4px 3px 6px; */
+  cursor: pointer;
+  font: bold 12px verdana;
+  text-align: center;
+  /* box-shadow: 0 0 5px black; */
+}
+#animationSpeed {
+  position: absolute;
+  height: 20px;
+  left: 1%;
+  border-radius: 5px;
+  display: flex;
+  padding: 5px;
+  font: normal 12px verdana;
+  text-align: center;
+}
+#animationSpeed input {
+  width: 10px;
+  padding: 0 3px;
+  height: 14px;
+  overflow: hidden;
+  margin-left: 10px;
+  border-radius: 6px 0;
+}
+
+#currentLocation {
+  position: absolute;
+  top: -18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: dashed 1px blue;
+  padding: 2.5px;
+  font: normal 9px verdana;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
+}
+#currentLocation span {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: blue;
+  border-width: 0 1px 1px 1px;
+  border-style: dashed;
+  position: absolute;
+  top: 16.5px;
+  height: 32px;
+  left: 31%;
+}
+
+.land {
+  fill: #262626;
+  opacity: 0.7;
+}
+.landHover {
+  stroke: green;
   stroke-width: 2px;
 }
 
-.border{
-	fill: none;
+.border {
+  fill: none;
   stroke: none;
 }
 
-
-#globe{
+#globe {
   stroke: white;
   stroke-width: 2px;
 }
 
-#tooltip{
+#tooltip {
   position: absolute;
   background-color: white;
   padding: 5px;
+  border-radius: 8px;
   visibility: hidden;
-  font: bold 16px verdana;
+  font: bold 15px verdana;
+  white-space: nowrap;
+  text-align: center;
 }
-
-.showBefore:before{
+#tooltip span {
+  font: normal 12px verdana;
+}
+#tooltip-thumbnail-image {
+  /* position: absolute; */
+  background-color: white;
+  padding: 5px;
+  /* left: 100%;
+  top: 50%; */
+  /* transform: translate(50px, -50%); */
+}
+#tooltip-thumbnail-image:before {
+  content: "";
+  width: 1px;
+  border-bottom: solid 2px;
+  border-color: inherit;
+  position: absolute;
+  left: -32px;
+  top: 52%;
+  animation-name: thumbnail-line;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes thumbnail-line {
+  from {
+    width: 1px;
+  }
+  to {
+    width: 32px;
+  }
+}
+/* .showBefore:before{
   content: '';
   width: 1px;
    border-bottom: solid 2px;
@@ -184,34 +485,34 @@ body{
 @keyframes example {
     from {width: 1px;}
     to {width: 70px;}
-}
-.pinAfter{
-  transform: scale(1);  
-    animation-duration: .6s;
+} */
+.pinAfter {
+  transform: scale(1);
+  animation-duration: 0.6s;
   animation-fill-mode: forwards;
 }
 @keyframes pinGrow {
-    from {
-      transform: scale(1);
-      stroke-width: 2px;
+  from {
+    transform: scale(1);
+    stroke-width: 2px;
   }
-    to {
-      transform: scale(3);
-      stroke-width: .6px
+  to {
+    transform: scale(3);
+    stroke-width: 0.6px;
   }
 }
 @keyframes pinShrink {
-    from {
-      transform: scale(3);
-      stroke-width: .6px; 
-    }
-    to {
-      transform: scale(1);
-      stroke-width: 2px;
-     }
+  from {
+    transform: scale(3);
+    stroke-width: 0.6px;
+  }
+  to {
+    transform: scale(1);
+    stroke-width: 2px;
+  }
 }
 
-#svg2{
+#svg2 {
   margin: 0;
   position: fixed;
   background-color: black;
@@ -221,28 +522,33 @@ body{
   opacity: 0.7;
 }
 
-@keyframes fadeIn{
-  from{opacity: 0.1;};
-  to{opacity: .7;};
+@keyframes fadeIn {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.7;
+  }
 }
 
-.countryFocus{
-fill: lightgray;
+.countryFocus {
+  fill: lightgray;
   opacity: 0.7;
   stroke: #92c0dd;
   stroke-width: 4px;
 }
 
-.point{
+.point {
   fill: none;
 }
 
-#changeProjection{
+#changeProjection {
   text-decoration: underline;
 }
 
-#imageContainer{
+#imageContainer {
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
   height: 99%;
   width: 100%;
   cursor: pointer;
@@ -250,50 +556,93 @@ fill: lightgray;
   justify-content: center;
   align-content: center;
   object-fit: contain;
-  z-index: 101;
-}
-
-#stepImage{
-  background-color: white;
-  align-self: center;
-  padding: 20px;
-  max-height: 85vh;
-  max-width: 85vw;
+  z-index: 1001;
   overflow: hidden;
 }
 
-#stepImage img{
+.stepImage {
+  align-self: center;
+  max-height: auto;
+  max-width: 100vw;
+}
+
+.stepImage img,
+.stepImage video {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
   max-height: 80vh;
   max-width: 80vw;
 }
 
+#nextImage,
+#prevImage {
+  position: absolute;
+  top: 50%;
+  border-radius: 5px;
+  font-size: 40px;
+  font-family: "Verdana";
+  color: white;
+  z-index: 1002;
+  cursor: pointer;
+}
+#nextImage {
+  padding: 30px 10px 30px 80px;
+  left: 80%;
+}
+#prevImage {
+  padding: 30px 80px 30px 10px;
+  left: 15%;
+}
+#nextImage:hover,
+#prevImage:hover {
+  color: red;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: red;
+  animation-name: growButton;
+  animation-duration: 0.5s;
+  /* animation-iteration-count: infinite; */
+}
 
 .graticule {
   fill: none;
   stroke: #777;
-  stroke-opacity: .5;
+  stroke-opacity: 0.3;
+  stroke-width: 0.5;
 }
 
-.countryFocusInfo{
+#graticule43 {
+  stroke: green;
+  stroke-width: 2;
+}
+#graticule41,
+#graticule45 {
+  stroke: green;
+  stroke-width: 1;
+}
+
+.countryFocusInfo {
   position: absolute;
   left: 65%;
   top: 50%;
   color: white;
   font: bold 16px verdana;
   text-align: center;
-    position-anchor: 50% 50%;
+  /* position-anchor: 50% 50%; */
   line-height: 2;
   z-index: 98;
 }
 
-#countryFocusName{
+#countryFocusName {
   font: bold 32px verdana;
   text-decoration: underline;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
-.countryFocusClose{
+.countryFocusClose {
   position: absolute;
   left: 75%;
   top: 8%;
@@ -302,7 +651,121 @@ fill: lightgray;
   z-index: 99;
   cursor: pointer;
 }
-.countryFocusClose img{
+.countryFocusClose img {
   height: 25px;
   width: 25px;
+}
+
+#budgetButton {
+  position: absolute;
+  right: 3%;
+  border-radius: 4px;
+  color: green;
+  -webkit-text-fill-color: green;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#budgetBody {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 998;
+}
+
+#budgetContainer {
+  align-self: center;
+  width: 860px;
+  background-color: white;
+  padding: 10px;
+  margin: 5px 20px;
+  border: solid 1px black;
+  border-radius: 4px;
+}
+
+#buttonsContainer {
+  display: flex;
+  justify-content: center;
+}
+.sortButton {
+  background-color: white;
+  cursor: pointer;
+  margin: 10px;
+  padding: 8px;
+  font: bold 14px verdana;
+  text-align: center;
+  border-radius: 4px;
+  border: solid 1px black;
+}
+
+#budgetTooltip {
+  position: absolute;
+  transform: translate(620px, -420px);
+  background-color: white;
+  border: solid 1px black;
+  box-shadow: 0 0 10px black;
+  border-radius: 4px;
+  padding: 6px;
+  display: inline-block;
+  font: 12px verdana;
+  opacity: 0.9;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.tooltip-Country {
+  text-transform: uppercase;
+  font: bold 18px verdana;
+  border-bottom: solid 1px black;
+  margin-bottom: 15px;
+}
+
+.tooltip-Date-Range {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.tooltip-Totals {
+  margin-bottom: 15px;
+  border-bottom: dashed 1px black;
+  border-top: dashed 1px black;
+  padding: 5px;
+}
+
+.tooltip-Airfare,
+.tooltip-Transportation,
+.tooltip-Food,
+.tooltip-Entertainment,
+.tooltip-Beer,
+.tooltip-Other,
+.tooltip-Accommodation {
+  padding: 5px;
+}
+
+.barContainer {
+  display: flex;
+}
+
+.bars {
+  display: flex;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barName {
+  position: absolute;
+  font: bold 11px verdana;
+  transform: translateY(-5px);
+  background-color: white;
+  display: inline-block;
+  box-shadow: 0 0 10px black;
+  opacity: 0.8;
 }

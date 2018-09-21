@@ -1,141 +1,206 @@
+window.onload = function() {
+  setTimeout(function() {
+    tripControls
+      .transition()
+      .duration(400)
+      .style("transform", "translateX(0%)");
+  }, 1800);
+};
 
 d3.select("body")
-.append("div")
-.attr("id", "fullscreen")
-.attr("title", "Fullscreen")
-.on("click", fullscreen)
-.append("div")
-.attr("id", "fs1")
-.append("div")
-.attr("id", "fs2")
-.append("div")
-.attr("id", "fs3");
+  .append("div")
+  .attr("id", "showControls")
+  .on("click", showControls)
+  .html("Controls")
+  .style("color", "white")
+  .style("border-color", "white")
+  .style("transform", "translate(0, -50%)")
+  .style("background-color", "rgb(170, 170, 170)");
 
-function fullscreen(){
+function showControls() {
+  let thisGuy = d3.select(this);
+  if(thisGuy.classed("clicked")){
+    thisGuy.classed("clicked", false)
+    .transition()
+    .duration(400)
+    .style("right", "0px");  
+    
+    d3.select("#controls")
+    .transition()
+    .duration(400)
+    .style("right", "-45px");
+  } else {
+  thisGuy
+  .classed("clicked", true)
+    .transition()
+    .duration(400)
+    .style("right", "43px");
+
+  d3.select("#controls")
+    .transition()
+    .duration(400)
+    .style("right", "0px");
+  }
+}
+
+let controls = d3
+  .select("body")
+  .append("div")
+  .attr("id", "controls")
+  .style("right", "-45px");
+
+controls
+  .append("div")
+  .attr("id", "fullscreen")
+  .attr("title", "Fullscreen")
+  .on("click", fullscreen)
+  .append("div")
+  .attr("id", "fs1");
+
+d3.select("#fullscreen")
+  .append("div")
+  .attr("id", "fs2");
+
+d3.select("#fullscreen")
+  .append("div")
+  .attr("id", "fs3");
+
+d3.select("#fullscreen")
+  .append("div")
+  .attr("id", "fs4");
+
+function fullscreen() {
   let elem = document.getElementsByTagName("body")[0];
 
-  if (document.fullscreenElement) { 
-    document.exitFullscreen() 
-  } else if (document.webkitFullscreenElement) { 
-    document.webkitExitFullscreen() 
-  } else if (document.msFullscreenElement) { 
-    document.msExitFullscreen() 
-  } else if (document.mozFullscreenElement) { 
-    document.mozExitFullscreen() 
-  } else { 
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  } else if (document.webkitFullscreenElement) {
+    document.webkitExitFullscreen();
+  } else if (document.msFullscreenElement) {
+    document.msExitFullscreen();
+  } else if (document.mozFullscreenElement) {
+    document.mozExitFullScreen();
+  } else {
     if (elem.requestFullscreen) {
       elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) { /* Firefox */
+    } else if (elem.mozRequestFullScreen) {
+      /* Firefox */
       elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    } else if (elem.webkitRequestFullscreen) {
+      /* Chrome, Safari & Opera */
       elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    } else if (elem.msRequestFullscreen) {
+      /* IE/Edge */
       elem.msRequestFullscreen();
     }
   }
-  
 }
 
 var themeCount = 0;
-
 //THEME BUTTON
 
-d3
-  .select("body")
+d3.select("body")
   .append("div")
   .attr("id", "showMenu")
   .attr("class", "menuItem")
   .html("Menu")
   .style("color", "white")
-  .style("box-shadow", "0 0 10px white")
+  .style("border-color", "white")
+  .style("transform", "translate(0, -66px)")
+  .style("background-color", "rgb(170, 170, 170)")
   .on("click", showMenu);
 
-  function showMenu(){
-    d3.select(this).transition().duration(500)
-    .style("visibility", "hidden");
+function showMenu() {
+  let thisGuy = d3.select(this);
 
-    d3.select("#buttonsMenu").transition().duration(500)
-    .style("visibility", "visible");
+  if (thisGuy.classed("clicked")) {
+    thisGuy
+      .classed("clicked", false)
+      .transition()
+      .duration(600)
+      .style("transform", "translate(0px, -66px)");
+
+    d3.select("#buttonsMenu")
+      .transition()
+      .duration(600)
+      .style("transform", "translate(-218px, -105px)");
+  } else {
+    thisGuy
+      .classed("clicked", true)
+      .transition()
+      .duration(600)
+      .style("transform", "translate(218px, -66px)");
+
+    d3.select("#buttonsMenu")
+      .transition()
+      .duration(600)
+      .style("transform", "translate(0, -105px)");
   }
+}
 
-d3
-  .select("body")
+d3.select("body")
   .append("div")
   .attr("id", "buttonsMenu")
   .attr("class", "menuItem")
-  .style("box-shadow", "0 0 10px white");
+  .style("color", "white")
+  .style("border-color", "white")
+  .style("transform", "translate(-218px, -105px)")
+  .style("background-color", "rgb(170, 170, 170)");
 
-d3
-  .select("#buttonsMenu")
+d3.select("#buttonsMenu")
   .append("div")
   .attr("id", "themeButton")
   .html("Change to Light Mode")
-  .style("color", "#bbcce8")
+  .style("color", "#4292c6")
   .on("click", changeTheme);
 
 //CHANGE SOME STUFF WHEN THE THEME BUTTON IS PRESSED
 function changeTheme() {
   if (themeCount == 0) {
-
     d3.select("#background")
-    .transition().duration(1000)
+      .transition()
+      .duration(1000)
       .style("background-color", "white");
 
     d3.select("#globe")
-    .transition().duration(600)
+      .transition()
+      .duration(600)
       .attr("fill", "#bbcce8");
-    
-    setTimeout(
-      function (){
-        d3.selectAll("#showMenu, #themeButton, #buttonOfDoom, #closeMenu, #zoomIn, #zoomOut")
-      .style("color", "black");
 
-        d3.selectAll("#showMenu, #buttonsMenu")
-       .style("box-shadow", "0 0 10px black");
+    setTimeout(function() {
+      d3.selectAll(
+        "#showMenu, #buttonsMenu, #controls, #zoomIn, #zoomOut"
+      ).style("color", "black");
 
-        d3.select("#themeButton")
-        .html("Change to Dark Mode");
+      d3.select("#themeButton").html("Change to Dark Mode");
 
-      d3.selectAll("#zoomIn, #zoomOut")
-      .style("border", "solid 1px black");
+      d3.selectAll("#zoomIn, #zoomOut").style("border", "solid 1px black");
 
-      d3.select("#fullscreen")
-      .style("background-color", "black");
-      d3.selectAll("#fs1, #fs2, #fs3")
-      .style("background-color", "white");
-
-      }, 800);
+      d3.selectAll("#fs1, #fs2, #fs3, #fs4").style("border-color", "black");
+    }, 800);
 
     themeCount = 1;
-
   } else {
     d3.select("#background")
-    .transition().duration(1000)
+      .transition()
+      .duration(1000)
       .style("background-color", "black");
 
     d3.select("#globe")
-    .transition().duration(600)
+      .transition()
+      .duration(600)
       .attr("fill", "#070f1c");
-    
-    setTimeout(
-      function (){
-        d3.selectAll("#showMenu, #themeButton, #buttonOfDoom, #closeMenu, #zoomIn, #zoomOut")
-      .style("color", "white");
 
-        d3.selectAll("#showMenu, #buttonsMenu")
-       .style("box-shadow", "0 0 10px white");
+    setTimeout(function() {
+      d3.selectAll(
+        "#showMenu, #buttonsMenu, #controls, #zoomIn, #zoomOut"
+      ).style("color", "white");
 
-        d3.select("#themeButton")
-        .html("Change to Light Mode");
+      d3.select("#themeButton").html("Change to Light Mode");
 
-      d3.selectAll("#zoomIn, #zoomOut")
-      .style("border", "solid 1px white");
+      d3.selectAll("#zoomIn, #zoomOut").style("border", "solid 1px white");
 
-      d3.select("#fullscreen")
-      .style("background-color", "white");
-      d3.selectAll("#fs1, #fs2, #fs3")
-      .style("background-color", "black");
-
+      d3.selectAll("#fs1, #fs2, #fs3, #fs4").style("border-color", "white");
     }, 800);
 
     themeCount = 0;
@@ -150,10 +215,13 @@ var projectionButton = d3
   .select("#buttonsMenu")
   .append("div")
   .attr("id", "buttonOfDoom")
-  .on("click", function (){
-    d3.select(this).classed("clicked", true);
-    d3.select("#zoomIn").classed("clicked", false);
-    d3.select("#zoomOut").classed("clicked", false);
+  .on("click", function() {
+    projectionButton.on("click", null);
+    clearTheInterval();
+    refreshType = "projection";
+    setTimeout(function() {
+      resetOnClick();
+    }, 800);
     refresh();
   });
 
@@ -162,6 +230,35 @@ projectionButton
   .attr("id", "changeProjection")
   .html("Change Projection Type");
 
+d3.select("body")
+  .append("div")
+  .attr("id", "projectionDescription")
+  .html(
+    `As you may know, <s>I am a nerd</s> the Earth is a sphere. (Sorry flat earthers, but it's true) </br></br> This means that the Earth cannot be represented on a flat surface (also known as a map, duh) without some distortion. This distortion is caused by the method the map is created, which is called a <a href="https://en.wikipedia.org/wiki/Map_projection" target="_blank">map projection</a>, and there are many different types. Every type of map projection serves a different purpose and distorts attributes of objects on the Earth's surface by different amounts. </br></br> The area of an object, </br> the shape or outline of an object, </br> and the distance and angle between objects </br></br> are the main distortions to consider. <a href="https://bl.ocks.org/syntagmatic/ba569633d51ebec6ec6e" target="_blank">This is a really great interactive comparison</a> of map projections and the amount they distort the attributes stated above, which also conviniently is made using the same javascript library (d3.js) that I used to create my map. </br></br> `
+  )
+  .style("visibility", "hidden");
+
+d3.select("#projectionDescription")
+  .append("div")
+  .attr("id", "currentProjDescript")
+  .html(
+    `You are currently viewing the <a href="https://en.wikipedia.org/wiki/${buttonText}_projection" target="_blank">${buttonText}</a> projection.`
+  );
+
+d3.select("#changeProjection")
+  .append("div")
+  .attr("id", "projectionHelp")
+  .html("?")
+  .on("mouseover", () => {
+    let viz = document.getElementById("projectionDescription").style.visibility;
+
+    if (viz === "hidden") {
+      d3.select("#projectionDescription").style("visibility", "visible");
+    } else {
+      d3.select("#projectionDescription").style("visibility", "hidden");
+    }
+  });
+
 projectionButton
   .append("div")
   .attr("id", "projectionType")
@@ -169,99 +266,404 @@ projectionButton
 
 //OPACITY HIDE/SHOW TRIP BUTTONS AND FUNCTIONS
 
-d3
-  .select("#buttonsMenu")
-  .append("div")
-  .attr("id", "hideIceland")
-  .html("Hide Iceland Trip")
-  .style("color", "darkred")
-  .on("click", hideIceland);
-
-d3
-  .select("#buttonsMenu")
-  .append("div")
-  .attr("id", "hideWorldTrip")
-  .html("Hide World Trip")
-  .style("color", "#4292c6")
-  .on("click", hideWorldTrip);
-    
-var icelandOpacity = 1;
-
-function hideIceland(){
-  if (icelandOpacity === 1) {
-      icelandOpacity -= 1;
-    this.innerHTML = "Show Iceland Trip";
-  } else {
-      icelandOpacity += 1;
-    this.innerHTML = "Hide Iceland Trip";
-    }
-  d3.selectAll(".icelandTravelPath, .icelandPins")
-    .transition().duration(500)
-    .style("opacity", icelandOpacity);
-}
-
+var icelandOpacity = 0;
+var icelandVisibility = "hidden";
 var worldTripOpacity = 1;
+var worldTripVisibility = "visible";
+var viewingTrip = "World";
 
-function hideWorldTrip(){
-  if (worldTripOpacity === 1) {
-      worldTripOpacity -= 1;
-    this.innerHTML = "Show World Trip";
-  } else {
-      worldTripOpacity += 1;
-    this.innerHTML = "Hide World Trip";
-    }
-  d3.selectAll(".travelPath, .pin")
-    .transition().duration(500)
-    .style("opacity", worldTripOpacity);
-}
-
-//CLOSE THE MENU BOTTON AND FUNCTION
-  d3
-  .select("#buttonsMenu")
+d3.select("#buttonsMenu")
   .append("div")
-  .attr("id", "closeMenu")
-  .html("^")
-  .style("text-align", "center")
-  .style("font", "bold 18px verdana")
-  .style("color", "white")
-  .style("margin-top", "10px")
-  .style("cursor", "pointer")
-  .on("click", closeMenu); 
+  .attr("id", "viewAllTrips")
+  .html("Go To All Trips")
+  .on("click", () => {
+    clearTheInterval();
+    viewingTrip = "All";
+    changeViewingCountry();
+  });
 
-  function closeMenu(){
-    d3.select("#buttonsMenu").transition().duration(500)
+d3.select("#buttonsMenu")
+  .append("div")
+  .attr("id", "viewIceland")
+  .html("Go To Iceland Trip")
+  .style("color", "darkred")
+  .on("click", () => {
+    clearTheInterval();
+    viewingTrip = "Iceland";
+    changeViewingCountry();
+  });
+
+d3.select("#buttonsMenu")
+  .append("div")
+  .attr("id", "viewWorldTrip")
+  .html("Viewing World Trip")
+  .style("color", "#4292c6")
+  .style("border", "dashed 1px gray")
+  .on("click", () => {
+    clearTheInterval();
+    viewingTrip = "World";
+    changeViewingCountry();
+  });
+
+function changeViewingCountry() {
+  if (viewingTrip === "Iceland") {
+    icelandOpacity = 1;
+    icelandVisibility = "visible";
+    worldTripOpacity = 0;
+    worldTripVisibility = "hidden";
+
+    d3.select("#viewIceland")
+      .html("Viewing Iceland Trip")
+      .style("border", "dashed 1px gray");
+
+    d3.select("#viewWorldTrip")
+      .html("Go To World Trip")
+      .style("border", "none");
+
+    d3.select("#viewAllTrips")
+      .html("Go To All Trips")
+      .style("border", "none");
+
+    d3.selectAll("#tripControls")
+      .transition()
+      .duration(400)
+      .style("transform", "translateX(-100%)");
+  }
+
+  if (viewingTrip === "World") {
+    icelandOpacity = 0;
+    icelandVisibility = "hidden";
+    worldTripOpacity = 1;
+    worldTripVisibility = "visible";
+
+    d3.select("#viewWorldTrip")
+      .html("Viewing World Trip")
+      .style("border", "dashed 1px gray");
+
+    d3.select("#viewIceland")
+      .html("Go To Iceland Trip")
+      .style("border", "none");
+
+    d3.select("#viewAllTrips")
+      .html("Go To All Trips")
+      .style("border", "none");
+
+    d3.selectAll("#tripControls")
+      .transition()
+      .duration(400)
+      .style("transform", "translateX(0%)");
+  }
+
+  if (viewingTrip === "All") {
+    icelandOpacity = 1;
+    icelandVisibility = "visible";
+    worldTripOpacity = 1;
+    worldTripVisibility = "visible";
+
+    d3.select("#viewAllTrips")
+      .html("Viewing All Trips")
+      .style("border", "dashed 1px gray");
+
+    d3.select("#viewWorldTrip")
+      .html("Go To World Trip")
+      .style("border", "none");
+
+    d3.select("#viewIceland")
+      .html("Go To Iceland Trip")
+      .style("border", "none");
+
+    d3.selectAll("#tripControls")
+      .transition()
+      .duration(400)
+      .style("transform", "translateX(-100%)");
+  }
+
+  d3.selectAll(".icelandTravelPath, .icelandPins")
+    .transition()
+    .duration(500)
+    .style("opacity", icelandOpacity);
+
+  function changeIcelandVisibility() {
+    d3.selectAll(".icelandTravelPath, .icelandPins").style(
+      "visibility",
+      icelandVisibility
+    );
+  }
+
+  if (icelandVisibility === "visible") {
+    changeIcelandVisibility();
+  }
+
+  if (icelandVisibility === "hidden") {
+    setTimeout(() => {
+      changeIcelandVisibility();
+    }, 500);
+  }
+
+  d3.selectAll(".travelPath, .pin")
+    .transition()
+    .duration(500)
+    .style("opacity", worldTripOpacity);
+
+  function changeWorldVisibility() {
+    d3.selectAll(".travelPath, .pin").style("visibility", worldTripVisibility);
+  }
+
+  if (worldTripVisibility === "visible") {
+    changeWorldVisibility();
+  }
+  if (worldTripVisibility === "hidden") {
+    setTimeout(() => {
+      changeWorldVisibility();
+    }, 500);
+  }
+} //<---END OF CHANGE VIEWING COUNTRY FUNCTION
+
+//CLOSE THE MENU BUTTON AND FUNCTION
+// d3.select("#buttonsMenu")
+//   .append("div")
+//   .attr("id", "closeMenu")
+//   .html("^")
+//   .style("text-align", "center")
+//   .style("font", "bold 18px verdana")
+//   .style("color", "white")
+//   .style("margin-top", "10px")
+//   .style("cursor", "pointer")
+//   .on("click", closeMenu);
+
+function closeMenu() {
+  d3.select("#buttonsMenu")
+    .transition()
+    .duration(500)
     .style("visibility", "hidden");
 
-    d3.select("#showMenu").transition().duration(500)
+  d3.select("#showMenu")
+    .transition()
+    .duration(500)
     .style("visibility", "visible");
-  }
+}
 
 // ZOOM BUTTONS AND FUNCTIONS
 
-  let zoom = d3.select("body")
+let zoom = controls
   .append("div")
   .attr("id", "zoom")
   .attr("class", "menuItem");
 
-  zoom.append("div")
-  .attr("id", "zoomIn")
-  .html("+")
-  .on("click", function(){
-    d3.select("#buttonOfDoom").classed("clicked", false);
-    d3.select("#zoomOut").classed("clicked", false);
-    d3.select(this).classed("clicked", true);
-    refresh()
+zoom
+  .append("div")
+  .attr("id", "zoomFactor")
+  .html("Zoom")
+  .style("font", "12px verdana")
+  .style("margin-bottom", "4px")
+  .style("transform", "translateX(-3px)");
+
+zoom
+  .append("input")
+  .attr("id", "zoomInput")
+  .attr("value", "1")
+  .on("input", function() {
+    d3.select("#zoomInput").on("click", null);
+    clearTheInterval();
+    refreshType = "zoomArb";
+    setTimeout(function() {
+      resetOnClick();
+    }, 800);
+    refresh();
   });
 
-  zoom.append("div")
+zoom
+  .append("div")
+  .attr("id", "zoomIn")
+  .html("+")
+  .on("click", function() {
+    d3.select("#zoomIn").on("click", null);
+    clearTheInterval();
+    refreshType = "zoomIn";
+    setTimeout(function() {
+      resetOnClick();
+    }, 800);
+    refresh();
+  });
+
+zoom
+  .append("div")
   .attr("id", "zoomOut")
   .html("-")
-  .on("click", function(){
-    d3.select("#buttonOfDoom").classed("clicked", false);
-    d3.select("#zoomIn").classed("clicked", false);
-    d3.select(this).classed("clicked", true);
-    refresh()
+  .on("click", function() {
+    d3.select("#zoomOut").on("click", null);
+    clearTheInterval();
+    refreshType = "zoomOut";
+    setTimeout(function() {
+      resetOnClick();
+    }, 800);
+    refresh();
   });
+
+function resetOnClick() {
+  projectionButton.on("click", function() {
+    projectionButton.on("click", null);
+    clearTheInterval();
+    refreshType = "projection";
+    setTimeout(function() {
+      resetOnClick();
+    }, 800);
+    refresh();
+  });
+  d3.select("#zoomIn").on("click", function() {
+    d3.select("#zoomIn").on("click", null);
+    clearTheInterval();
+    refreshType = "zoomIn";
+    setTimeout(function() {
+      resetOnClick();
+    }, 800);
+    refresh();
+  });
+  d3.select("#zoomOut").on("click", function() {
+    d3.select("#zoomOut").on("click", null);
+    clearTheInterval();
+    refreshType = "zoomOut";
+    setTimeout(function() {
+      resetOnClick();
+    }, 800);
+    refresh();
+  });
+  d3.select("#zoomInput").on("click", function() {
+    d3.select("#zoomInput").on("input", null);
+    clearTheInterval();
+    refreshType = "zoomArb";
+    setTimeout(function() {
+      resetOnClick();
+    }, 800);
+    refresh();
+  });
+}
+
+//TIMEOUT AND INTERVAL VARIABLES
+let day = 1;
+let interval;
+let timeouts = [];
+let speed = 3000;
+
+function clearTheInterval() {
+  for (let i = 0; i < timeouts.length; i++) {
+    window.clearTimeout(timeouts[i]);
+  }
+  let mouseout = new Event("mouseout");
+  for (let i = day; i > day - 20; i--) {
+    let thisPin = document.querySelector(`.pin[data-day="${i}"]`);
+    if (thisPin !== null) {
+      thisPin.dispatchEvent(mouseout);
+    }
+  }
+
+  d3.select("#animationButton")
+    .classed("clicked", false)
+    .html("►");
+  clearInterval(interval);
+}
+
+let tripControls = d3
+  .select("body")
+  .append("div")
+  .attr("id", "tripControls")
+  .style("transform", "translateX(-100%)");
+//CREATE SLIDER
+let slider = tripControls
+  .append("input")
+  .attr("type", "range")
+  .attr("min", "1")
+  .attr("value", "1")
+  .attr("class", "slider")
+  .attr("id", "myRange");
+
+tripControls
+  .append("div")
+  .attr("id", "currentLocation")
+  .style("left", "-100%");
+//.style("opacity", 0);
+
+tripControls
+  .append("div")
+  .attr("id", "sliderLegendButton")
+  .on("mouseover", () => {
+    d3.select("#sliderLegend").style("visibility", "visible");
+  })
+  .on("mouseout", () => {
+    d3.select("#sliderLegend").style("visibility", "hidden");
+  });
+
+//CREATE BUDGET STUFF
+tripControls
+  .append("div")
+  .attr("id", "budgetButton")
+  .html("$")
+  .on("click", () => {
+    let visibility = document.getElementById("budgetBody").style.visibility;
+
+    if (visibility === "hidden") {
+      d3.select("#budgetButton")
+        .transition()
+        .duration(400)
+        .style("transform", "scale(2)");
+
+      d3.select("#budgetBody")
+        .style("transform", "scale(.01)")
+        .style("opacity", 1)
+        .style("visibility", "visible");
+
+      d3.select("#budgetBody")
+        .transition()
+        .duration(400)
+        .style("opacity", 1)
+        .style("transform", "scale(1)");
+    } else {
+      d3.select("#budgetButton")
+        .transition()
+        .duration(400)
+        .style("transform", "scale(1)");
+
+      d3.select("#budgetBody")
+        .transition()
+        .duration(400)
+        .style("transform", "scale(.01)")
+        .style("opacity", 0);
+
+      setTimeout(() => {
+        d3.select("#budgetBody").style("visibility", "hidden");
+      }, 500);
+    }
+  });
+
+//LEGEND SHOWN WHEN HOVERING ON SLIDER BUTTON
+d3.select("body")
+  .append("div")
+  .attr("id", "sliderLegend")
+  .style("visibility", "hidden");
+
+d3.select("#sliderLegend")
+  .append("div")
+  .attr("id", "sliderLegTitle")
+  .html("World Trip Slider Legend");
+
+//CONTAINER FOR COUNTRY COLORS
+tripControls.append("div").attr("class", "slider-background-container");
+
+//SLIDER ANIMATION
+tripControls.append("div").attr("id", "animationButton");
+
+tripControls
+  .append("div")
+  .attr("id", "animationSpeed")
+  .html("Speed")
+  .append("input")
+  .attr("value", "3")
+  .on("input", changeSpeed);
+
+function changeSpeed() {
+  clearTheInterval();
+  speed = this.value * 1000;
+}
 
 /***** ALL MATH FUNCTIONS ****/
 //_______Copied from Ivy Wang's "Drag to Rotate the Globe" --> http://bl.ocks.org/ivyywang/7c94cb5a3accd9913263
@@ -311,9 +713,9 @@ function quaternion(v0, v1) {
     if (w_len == 0) return;
 
     var theta = 0.5 * Math.acos(Math.max(-1, Math.min(1, dot(v0, v1)))),
-      qi = w[2] * Math.sin(theta) / w_len;
-    qj = -w[1] * Math.sin(theta) / w_len;
-    qk = w[0] * Math.sin(theta) / w_len;
+      qi = (w[2] * Math.sin(theta)) / w_len;
+    qj = (-w[1] * Math.sin(theta)) / w_len;
+    qk = (w[0] * Math.sin(theta)) / w_len;
     qr = Math.cos(theta);
 
     return theta && [qr, qi, qj, qk];
@@ -414,15 +816,6 @@ function eulerAngles(v0, v1, o0) {
 
 var width, height, canvas, projection, svg, r;
 
-// FUNCTION TO REDRAW EVERYTHING WHEN WINDOW SIZE CHANGES BUT TOO GLITCHY AT THE MOMENT
-
-// function resizeCanvas(){
-
-//     d3.selectAll("#tooltip").remove();
-//     d3.selectAll("#globe").remove();
-//     svg.selectAll("path.travelPath").remove();
-//     d3.select("#world").remove();
-
 // SET SIZE OF SVG EARTH BASED ON HEIGHT OR WIDTH, WHICHEVER IS SMALLER
 
 let windowWidth = window.innerWidth;
@@ -435,7 +828,8 @@ if (windowHeight <= windowWidth) {
 
 // ORTHOGRAPHIC PROJECTION TO START WITH
 
-projection = d3.geoOrthographic()
+projection = d3
+  .geoOrthographic()
   .translate([windowWidth / 2, windowHeight / 2])
   .scale(width / 2 - 20)
   .clipAngle(90)
@@ -444,18 +838,19 @@ projection = d3.geoOrthographic()
 
 if (Math.abs(window.orientation) === 90) {
   windowHeight *= 1.01;
-  setTimeout(()=>{alert("Turn to portrait mode and then back to landscape again.")}, 500);
+  setTimeout(() => {
+    alert("Turn to portrait mode and then back to landscape again.");
+  }, 500);
 }
-if (Math.abs(window.orientation) === 90 || window.orientation === 0) {
-  d3.select("#zoom")
-  .style("transform", "translate(0px, -150%) scale(2)");
-  d3.selectAll("#buttonsMenu, #showMenu")
-  .style("transform", "translate(50%, 100px) scale(2)");
-  d3.select("#fullscreen")
-  .style("visibility", "hidden");
-} 
+// if (Math.abs(window.orientation) === 90 || window.orientation === 0) {
+//   d3.select("#zoom").style("transform", "translate(0px, -150%) scale(2)");
+//   d3.selectAll("#buttonsMenu, #showMenu").style(
+//     "transform",
+//     "translate(50%, 100px) scale(2)"
+//   );
+//   d3.select("#fullscreen").style("visibility", "hidden");
+// }
 
- 
 // INITIALIZE EVERYTHING (RUNS AGAIN WHEN PROJECTION BUTTON IS CLICKED)
 
 initialize();
@@ -466,8 +861,7 @@ function initialize() {
 
   //CREATE BACKGROUND
 
-  d3
-    .select("body")
+  d3.select("body")
     .append("div")
     .attr("id", "background")
     .style("background-color", function() {
@@ -476,57 +870,29 @@ function initialize() {
     });
 
   // CREATE THE SVG
-                 		
-      
+
   var svg = d3
     .select("body")
     .append("svg")
     .attr("id", "world")
-    .attr("width", function(){
+    .attr("width", function() {
       if (window.chrome) {
-        return "100vw"
-      } else return "100%"
+        return "100vw";
+      } else return "100%";
     })
-    .attr("height", windowHeight);
-  //   .call(d3.zoom().on("zoom", zoomed));
-  
-  //  svg.on("mousedown.zoom", null)
-  //     .on("touchstart.zoom", null)
-  //     .on("touchmove.zoom", null)
-  //     .on("touchend.zoom", null);
-  
-  
-  // function zoomed() {
+    .attr("height", function() {
+      if (window.chrome) {
+        return "100vh";
+      } else return windowHeight;
+    });
 
-  // let k = d3.event.transform.k;
-  //   d3.selectAll("#world").attr("transform", "scale(" + k + ")");
-
-  //    d3.selectAll(".graticule").attr("stroke-width", 0.5 / k);
-  //    d3.selectAll(".pin").attr("stroke-width", 2 / k);
-  //    d3.selectAll(".travelPath").attr("stroke-width", 2 / k);
-  //    d3.selectAll(".land").attr("stroke-width", 1 / k);
-  //    d3.selectAll(".border").attr("stroke-width", 1 / k);
-  //  }
-  
   // QUEUE MY JSON FILES --> MAP, COUNTRY NAMES, AND TRAVEL INFO
 
   queue()
-    .defer(
-      d3.json,
-      "WorldCountries.json"
-    )
-    .defer(
-      d3.tsv,
-      "WorldCountryNames.tsv"
-    )
-    .defer(
-      d3.json,
-      "wequitourjobs.json"
-    )
-    .defer(
-      d3.json,
-      "/all"
-    )
+    .defer(d3.json, "WorldCountries.json")
+    .defer(d3.tsv, "WorldCountryNames.tsv")
+    .defer(d3.json, "wequitourjobs.json")
+    .defer(d3.json, "/all")
     .await(ready);
 
   function ready(error, world, names, data, dataIceland) {
@@ -543,12 +909,13 @@ function initialize() {
     svg.call(drag);
 
     var gpos0, o0;
-    
+
     function dragstarted() {
+      clearTheInterval();
 
       gpos0 = projection.invert(d3.mouse(this));
       o0 = projection.rotate();
-      
+
       svg
         .insert("path")
         .datum({ type: "Point", coordinates: gpos0 })
@@ -557,16 +924,19 @@ function initialize() {
     }
 
     function dragged() {
+      var gpos1;
 
-      var gpos1 = projection.invert(d3.mouse(this));
+      gpos1 = projection.invert(d3.mouse(this));
 
       o0 = projection.rotate();
 
       var o1 = eulerAngles(gpos0, gpos1, o0);
+      o1[2] = 0; //<--added tthis to keep the poles always in the center (north is always up unless you keep rotating until the globe is upside down)
+
       projection.rotate(o1);
 
       svg.selectAll(".point").datum({ type: "Point", coordinates: gpos1 });
-
+      //update all of the map features
       d3.selectAll(".graticule").attr("d", path);
       d3.selectAll(".land").attr("d", path);
       d3.selectAll(".border").attr("d", path);
@@ -576,31 +946,48 @@ function initialize() {
       svg.selectAll(".icelandTravelPath").attr("d", path);
     }
 
-    function dragended() {
+    function dragged2(input) {
+      //FOR SLIDER AND ANIMATION ROTATION
 
+      var gpos1;
+
+      gpos0 = input;
+      gpos1 = projection.invert([
+        window.innerWidth / 2,
+        window.innerHeight / 2
+      ]);
+
+      o0 = projection.rotate();
+
+      var o1 = eulerAngles(gpos0, gpos1, o0);
+      if (o1 === undefined) return;
+      o1[2] = 0; //<--added tthis to keep the poles always in the center (north is always up unless you keep rotating until the globe is upside down)
+
+      d3.transition()
+        .duration(speed / 4)
+        .tween("rotate", function() {
+          var r = d3.interpolate(o0, o1);
+          return function(t) {
+            projection.rotate(r(t));
+            d3.selectAll(".graticule").attr("d", path);
+            d3.selectAll(".land").attr("d", path);
+            d3.selectAll(".border").attr("d", path);
+            svg.selectAll(".pin").attr("d", path);
+            svg.selectAll(".icelandPins").attr("d", path);
+            svg.selectAll(".travelPath").attr("d", path);
+            svg.selectAll(".icelandTravelPath").attr("d", path);
+          };
+        });
+    }
+
+    function dragended() {
       svg.selectAll(".point").remove();
     }
 
-
-
-    // BLUR I HAD PLANNED FOR EARTH ATMOSPHERE EFFECT BUT COULDN'T FIGURE OUT
-
-    // var defs = svg.append("defs");
-
-    // var filter = defs.append("filter")
-    //     .attr("id", "drop-shadow")
-    //     .attr("height", "130%");
-
-    // filter.append("feGaussianBlur")
-    //     .attr("in", "SourceAlpha")
-    //     .attr("stdDeviation", 5)
-    //     .attr("result", "blur");
-
-    // SPHERE VARIABLE TO FILL IN OCEAN AND EARTH BORDER
+    // OCEAN AND EARTH BORDER
     var globe = { type: "Sphere" };
-    
-    d3
-      .select("#world")
+
+    d3.select("#world")
       .datum(globe)
       .append("path")
       .attr("id", "globe")
@@ -610,16 +997,20 @@ function initialize() {
         else return "#bbcce8";
       });
 
- // LAT, LONG, MERIDIAN LINES
+    // LAT, LONG, MERIDIAN LINES
     var graticule = d3.geoGraticule();
+    graticule.step([10, 11.75]);
+    graticuleObj = graticule.lines();
 
     svg
+      .selectAll(null)
+      .data(graticuleObj)
+      .enter()
       .append("path")
-      .datum(graticule)
       .attr("class", "graticule")
-      .attr("d", path)
-      .attr("stroke-width", 0.5);
-    
+      .attr("id", (d, i) => "graticule" + i)
+      .attr("d", path);
+
     // DRAW ALL THE COUNTRIES
     svg
       .append("g")
@@ -636,8 +1027,7 @@ function initialize() {
 
     // COUNTRY HOVER FUNCTIONS
     function showCountryName(d, i) {
-      d3
-        .select("#tooltip")
+      d3.select("#tooltip")
         .style("visibility", "visible")
         .html(function() {
           let countryName = names.filter(x => x.id == d.id);
@@ -645,7 +1035,8 @@ function initialize() {
         })
         .style("left", d3.event.pageX + 25 + "px")
         .style("top", d3.event.pageY - 28 + "px")
-        .style("box-shadow", "0px 0px 8px 4px"+this.getAttribute("stroke"));
+        .style("transform", "translate(0,0")
+        .style("box-shadow", "0px 0px 8px 4px" + this.getAttribute("stroke"));
 
       d3.select(this).classed("landHover", true);
     }
@@ -666,9 +1057,9 @@ function initialize() {
       .attr("class", "border")
       .attr("d", path);
 
-    //EMPTY ARRAYS TO PUSH TO IN A MINUTE
+    //LOCATIONS TO CREATE MAP POINTS AND PATHS FROM
 
-    var locations = [];
+    let locations = [];
 
     const formatMonth = [
       "January",
@@ -685,50 +1076,222 @@ function initialize() {
       "December"
     ];
 
-    // GO THROUGH JSON DATA AND CREATE OBJECTS WITH [LONGITUDE, LATITUDE] AND OTHER INFO
-    for (let i = 0; i < data.all_steps.length; i++) {
-      
-      // CONVERT JSON TIME DATA INTO MONTH, DAY, YEAR
+    // FOR LOOP TO SET LOCATIONS ARRAY INDEXES
+    for (let i = 1; i < data.all_steps.length; i++) {
+      // create date object with start time and get variables from it
 
       let utcTime = new Date(data.all_steps[i].start_time * 1000);
       let firstDay = new Date(data.all_steps[0].start_time * 1000);
-      let dayNum = Math.floor((utcTime - firstDay)/86400000); //difference (86,400,000 milliseconds in a day)
+      let dayNum = Math.floor((utcTime - firstDay) / 86400000); //difference (86,400,000 milliseconds in a day)
       let month = formatMonth[utcTime.getMonth()];
       let day = utcTime.getDate();
       let year = utcTime.getFullYear();
 
-      //OBJECT WITH COORDINATES AND PERTINANT INFO AS HTML TO BE PUT INTO TOOLTIP
+      //can't set days_at_location until we know time of next index
+      if (i > 1) {
+        locations[i - 1].days_at_location =
+          (utcTime.getTime() - locations[i - 1].date.getTime()) / 86400000;
+      }
 
+      // let imageArray;
+      // if (Array.isArray(data.all_steps[i].main_media_item_path)){
+      //   imageArray = data.all_steps[i].main_media_item_path
+      // } else imageArray = [data.all_steps[i].main_media_item_path];
+
+      //location object used throughout code
       locations[i] = {
+        date: utcTime,
+        day_of_trip: dayNum,
+        days_at_location: 0,
+        country: data.all_steps[i].location.detail,
+        city: data.all_steps[i].location.name,
         coordinates: [
           data.all_steps[i].location.lon,
           data.all_steps[i].location.lat
         ],
-        locationInfo: `World Trip, Day ${dayNum}</br>${data.all_steps[i].location.name}, ${
+        locationInfo: `${data.all_steps[i].location.name}, ${
           data.all_steps[i].location.detail
-        }</br>${month} ${day}, ${year}`,
-        locationImage: `<img src=${data.all_steps[i].main_media_item_path} />`
+        }</br><span>Arrived:</br>${month} ${day}, ${year}, day ${dayNum}</span>`,
+        locationImage: data.all_steps[i].main_media_item_path
       };
-    }
+    } //<---END OF FOR LOOP
 
-     //TRAVEL PATH ARRAY, POINT COORDINATES TO NEXT POINT, IF ITS THE LAST ONE, CONNECT TO FIRST ONE
-    let locationsPaths = [];
-    for (let i = 0; i < locations.length - 1; i++) {
-      if (i == locations.length - 1) {
-        locationsPaths.push([
-          locations[i].coordinates,
-          locations[0].coordinates
-        ]);
-      } else {
-        locationsPaths.push([
-          locations[i].coordinates,
-          locations[i + 1].coordinates
-        ]);
+    // FILL SLIDER CONTAINER WITH COLORED COUNTRY UNITS
+
+    let sliderRange = document.getElementById("myRange").offsetWidth;
+
+    let maxRange = locations[locations.length - 1].day_of_trip;
+
+    let sliderUnits = document.getElementsByClassName("slider-units");
+
+    if (sliderUnits.length === 0) {
+      let locationsList = [];
+
+      locations.forEach(x => {
+        d3.select(".slider-background-container")
+          .append("div")
+          .attr("class", "slider-units")
+          .attr("id", () => {
+            if (x.country === "United States") {
+              return "slider-United-States";
+            } else return "slider-" + x.country;
+          })
+          .style("width", (sliderRange / maxRange) * x.days_at_location + "px");
+
+        if (!locationsList.includes(x.country)) {
+          locationsList.push(x.country);
+        }
+      });
+
+      locationsList.forEach((x, i) => {
+        d3.select("#sliderLegendButton")
+          .append("div")
+          .style("height", "15px")
+          .style("width", "1px")
+          .attr("id", () => {
+            if (x === "United States") {
+              return "slider-United-States";
+            } else return "slider-" + x;
+          });
+
+        d3.select("#sliderLegend")
+          .append("div")
+          .attr("id", "sliderLegContainer" + i)
+          .style("display", "flex")
+          .style("margin", "5px 0 0 20px")
+          .style("font", "bold 14px verdana")
+          .append("div")
+          .style("height", "15px")
+          .style("width", "15px")
+          .attr("id", () => {
+            if (x === "United States") {
+              return "slider-United-States";
+            } else return "slider-" + x;
+          });
+
+        d3.select("#sliderLegContainer" + i)
+          .append("div")
+          .style("margin-left", "20px")
+          .html(x);
+      }); //<---END OF LOCATIONSLIST.FOREACH
+    } //<---END OF IF SLIDER UNITS LENGTH STATEMENT
+
+    //SLIDER ANIMATION WITH PLAY BUTTON
+
+    d3.select("#myRange")
+      .attr("max", maxRange)
+      .on("input", myRangeInput);
+
+    d3.select("#animationButton")
+      .html("►")
+      .on("click", () => {
+        if (d3.select("#animationButton").classed("clicked")) {
+          clearTheInterval();
+        } else {
+          d3.select("#animationButton")
+            .classed("clicked", true)
+            .html("❚❚");
+          worldTour();
+          interval = setInterval(function() {
+            worldTour();
+          }, speed);
+        }
+      });
+
+    function worldTour() {
+      if (day === 260 || day === undefined) {
+        day = 1;
       }
+      document.getElementById("myRange").value = day;
+      myRangeInput(document.getElementById("myRange"));
+      day++;
     }
 
-     //CONVERT LOCATION PATHS TO GEOJSON FORMAT
-    
+    //ROTATE EARTH AND ACTIVATE HOVER STATE ON SLIDER INPUT (OR ANIMATION)
+    function myRangeInput() {
+      let thisGuy = document.getElementById("myRange");
+
+      day = thisGuy.value; //if slider changed manually animation will continue from its new value
+
+      let filterLocation = locations.filter(
+        x => x.day_of_trip <= Number(thisGuy.value)
+      );
+
+      let lastLocation = filterLocation[filterLocation.length - 2];
+      let currentLocation = filterLocation[filterLocation.length - 1];
+
+      let select = d3.select("#currentLocation");
+
+      select
+        .style(
+          "left",
+          (thisGuy.offsetWidth / Number(thisGuy.max)) * Number(thisGuy.value) +
+            window.innerWidth / 8 +
+            "px"
+        )
+        .html("Day: <br><span>" + thisGuy.value + "</span>");
+
+      // select
+      //   .transition()
+      //   .duration(1)
+      //   .style("opacity", 1);
+
+      let oldCoords = currentLocation.coordinates.map(
+        x => Math.floor(x * 100) / 100
+      );
+      let newCoords = projection
+        .invert([window.innerWidth / 2, window.innerHeight / 2])
+        .map(x => Math.floor(x * 100) / 100);
+      var mouseout = new Event("mouseout");
+      var mouseover = new Event("mouseover");
+
+      if (newCoords[0] !== oldCoords[0] || newCoords[1] !== oldCoords[1]) {
+        if (lastLocation) {
+          document
+            .querySelectorAll(`.pin[data-day="${lastLocation.day_of_trip}"]`)
+            .forEach(x => x.dispatchEvent(mouseout));
+        }
+
+        dragged2(currentLocation.coordinates);
+        let delay = speed / 4 + 300;
+        let pins = document.querySelectorAll(
+          `.pin[data-day="${currentLocation.day_of_trip}"]`
+        );
+
+        if (pins.length === 1) {
+          setTimeout(function() {
+            document
+              .querySelector(`.pin[data-day="${currentLocation.day_of_trip}"]`)
+              .dispatchEvent(mouseover);
+          }, delay);
+        } else {
+          pins.forEach((x, i) => {
+            timeouts.push(
+              setTimeout(function() {
+                x.dispatchEvent(mouseover);
+              }, ((speed - delay) / pins.length) * i + delay)
+            );
+          });
+        } //<--END OF ELSE STATEMENT
+      } //<---END OF IF(NEW COORDS...) STATEMENT
+
+      // select
+      //   .transition()
+      //   .duration(6000)
+      //   .style("opacity", 0);
+    } //<---END OF MYRANGEINPUT FUNCTION
+
+    //TRAVEL PATH LINES
+    let locationsPaths = [];
+    for (let i = 1; i < locations.length - 1; i++) {
+      locationsPaths.push([
+        locations[i].coordinates,
+        locations[i + 1].coordinates
+      ]);
+    }
+
+    //geojson format
+
     function geoPaths(places) {
       return places.map(function(d) {
         return {
@@ -737,8 +1300,8 @@ function initialize() {
         };
       });
     }
-    
-    //CREATE TRAVEL PATH OF TRIP
+
+    //create the paths
 
     svg
       .append("g")
@@ -751,9 +1314,10 @@ function initialize() {
       .attr("stroke-width", "2px")
       .attr("fill", "none")
       .attr("d", path)
-      .style("opacity", worldTripOpacity);
+      .style("opacity", worldTripOpacity)
+      .style("visibility", worldTripVisibility);
 
- //CONVERT LOCATION POINTS TO GEOJSON FORMAT
+    //CONVERT LOCATION POINTS TO GEOJSON FORMAT
 
     function geoLocations(locations) {
       //radius
@@ -763,9 +1327,8 @@ function initialize() {
       //let a = Math.sqrt(Math.pow(r, 2) / 2);
 
       return locations.map(function(d) {
-          
         return {
-           //CONVERT LOCATION POINTS TO "CIRCLES" (OCTAGONS)
+          //CONVERT LOCATION POINTS TO OCTAGONS
           // type: "Polygon",
           // coordinates: [[
           //     [d[0] + r, d[1]],
@@ -781,7 +1344,24 @@ function initialize() {
           type: "Point",
           coordinates: d.coordinates,
           info: d.locationInfo,
-          image: d.locationImage
+          days_at_location: Math.floor(d.days_at_location),
+          day: d.day_of_trip,
+          image: function() {
+            let images = [];
+            d.locationImage.forEach(x => {
+              if (x.match(/\.mp4/)) {
+                images.push(`<video src=${x} controls>
+                  Your browser does not support the video tag.
+                </video>`);
+              } else {
+                images.push(`<img src=${x}>`);
+              }
+            });
+            return images;
+          },
+          image_thumbnail: `<img src=${
+            d.locationImage[0]
+          } style= "max-width:200px; max-height:200px; border-radius: 20px;" />`
         };
       });
     }
@@ -789,77 +1369,104 @@ function initialize() {
     // PLOT THE POINTS ON THE MAP
 
     svg
-      .selectAll(".pin")
+      .selectAll(null)
       .data(geoLocations(locations))
       .enter()
       .append("path")
       .attr("d", path)
       .attr("class", "pin")
       .attr("fill", "white")
+      .attr("data-day", (d, i) => {
+        if (i !== 0) return d.day;
+      })
       .attr("stroke", "#4292c6")
       .attr("stroke-width", "2px")
       .style("opacity", worldTripOpacity)
+      .style("visibility", worldTripVisibility)
       .on("mouseover", locationData)
       .on("mouseout", locationDataOff)
       .on("click", showImage);
 
-
-      // CREATE ARRAYS FOR ICELAND TRIP LOCATIONS AND PATHS
-      
-      icelandLocations = [];
-      for (let i =0; i < dataIceland.length; i++){
-        icelandLocations[i] = {
-          "coordinates": [
-            dataIceland[i].longitude, 
-            dataIceland[i].lattitude
-          ],
-          "locationInfo": `Iceland Trip, Day ${dataIceland[i].day}</br> ${dataIceland[i].city}, ${dataIceland[i].country}</br>${dataIceland[i].date}`,
-          "day": dataIceland[i].day,
-          "time": dataIceland[i].time,
-          "locationImage": "no image"
-          }
+    // CREATE ARRAYS FOR ICELAND TRIP LOCATIONS AND PATHS
+    dataIceland.sort((a, b) => {
+      let aTime = a.time.substring(0, 8).split(":");
+      let bTime = b.time.substring(0, 8).split(":");
+      if (a.date > b.date) {
+        return 1;
       }
-      icelandLocations.sort((a,b)=>{
-        let aTime = a.time.substring(0,8).split(":");
-        let bTime = b.time.substring(0,8).split(":");
-        if (a.day>b.day) {return 1};
-        if (a.day<b.day) {return -1};
-        if (Number(aTime[0])>Number(bTime[0])) {return 1};
-        if (Number(aTime[0])<Number(bTime[0])) {return -1};
-      })
-
-      let icelandLocationsPaths = [];
-      for (let i = 0; i < icelandLocations.length - 1; i++) {
-        if (i == icelandLocations.length - 1) {
-          icelandLocationsPaths.push([
-            icelandLocations[i].coordinates,
-            icelandLocations[0].coordinates
-          ]);
-        } else {
-          icelandLocationsPaths.push([
-            icelandLocations[i].coordinates,
-            icelandLocations[i + 1].coordinates
-          ]);
-        }
+      if (a.date < b.date) {
+        return -1;
       }
-     
-      //CREATE TRAVEL PATH AND PINS OF ICELAND TRIP
-  
-      svg
-        .append("g")
-        .selectAll(".IcelandTravelPath")
-        .data(geoPaths(icelandLocationsPaths))
-        .enter()
-        .append("path")
-        .attr("class", "icelandTravelPath")
-        .attr("stroke", "red")
-        .attr("stroke-width", "2px")
-        .attr("fill", "none")
-        .attr("d", path)
-        .style("opacity", icelandOpacity);
+      if (Number(aTime[0]) > Number(bTime[0])) {
+        return 1;
+      }
+      if (Number(aTime[0]) < Number(bTime[0])) {
+        return -1;
+      }
+    });
 
-     
-      svg
+    let icelandLocations = [];
+
+    for (let i = 0; i < dataIceland.length; i++) {
+      let utcTime = new Date(dataIceland[i].date + " " + dataIceland[i].time);
+
+      let dayNum;
+      if (i === 0) {
+        dayNum = 0;
+      } else {
+        dayNum =
+          (utcTime.getTime() - icelandLocations[0].date.getTime()) / 86400000;
+      }
+
+      icelandLocations[i] = {
+        country: dataIceland[i].country,
+        city: dataIceland[i].city,
+        coordinates: [dataIceland[i].longitude, dataIceland[i].lattitude],
+        locationInfo: `${dataIceland[i].city}, ${
+          dataIceland[i].country
+        }</br><span>Arrived:</br>${dataIceland[i].date}, day ${Math.round(
+          dayNum
+        )}`,
+        day_of_trip: dayNum,
+        days_at_location: 0,
+        date: utcTime,
+        time: dataIceland[i].time,
+        locationImage: dataIceland[i].image
+      };
+    }
+
+    for (let i = 0; i < icelandLocations.length - 1; i++) {
+      icelandLocations[i].days_at_location =
+        (icelandLocations[i + 1].date.getTime() -
+          icelandLocations[i].date.getTime()) /
+        86400000;
+    }
+
+    let icelandLocationsPaths = [];
+    for (let i = 0; i < icelandLocations.length - 1; i++) {
+      icelandLocationsPaths.push([
+        icelandLocations[i].coordinates,
+        icelandLocations[i + 1].coordinates
+      ]);
+    }
+
+    //CREATE TRAVEL PATH AND PINS OF ICELAND TRIP
+
+    svg
+      .append("g")
+      .selectAll(".IcelandTravelPath")
+      .data(geoPaths(icelandLocationsPaths))
+      .enter()
+      .append("path")
+      .attr("class", "icelandTravelPath")
+      .attr("stroke", "red")
+      .attr("stroke-width", "2px")
+      .attr("fill", "none")
+      .attr("d", path)
+      .style("opacity", icelandOpacity)
+      .style("visibility", icelandVisibility);
+
+    svg
       .selectAll(".icelandPins")
       .data(geoLocations(icelandLocations))
       .enter()
@@ -870,11 +1477,12 @@ function initialize() {
       .attr("stroke", "#ff0000")
       .attr("stroke-width", "2px")
       .style("opacity", icelandOpacity)
+      .style("visibility", icelandVisibility)
       .on("mouseover", locationData)
       .on("mouseout", locationDataOff)
       .on("click", showImage);
 
-      // PIN HOVER AND CLICK FUNCTIONS
+    // FUNCTIONS WHEN PIN IS CLICKED
 
     function showImage(d, i) {
       let container = d3
@@ -883,20 +1491,60 @@ function initialize() {
         .attr("id", "imageContainer")
         .on("click", hideImage);
 
-      container
-        .append("div")
-        .attr("id", "stepImage")
-        .html(d.image);
-    }
+      d.image().forEach((image, index) => {
+        container
+          .append("div")
+          .attr("id", "stepImage" + index)
+          .attr("class", "stepImage")
+          .style("opacity", () => {
+            if (index === 0) {
+              return 1;
+            } else return 0;
+          })
+          .html(image);
+      });
+
+      if (d.image().length > 1) {
+        d3.select("body")
+          .append("div")
+          .attr("id", "nextImage")
+          .html(">")
+          .on("click", () => {
+            nextImage("next");
+          });
+        d3.select("body")
+          .append("div")
+          .attr("id", "prevImage")
+          .html("<")
+          .on("click", () => {
+            nextImage("prev");
+          });
+      }
+      let count = 0;
+      function nextImage(input) {
+        d3.select("#stepImage" + count)
+          .transition()
+          .duration(400)
+          .style("opacity", 0);
+        if (input === "next") {
+          count++;
+        } else if (input === "prev") {
+          count--;
+        }
+        d3.select("#stepImage" + count)
+          .transition()
+          .duration(400)
+          .style("opacity", 1);
+      }
+    } //<---END OF SHOW IMAGE
 
     function hideImage() {
-      d3.select("#imageContainer").remove();
+      d3.selectAll("#imageContainer, #nextImage, #prevImage").remove();
     }
 
-    // CIRCLE HOVER FUNCTIONS
+    // PIN HOVER FUNCTIONS
 
     function locationData(d, i) {
-      
       let thisX = Number(this.getAttribute("d").split(/[MLm,]/)[1]);
       let thisY = Number(this.getAttribute("d").split(/[MLm,]/)[2]);
 
@@ -907,60 +1555,72 @@ function initialize() {
 
       d3.select(this).classed("pinAfter", true);
 
-      d3
-        .select(".pinAfter")
+      d3.select(".pinAfter")
         .style("transform-origin", `${thisX}px  ${thisY}px`)
         .style("animation-name", "pinGrow");
 
-        let color = this.getAttribute("stroke");
-      
-      d3
-        .select("#tooltip")
-        .attr("class", "showBefore")
-        .style("visibility", "visible")
-        .html(d.info)
-        .style("left", x + 87 + "px")
-        .style("top", y - 30 + "px")
-        .style("border-color", color)
-        .style("box-shadow", "0px 0px 8px 4px"+color);
+      let color = this.getAttribute("stroke");
 
-          
+      d3.select(".pinAfter").attr("fill", "orange");
+      d3.select("#tooltip")
+        //.classed("showBefore", true)
+        .style("visibility", "visible")
+        .html(
+          `${d.info}</br><span>Days at location: ${d.days_at_location}</span>`
+        )
+        .style("left", x + "px")
+        .style("transform", "translate(50px, -50%")
+        .style("top", y + "px")
+        .style("border-color", color)
+        .style("box-shadow", "0px 0px 8px 4px" + color);
+
+      //setTimeout(function(){
+
+      d3.select("#tooltip")
+        .append("div")
+        .attr("id", "tooltip-thumbnail-image")
+        .html(d.image_thumbnail)
+        .style("border-color", color);
+      // .style("box-shadow", "0px 0px 8px 4px"+color);
+
+      //}, 400)
     }
 
     function locationDataOff(d, i) {
-      d3.selectAll(".pinAfter").style("animation-name", "pinShrink");
+      d3.selectAll(".pinAfter")
+        .attr("fill", "white")
+        .style("animation-name", "pinShrink");
 
-      d3.selectAll("#tooltipLine").remove();
-
-      d3
-        .select("#tooltip")
-        .attr("class", "dontshowBefore")
+      d3.select("#tooltip")
+        .classed("showBefore", false)
         .style("visibility", "hidden");
     }
 
-    // FUNCTION FOR CREATING  NEW FULL SCREEN COUNTRY
+    // FUNCTION WHEN COUNTRY IS CLICKED
 
     function goToCountry(d, i) {
       let newProj;
 
       if (d.id == 840) {
-        newProj = d3.geoAlbersUsa()
+        newProj = d3
+          .geoAlbersUsa()
           .scale(width)
           .translate([width / 2, width / 2]);
       } else {
-        newProj = d3.geoOrthographic()
+        newProj = d3
+          .geoOrthographic()
           .scale(
-              d.id == 643  // RUSSIA
+            d.id == 643 // RUSSIA
               ? width * 0.8
               : d.id == 152 || d.id == 32 || d.id == 360 || d3.geoArea(d) > 0.1 //CHILE, ARGENTINA, AND INDONESIA ARE AWKWARD
-              ? width
-              : d.id == 356 //INDIA 
-              ? width * 1.5 
-              : d3.geoArea(d) > 0.03 
-              ? width * 2 
-              : d3.geoArea(d) > 0.008 //BECAUSE VIETNAM IS .077
-              ? width * 3 
-              : width * 5
+                ? width
+                : d.id == 356 //INDIA
+                  ? width * 1.5
+                  : d3.geoArea(d) > 0.03
+                    ? width * 2
+                    : d3.geoArea(d) > 0.008 //BECAUSE VIETNAM IS .077
+                      ? width * 3
+                      : width * 5
           )
           .translate([width / 2, width / 2])
           .rotate([-d3.geoCentroid(d)[0], -d3.geoCentroid(d)[1]]);
@@ -972,8 +1632,7 @@ function initialize() {
         world,
         world.objects.countries.geometries[i]
       );
-      d3
-        .select("body")
+      d3.select("body")
         .append("div")
         .attr("id", "svg2")
         .style("height", "100vh")
@@ -1006,13 +1665,12 @@ function initialize() {
         .append("div")
         .attr("class", "countryFocusInfo");
 
+      let countryName = names.filter(x => x.id == d.id);
+
       textBox
         .append("div")
         .attr("id", "countryFocusName")
-        .html(function() {
-          let countryName = names.filter(x => x.id == d.id);
-          return countryName[0].name;
-        });
+        .html(countryName[0].name);
 
       let closeButton = d3
         .select("body")
@@ -1030,12 +1688,12 @@ function initialize() {
         d3.select(".countryFocusInfo").remove();
       }
 
-      let locationFilter = locations.filter(x =>
-        d3.geoContains(d, x.coordinates)
+      let locationFilter = locations.filter(
+        x => x.country === countryName[0].name
       );
-      
-      let icelandLocationFilter = icelandLocations.filter(x =>
-        d3.geoContains(d, x.coordinates)
+
+      let icelandLocationFilter = icelandLocations.filter(
+        x => x.country === countryName[0].name
       );
 
       svg2
@@ -1051,8 +1709,21 @@ function initialize() {
         .on("mouseover", locationData)
         .on("mouseout", locationDataOff)
         .on("click", showImage);
-      
-            svg2
+
+      // svg2
+      // .append("g")
+      // .selectAll(".newTravelPath")
+      // .data(geoPaths(locationsPaths))
+      // .enter()
+      // .append("path")
+      // .attr("class", "newTravelPath")
+      // .attr("stroke", "#4292c6")
+      // .attr("stroke-width", "2px")
+      // .attr("fill", "none")
+      // .attr("d", newPath)
+      // .style("opacity", worldTripOpacity);
+
+      svg2
         .selectAll(".newIcelandPin")
         .data(geoLocations(icelandLocationFilter))
         .enter()
@@ -1079,17 +1750,535 @@ function initialize() {
     } // <--- END OF GOTOCOUNTRY FUNCTION
 
     // CREATE TOOLTIP
-    d3
-      .select("body")
+    d3.select("body")
       .append("div")
       .attr("id", "tooltip")
       .style("z-index", "99");
-  } // <--- END OF READY FUNCTION
-} //<------END OF INITIALIZE FUNCTION
+  } // <--- END OF READY FUNCTION_________________
+} //<------END OF INITIALIZE FUNCTION_________________________________
+
+//BUDGET STUFF_________________________________
+function doStuff(err, data) {
+  let budgetInfo = data.Sheet1;
+
+  // SPLIT OUT ALL OF THE COUNTRIES
+
+  let countriesArray = [];
+
+  budgetInfo.forEach(d => {
+    if (countriesArray.indexOf(d.Country) === -1) {
+      countriesArray.push(d.Country);
+    }
+  });
+
+  // TURN ARRAY OF COUNTRIE INTO OBJECTS WITH PERTINENT INFO
+
+  countriesArray.forEach((d, i) => (countriesArray[i] = dailyAverage(d)));
+
+  function dailyAverage(country) {
+    let budgetCountry = budgetInfo.filter(d => d.Country === country);
+    let totalCountry = 0;
+    budgetCountry.forEach(d => (totalCountry += d.Cost));
+
+    let categoryTotals = {};
+    budgetCountry.forEach(d => {
+      let category = d["Category "];
+      categoryTotals[category] = 0;
+    });
+
+    budgetCountry.forEach(d => {
+      let category = d["Category "];
+      categoryTotals[category] += d.Cost;
+      categoryTotals[category] =
+        Math.round(categoryTotals[category] * 100) / 100;
+    });
+
+    let totalAirfare = 0;
+    budgetCountry.forEach(d => {
+      if (d["Category "] === "Airfare") {
+        totalAirfare += d.Cost;
+      }
+    });
+
+    let firstDate = new Date(budgetCountry[0].Date);
+
+    let lastDate = new Date(budgetCountry[budgetCountry.length - 1].Date);
+    let daysNum = (lastDate.getTime() - firstDate.getTime()) / 86400000;
+    let daysNum2 = [];
+
+    budgetCountry.forEach(d => {
+      if (daysNum2.indexOf(d.Date) === -1) {
+        daysNum2.push(d.Date);
+      }
+    });
+
+    return {
+      country: country,
+      total_expenses: Math.floor(totalCountry * 100) / 100,
+      total_airfare: totalAirfare,
+      category_totals: categoryTotals,
+      days_in_country: daysNum2.length,
+      date_range: { from: firstDate.toString(), to: lastDate.toString() },
+      daily_average: Math.floor((totalCountry / daysNum2.length) * 100) / 100,
+      first_day: firstDate.getTime()
+    };
+  }
+
+  //CREATE SORTING BUTTONS
+
+  d3.select("body")
+    .append("div")
+    .attr("id", "budgetBody")
+    .style("visibility", "hidden");
+
+  let buttonsContainer = d3
+    .select("#budgetBody")
+    .append("div")
+    .attr("id", "buttonsContainer");
+
+  buttonsContainer
+    .append("div")
+    .classed("sortButton sortByAvg", true)
+    .on("click", sortByAvg)
+    .append("div")
+    .html("Daily Average");
+
+  buttonsContainer
+    .append("div")
+    .classed("sortButton sortChrono", true)
+    .on("click", sortChrono)
+    .style("box-shadow", "0 0 10px red")
+    .append("div")
+    .html("Chronologically");
+
+  buttonsContainer
+    .append("div")
+    .classed("sortButton sortTotExp", true)
+    .on("click", sortTotExp)
+    .append("div")
+    .html("Total Expenses");
+
+  buttonsContainer
+    .append("div")
+    .classed("sortButton sortDays", true)
+    .on("click", sortDays)
+    .append("div")
+    .html("Days in Country");
+
+  //CHOOSE SORTING PARAMETER AND EXECUTE sortStuff()
+
+  let sortType = "chronological";
+
+  function sortChrono() {
+    countriesArray.sort((a, b) => {
+      if (a.first_day < b.first_day) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+
+    d3.selectAll(".sortButton").style("box-shadow", "none");
+    d3.select(".sortChrono").style("box-shadow", "0 0 10px red");
+
+    sortType = "chronological";
+    sortStuff();
+  }
+
+  function sortByAvg() {
+    countriesArray.sort((a, b) => {
+      if (a.daily_average < b.daily_average) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+
+    d3.selectAll(".sortButton").style("box-shadow", "none");
+    d3.select(".sortByAvg").style("box-shadow", "0 0 10px red");
+
+    sortType = "average";
+    sortStuff();
+  }
+
+  function sortTotExp() {
+    countriesArray.sort((a, b) => {
+      if (a.total_expenses < b.total_expenses) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+
+    d3.selectAll(".sortButton").style("box-shadow", "none");
+    d3.select(".sortTotExp").style("box-shadow", "0 0 10px red");
+
+    sortType = "total expenses";
+    sortStuff();
+  }
+
+  function sortDays() {
+    countriesArray.sort((a, b) => {
+      if (a.days_in_country < b.days_in_country) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+
+    d3.selectAll(".sortButton").style("box-shadow", "none");
+    d3.select(".sortDays").style("box-shadow", "0 0 10px red");
+
+    sortType = "days in country";
+    sortStuff();
+  }
+
+  //DO THE SORTING WITH ANIMATION____________
+
+  function sortStuff() {
+    d3.select("#budgetTooltip").remove();
+
+    setTimeout(function() {
+      d3.selectAll(".barName").remove();
+    }, 400);
+
+    d3.selectAll(".bars")
+      .transition()
+      .duration(600)
+      .style("width", "1px");
+
+    setTimeout(function() {
+      removeBars();
+    }, 700);
+
+    function removeBars() {
+      d3.selectAll(".barContainer").remove();
+      createBars();
+    }
+  }
+
+  //CONTAINER AND FUNCTION CREATING BAR CHART WITH ANIMATION____________
+
+  let container = d3
+    .select("#budgetBody")
+    .append("div")
+    .attr("id", "budgetContainer");
+
+  let colors = d3.schemeSpectral[7];
+
+  function createBars() {
+    container
+      .selectAll(null)
+      .data(countriesArray)
+      .enter()
+      .append("div")
+      .attr("class", "barContainer")
+      .style("margin-top", "15px")
+      .append("div")
+      .attr("class", "bars")
+      .style("background-color", "gray")
+      .style("width", "1px")
+      .style("height", "20px")
+      .on("mouseover", showTooltip)
+      .on("click", showTooltip);
+
+    container
+      .append("div")
+      .attr("id", "budgetTooltip")
+      .style("visibility", "hidden");
+
+    let categories = [
+      "Country",
+      "Date-Range",
+      "Totals",
+      "Airfare",
+      "Food",
+      "Transportation",
+      "Accommodation",
+      "Entertainment",
+      "Beer",
+      "Other"
+    ];
+
+    categories.forEach(x => {
+      d3.select("#budgetTooltip")
+        .append("div")
+        .classed("tooltip-" + x, true);
+    });
+
+    d3.select("#budgetTooltip").on("click", hideTooltip);
+
+    d3.selectAll(".bars")
+      .append("div")
+      .attr("class", "airfare")
+      .style("height", "30px")
+      .style("width", d => {
+        if (sortType === "total expenses") {
+          return d.total_airfare / 3 + "px";
+        } else if (sortType === "days in country") {
+          return (
+            d.days_in_country * (d.total_airfare / d.total_expenses) * 11 + "px"
+          );
+        } else return (d.total_airfare / d.days_in_country) * 6 + "px";
+      })
+      .style("background-color", colors[0]);
+
+    d3.selectAll(".bars")
+      .append("div")
+      .attr("class", "food")
+      .style("height", "30px")
+      .style("width", d => {
+        if (sortType === "total expenses") {
+          return d.category_totals.Food / 3 + "px";
+        } else if (sortType === "days in country") {
+          return (
+            d.days_in_country *
+              (d.category_totals.Food / d.total_expenses) *
+              11 +
+            "px"
+          );
+        } else return (d.category_totals.Food / d.days_in_country) * 6 + "px";
+      })
+      .style("background-color", colors[1]);
+
+    d3.selectAll(".bars")
+      .append("div")
+      .attr("class", "transportation")
+      .style("height", "30px")
+      .style("width", d => {
+        if (sortType === "total expenses") {
+          return d.category_totals.Transportation / 3 + "px";
+        } else if (sortType === "days in country") {
+          return (
+            d.days_in_country *
+              (d.category_totals.Transportation / d.total_expenses) *
+              11 +
+            "px"
+          );
+        } else
+          return (
+            (d.category_totals.Transportation / d.days_in_country) * 6 + "px"
+          );
+      })
+      .style("background-color", colors[2]);
+
+    d3.selectAll(".bars")
+      .append("div")
+      .attr("class", "accommodation")
+      .style("height", "30px")
+      .style("width", d => {
+        if (sortType === "total expenses") {
+          return d.category_totals.Accommodation / 3 + "px";
+        } else if (sortType === "days in country") {
+          return (
+            d.days_in_country *
+              (d.category_totals.Accommodation / d.total_expenses) *
+              11 +
+            "px"
+          );
+        } else
+          return (
+            (d.category_totals.Accommodation / d.days_in_country) * 6 + "px"
+          );
+      })
+      .style("background-color", colors[3]);
+
+    d3.selectAll(".bars")
+      .append("div")
+      .attr("class", "entertainment")
+      .style("height", "30px")
+      .style("width", d => {
+        if (sortType === "total expenses") {
+          return d.category_totals.Entertainment / 3 + "px";
+        } else if (sortType === "days in country") {
+          return (
+            d.days_in_country *
+              (d.category_totals.Entertainment / d.total_expenses) *
+              11 +
+            "px"
+          );
+        } else
+          return (
+            (d.category_totals.Entertainment / d.days_in_country) * 6 + "px"
+          );
+      })
+      .style("background-color", colors[4]);
+
+    d3.selectAll(".bars")
+      .append("div")
+      .attr("class", "alcohol")
+      .style("height", "30px")
+      .style("width", d => {
+        if (sortType === "total expenses") {
+          return d.category_totals.Beer / 3 + "px";
+        } else if (sortType === "days in country") {
+          return (
+            d.days_in_country *
+              (d.category_totals.Beer / d.total_expenses) *
+              11 +
+            "px"
+          );
+        } else return (d.category_totals.Beer / d.days_in_country) * 6 + "px";
+      })
+      .style("background-color", colors[5]);
+
+    d3.selectAll(".bars")
+      .append("div")
+      .attr("class", "other")
+      .style("height", "30px")
+      .style("width", d => {
+        if (sortType === "total expenses") {
+          return d.category_totals.Other / 3 + "px";
+        } else if (sortType === "days in country") {
+          return (
+            d.days_in_country *
+              (d.category_totals.Other / d.total_expenses) *
+              11 +
+            "px"
+          );
+        } else return (d.category_totals.Other / d.days_in_country) * 6 + "px";
+      })
+      .style("background-color", colors[6]);
+
+    //ANIMATE TO CORRECT WIDTH
+    d3.selectAll(".bars")
+      .transition()
+      .duration(600)
+      .style("width", d => {
+        if (sortType === "total expenses") {
+          return d.total_expenses / 3 + "px";
+        } else if (sortType === "days in country") {
+          return d.days_in_country * 11 + "px";
+        } else return d.daily_average * 6 + "px";
+      });
+
+    setTimeout(function() {
+      d3.selectAll(".bars")
+        .append("div")
+        .attr("class", "barName")
+        .style("margin-left", "5px")
+        .html(d => `${d.country}`);
+    }, 600);
+  }
+
+  //RUN THE FUNCTION
+  createBars();
+
+  //TOOLTIP FUNCTIONS
+
+  function showTooltip(d) {
+    let from =
+      d.date_range.from.substring(4, 10) +
+      "," +
+      d.date_range.from.substring(10, 15);
+    let to =
+      d.date_range.to.substring(4, 10) +
+      "," +
+      d.date_range.to.substring(10, 15);
+
+    d3.selectAll(".bars")
+      .style("border", "none")
+      .style("box-shadow", "none");
+
+    d3.select(this)
+      .style("border", "dashed 1px black")
+      .style("box-shadow", "0 0 10px black");
+
+    d3.select("#budgetTooltip").style("visibility", "visible");
+
+    d3.select(".tooltip-Country").html(() => d.country);
+
+    d3.select(".tooltip-Date-Range").html(() => from + " - " + to);
+
+    d3.select(".tooltip-Totals").html(
+      () =>
+        `Total Expenses: $${d.total_expenses}</br>Days in Country: ${
+          d.days_in_country
+        }</br>Daily Average: $${d.daily_average}`
+    );
+
+    d3.select(".tooltip-Airfare")
+      .style("background-color", colors[0])
+      .html(
+        () =>
+          `Airfare: $${d.total_airfare} (${Math.floor(
+            (d.total_airfare / d.total_expenses) * 10000
+          ) / 100}%)`
+      );
+
+    d3.select(".tooltip-Food")
+      .style("background-color", colors[1])
+      .html(
+        () =>
+          `Food: $${d.category_totals.Food} (${Math.floor(
+            (d.category_totals.Food / d.total_expenses) * 10000
+          ) / 100}%)`
+      );
+
+    d3.select(".tooltip-Accommodation")
+      .style("background-color", colors[3])
+      .html(
+        () =>
+          `Accommodation: $${d.category_totals.Accommodation} (${Math.floor(
+            (d.category_totals.Accommodation / d.total_expenses) * 10000
+          ) / 100}%)`
+      );
+
+    d3.select(".tooltip-Transportation")
+      .style("background-color", colors[2])
+      .html(
+        () =>
+          `Transportation: $${d.category_totals.Transportation} (${Math.floor(
+            (d.category_totals.Transportation / d.total_expenses) * 10000
+          ) / 100}%)`
+      );
+
+    d3.select(".tooltip-Entertainment")
+      .style("background-color", colors[4])
+      .html(
+        () =>
+          `Entertainment: $${d.category_totals.Entertainment} (${Math.floor(
+            (d.category_totals.Entertainment / d.total_expenses) * 10000
+          ) / 100}%)`
+      );
+
+    d3.select(".tooltip-Beer")
+      .style("background-color", colors[5])
+      .html(
+        () =>
+          ` Alcohol: $${d.category_totals.Beer} (${Math.floor(
+            (d.category_totals.Beer / d.total_expenses) * 10000
+          ) / 100}%)`
+      );
+
+    d3.select(".tooltip-Other")
+      .style("background-color", colors[6])
+      .html(() => {
+        if (d.category_totals.Other) {
+          return `Other: $${d.category_totals.Other} (${Math.floor(
+            (d.category_totals.Other / d.total_expenses) * 10000
+          ) / 100}%)`;
+        } else return "Other: $0 (0%)";
+      });
+  }
+
+  function hideTooltip() {
+    d3.selectAll(".bars")
+      .style("border", "none")
+      .style("box-shadow", "none");
+
+    d3.select("#budgetTooltip").style("visibility", "hidden");
+  }
+} //END OF doStuff()
+
+//GET BUDGET JSON DATA AND RUN doStuff()
+
+d3.json("/World Trip Budget Formatted .json", doStuff);
+
+//END OF BUDGET STUFF__________________________
 
 //COUNTER FOR PROJECTION TYPE
 var count = 0;
-var zoomCount = 1;
 
 // REFRESH RUNS WHEN PROJECTION BUTTON IS PRESSED
 function refresh() {
@@ -1102,119 +2291,133 @@ function refresh() {
   let zoomIn = document.getElementById("zoomIn");
   let zoomOut = document.getElementById("zoomOut");
 
-  if (doom.classList.contains("clicked")){
+  let zoomInputVal = document.getElementById("zoomInput");
+  let zoomCount = Number(zoomInputVal.value);
+
+  if (refreshType === "projection") {
     count++;
   }
-  if (zoomIn.classList.contains("clicked")){
-    zoomCount *= 1.3 ;
+  if (refreshType === "zoomIn") {
+    zoomCount = Math.round(zoomCount * 13) / 10;
+    zoomInputVal.value = zoomCount;
   }
-  if (zoomOut.classList.contains("clicked")){
-    zoomCount /= 1.3 ;
+  if (refreshType === "zoomOut") {
+    zoomCount = Math.round((zoomCount / 1.3) * 10) / 10;
+    zoomInputVal.value = zoomCount;
   }
 
-  
   // CHANGE PROJECTION TYPE
-  if (count == 0) {
+  if (count === 0) {
     buttonText = "Orthographic";
 
     d3.select("#projectionType").html(buttonText);
 
-    projection = d3.geoOrthographic()
+    projection = d3
+      .geoOrthographic()
       .translate([windowWidth / 2, windowHeight / 2])
-      .scale((width / 2 - 20)*zoomCount)
+      .scale((width / 2 - 20) * zoomCount)
       .rotate(center)
       .clipAngle(90)
       .precision(0.6);
   }
-  
-  if (count == 1) {
+
+  if (count === 1) {
     buttonText = "Natural Earth";
 
     d3.select("#projectionType").html(buttonText);
 
-    projection = d3.geoNaturalEarth1()
+    projection = d3
+      .geoNaturalEarth1()
       .translate([windowWidth / 2, windowHeight / 2])
-      .scale((width / 5 - 20)*zoomCount)
+      .scale((width / 5 - 20) * zoomCount)
       .rotate(center)
       .precision(0.1);
   }
 
-  if (count == 2) {
-    buttonText = "Baker Dinomic";
+  //   if (count === 2) {
+  //     buttonText = "Baker Dinomic";
 
-    d3.select("#projectionType").html(buttonText);
+  //     d3.select("#projectionType").html(buttonText);
 
-    projection = d3.geoBaker()
-      .scale((width / 6 - 20)*zoomCount)
-      .translate([windowWidth / 2, windowHeight / 2])
-      .rotate(center)
-      .precision(0.1);
-  }
+  //     projection = d3.geoBaker()
+  //       .scale((width / 6 - 20)*zoomCount)
+  //       .translate([windowWidth / 2, windowHeight / 2])
+  //       .rotate(center)
+  //       .precision(0.1);
+  //   }
 
-  if (count == 3) {
+  if (count === 2) {
     buttonText = "Mollweide";
 
     d3.select("#projectionType").html(buttonText);
 
-    projection = d3.geoMollweide()
-      .scale((width / 5 - 30)*zoomCount)
+    projection = d3
+      .geoMollweide()
+      .scale((width / 5 - 30) * zoomCount)
       .translate([windowWidth / 2, windowHeight / 2])
       .rotate(center)
       .precision(0.1);
   }
 
-  if (count == 4) {
+  if (count === 3) {
     buttonText = "Stereographic";
 
     d3.select("#projectionType").html(buttonText);
 
-    projection = d3.geoStereographic()
-    .scale((width/5)*zoomCount)
-    .translate([windowWidth / 2, windowHeight / 2])
-    .rotate(center)
-    .clipAngle(180 - 1e-4)
-    .clipExtent([[0, 0], [windowWidth, windowHeight]])
-    .precision(0.1);
+    projection = d3
+      .geoStereographic()
+      .scale((width / 5) * zoomCount)
+      .translate([windowWidth / 2, windowHeight / 2])
+      .rotate(center)
+      .clipAngle(180 - 1e-4)
+      .clipExtent([[0, 0], [windowWidth, windowHeight]])
+      .precision(0.1);
   }
-  
-  if (count == 5) {
-    buttonText = "Eisenlohr";
 
-    d3.select("#projectionType").html(buttonText);
-    
-  projection = d3.geoEisenlohr()
-    .scale((width/13)*zoomCount)
-    .translate([windowWidth / 2, windowHeight / 2])
-    .rotate(center)
-    .precision(0.1);
-  }
-  
-  if (count == 6) {
+  //   if (count === 5) {
+  //     buttonText = "Eisenlohr";
+
+  //     d3.select("#projectionType").html(buttonText);
+
+  //   projection = d3.geoEisenlohr()
+  //     .scale((width/13)*zoomCount)
+  //     .translate([windowWidth / 2, windowHeight / 2])
+  //     .rotate(center)
+  //     .precision(0.1);
+  //   }
+
+  if (count === 4) {
     buttonText = "Mercator";
 
     d3.select("#projectionType").html(buttonText);
 
-    projection = d3.geoMercator()
-      .scale(((width-20) / (2 * Math.PI))*zoomCount)
+    projection = d3
+      .geoMercator()
+      .scale(((width - 20) / (2 * Math.PI)) * zoomCount)
       .rotate(center)
       .translate([windowWidth / 2, windowHeight / 2]);
   }
 
-  if (count == 7) {
+  if (count === 5) {
     count = 0;
 
     buttonText = "Orthographic";
 
     d3.select("#projectionType").html(buttonText);
 
-    projection = d3.geoOrthographic()
+    projection = d3
+      .geoOrthographic()
       .translate([windowWidth / 2, windowHeight / 2])
-      .scale((width / 2 - 20)*zoomCount)
+      .scale((width / 2 - 20) * zoomCount)
       .rotate(center)
       .clipAngle(90)
       .precision(0.6);
   }
 
+  d3.select("#currentProjDescript").html(
+    `You are currently viewing the <a href="https://en.wikipedia.org/wiki/${buttonText}_projection" target="_blank">${buttonText}</a> projection.`
+  );
+
   // REDRAW EVERYTHING
   initialize();
-}
+} //<------END OF REFRESH FUNCTION
