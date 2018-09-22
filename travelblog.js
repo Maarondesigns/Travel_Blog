@@ -1,9 +1,52 @@
+const isIphone = navigator.userAgent.indexOf("iPhone") != -1;
+
 window.onload = function() {
   setTimeout(function() {
-    tripControls
+    d3.selectAll("#tripControls, #budgetButton")
       .transition()
       .duration(400)
       .style("transform", "translateX(0%)");
+
+    if (isIphone) {
+      d3.select("#currentLocation").style(
+        "transform",
+        "scale(2) translateY(-5px)"
+      );
+
+      d3.select("#animationButton")
+        .style("font-size", "32px")
+        .style("left", "5%");
+
+      d3.select("#sliderLegendButton").style("transform", "scale(2)");
+
+      d3.select("#budgetButton").style("font-size", "48px");
+
+      d3.select("#animationSpeed").style("display", "none");
+
+      d3.selectAll("#showControls, #controls")
+        .transition()
+        .duration(400)
+        .style("transform", (d, i) => {
+          if (i === 0) {
+            return "scale(2) translate(0, 0)";
+          } else if (i === 1) {
+            return "scale(2) translate(22px, 0)";
+          }
+        })
+        .style("transform-origin", "100% 100%");
+
+      d3.selectAll("#showMenu, #buttonsMenu")
+        .transition()
+        .duration(400)
+        .style("transform", (d, i) => {
+          if (i === 0) {
+            return "scale(2) translate(0, 0)";
+          } else if (i === 1) {
+            return "scale(2) translate(-110px, 0)";
+          }
+        })
+        .style("transform-origin", "0 100%");
+    }
   }, 1800);
 };
 
@@ -14,32 +57,44 @@ d3.select("body")
   .html("Controls")
   .style("color", "white")
   .style("border-color", "white")
-  .style("transform", "translate(0, -50%)")
   .style("background-color", "rgb(170, 170, 170)");
 
 function showControls() {
   let thisGuy = d3.select(this);
-  if(thisGuy.classed("clicked")){
-    thisGuy.classed("clicked", false)
-    .transition()
-    .duration(400)
-    .style("right", "0px");  
-    
-    d3.select("#controls")
-    .transition()
-    .duration(400)
-    .style("right", "-45px");
-  } else {
-  thisGuy
-  .classed("clicked", true)
-    .transition()
-    .duration(400)
-    .style("right", "43px");
+  if (thisGuy.classed("clicked")) {
+    thisGuy
+      .classed("clicked", false)
+      .transition()
+      .duration(400)
+      .style("right", "0px");
 
-  d3.select("#controls")
-    .transition()
-    .duration(400)
-    .style("right", "0px");
+    d3.select("#controls")
+      .transition()
+      .duration(400)
+      .style("right", "-45px");
+  } else {
+    thisGuy
+      .classed("clicked", true)
+      .transition()
+      .duration(400)
+      .style("right", () => {
+        if (isIphone) {
+          return "86px";
+        } else {
+          return "43px";
+        }
+      });
+
+    d3.select("#controls")
+      .transition()
+      .duration(400)
+      .style("right", () => {
+        if (isIphone) {
+          return "43px";
+        } else {
+          return "0px";
+        }
+      });
   }
 }
 
@@ -106,7 +161,6 @@ d3.select("body")
   .html("Menu")
   .style("color", "white")
   .style("border-color", "white")
-  .style("transform", "translate(0, -66px)")
   .style("background-color", "rgb(170, 170, 170)")
   .on("click", showMenu);
 
@@ -118,23 +172,35 @@ function showMenu() {
       .classed("clicked", false)
       .transition()
       .duration(600)
-      .style("transform", "translate(0px, -66px)");
+      .style("left", "0px");
 
     d3.select("#buttonsMenu")
       .transition()
       .duration(600)
-      .style("transform", "translate(-218px, -105px)");
+      .style("left", "-218px");
   } else {
     thisGuy
       .classed("clicked", true)
       .transition()
       .duration(600)
-      .style("transform", "translate(218px, -66px)");
+      .style("left", () => {
+        if (isIphone) {
+          return "436px";
+        } else {
+          return "218px";
+        }
+      });
 
     d3.select("#buttonsMenu")
       .transition()
       .duration(600)
-      .style("transform", "translate(0, -105px)");
+      .style("left", () => {
+        if (isIphone) {
+          return "218px";
+        } else {
+          return "0px";
+        }
+      });
   }
 }
 
@@ -144,7 +210,6 @@ d3.select("body")
   .attr("class", "menuItem")
   .style("color", "white")
   .style("border-color", "white")
-  .style("transform", "translate(-218px, -105px)")
   .style("background-color", "rgb(170, 170, 170)");
 
 d3.select("#buttonsMenu")
@@ -245,11 +310,11 @@ d3.select("#projectionDescription")
     `You are currently viewing the <a href="https://en.wikipedia.org/wiki/${buttonText}_projection" target="_blank">${buttonText}</a> projection.`
   );
 
-d3.select("#changeProjection")
+d3.select("#buttonsMenu")
   .append("div")
   .attr("id", "projectionHelp")
   .html("?")
-  .on("mouseover", () => {
+  .on("click", () => {
     let viz = document.getElementById("projectionDescription").style.visibility;
 
     if (viz === "hidden") {
@@ -324,7 +389,7 @@ function changeViewingCountry() {
       .html("Go To All Trips")
       .style("border", "none");
 
-    d3.selectAll("#tripControls")
+    d3.selectAll("#tripControls, #budgetButton")
       .transition()
       .duration(400)
       .style("transform", "translateX(-100%)");
@@ -348,7 +413,7 @@ function changeViewingCountry() {
       .html("Go To All Trips")
       .style("border", "none");
 
-    d3.selectAll("#tripControls")
+    d3.selectAll("#tripControls, #budgetButton")
       .transition()
       .duration(400)
       .style("transform", "translateX(0%)");
@@ -372,7 +437,7 @@ function changeViewingCountry() {
       .html("Go To Iceland Trip")
       .style("border", "none");
 
-    d3.selectAll("#tripControls")
+    d3.selectAll("#tripControls, #budgetButton")
       .transition()
       .duration(400)
       .style("transform", "translateX(-100%)");
@@ -567,6 +632,13 @@ let tripControls = d3
   .select("body")
   .append("div")
   .attr("id", "tripControls")
+  .style("height", () => {
+    if (isIphone) {
+      return "60px";
+    } else {
+      return "30px";
+    }
+  })
   .style("transform", "translateX(-100%)");
 //CREATE SLIDER
 let slider = tripControls
@@ -575,13 +647,23 @@ let slider = tripControls
   .attr("min", "1")
   .attr("value", "1")
   .attr("class", "slider")
-  .attr("id", "myRange");
+  .attr("id", "myRange")
+  .style("width", "75%"); //() => {
+//   if (isIphone) {return "60%"}
+//   else {return "75%"}
+// });
 
 tripControls
   .append("div")
   .attr("id", "currentLocation")
-  .style("left", "-100%");
-//.style("opacity", 0);
+  .html("Day: <br><span>0</span>")
+  .style("left", "12%"); //() => {
+//   if (isIphone) {
+//     return "19.5%";
+//   } else {
+//     return "12%";
+//   }
+// });
 
 tripControls
   .append("div")
@@ -594,9 +676,10 @@ tripControls
   });
 
 //CREATE BUDGET STUFF
-tripControls
+d3.select("body")
   .append("div")
   .attr("id", "budgetButton")
+  .style("transform", "translate(-" + window.innerWidth + "px, 0)")
   .html("$")
   .on("click", () => {
     let visibility = document.getElementById("budgetBody").style.visibility;
@@ -647,7 +730,20 @@ d3.select("#sliderLegend")
   .html("World Trip Slider Legend");
 
 //CONTAINER FOR COUNTRY COLORS
-tripControls.append("div").attr("class", "slider-background-container");
+tripControls
+  .append("div")
+  .attr("class", "slider-background-container")
+  .style("height", () => {
+    if (isIphone) {
+      return "20px";
+    } else {
+      return "6px";
+    }
+  })
+  .style("width", "75%"); //() => {
+//   if (isIphone) {return "60%"}
+//   else {return "75%"}
+// });
 
 //SLIDER ANIMATION
 tripControls.append("div").attr("id", "animationButton");
@@ -1176,11 +1272,12 @@ function initialize() {
       }); //<---END OF LOCATIONSLIST.FOREACH
     } //<---END OF IF SLIDER UNITS LENGTH STATEMENT
 
-    //SLIDER ANIMATION WITH PLAY BUTTON
+    //SLIDER FUNCTIONS/ANIMATIONS AND PLAY BUTTON
 
     d3.select("#myRange")
       .attr("max", maxRange)
-      .on("input", myRangeInput);
+      .on("input", myRangeInput)
+      .on("change", myRangeChange);
 
     d3.select("#animationButton")
       .html("►")
@@ -1190,7 +1287,7 @@ function initialize() {
         } else {
           d3.select("#animationButton")
             .classed("clicked", true)
-            .html("❚❚");
+            .html("||");
           worldTour();
           interval = setInterval(function() {
             worldTour();
@@ -1198,17 +1295,30 @@ function initialize() {
         }
       });
 
+      //ANIMATION
     function worldTour() {
       if (day === 260 || day === undefined) {
         day = 1;
       }
       document.getElementById("myRange").value = day;
-      myRangeInput(document.getElementById("myRange"));
+      myRangeChange(document.getElementById("myRange"));
       day++;
     }
 
-    //ROTATE EARTH AND ACTIVATE HOVER STATE ON SLIDER INPUT (OR ANIMATION)
+    //CHANGE CURRENTLOCATION ON INPUT
     function myRangeInput() {
+      let thisGuy = document.getElementById("myRange");
+      d3.select("#currentLocation").style(
+        "left",
+        (thisGuy.offsetWidth / Number(thisGuy.max)) * Number(thisGuy.value) +
+          window.innerWidth / 8 +
+          "px"
+      )
+      .html("Day: <br><span>" + thisGuy.value + "</span>");
+    };
+
+    //ROTATE EARTH AND ACTIVATE HOVER STATE ON SLIDER INPUT (OR ANIMATION)
+    function myRangeChange() {
       let thisGuy = document.getElementById("myRange");
 
       day = thisGuy.value; //if slider changed manually animation will continue from its new value
@@ -1279,7 +1389,7 @@ function initialize() {
       //   .transition()
       //   .duration(6000)
       //   .style("opacity", 0);
-    } //<---END OF MYRANGEINPUT FUNCTION
+    } //<---END OF myRangeChange FUNCTION
 
     //TRAVEL PATH LINES
     let locationsPaths = [];
