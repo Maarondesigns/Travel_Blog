@@ -1655,18 +1655,21 @@ function initialize() {
     // PIN HOVER FUNCTIONS
 
     function locationData(d, i) {
-      let thisX = Number(this.getAttribute("d").split(/[MLm,]/)[1]);
-      let thisY = Number(this.getAttribute("d").split(/[MLm,]/)[2]);
-
-      let x = this.getBoundingClientRect().x;
-      let y = this.getBoundingClientRect().y;
-
+      let splitThis = this.getAttribute("d").split(/[MLm, ]/);
+      let splitFilter = splitThis.filter(x=>x.length>1);
+      let thisX = Number(splitFilter[0]);
+      let thisY = Number(splitFilter[1]);
+      
+      let x = this.getBoundingClientRect().left;
+      let y = this.getBoundingClientRect().top;
+     // console.log(this.getBoundingClientRect());
       d3.selectAll(".pinAfter").classed("pinAfter", false);
 
       d3.select(this).classed("pinAfter", true);
 
       d3.select(".pinAfter")
         .style("transform-origin", `${thisX}px  ${thisY}px`)
+        .style("-ms-transform-origin", `${thisX}px  ${thisY}px`)
         .style("animation-name", "pinGrow");
 
       let color = this.getAttribute("stroke");
