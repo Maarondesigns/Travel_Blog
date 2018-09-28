@@ -5,36 +5,208 @@ body {
   background-color: black;
   font-family: verdana;
 }
+
+#inputContainers {
+  display: flex;
+  justify-content: center;
+}
+
+#switchButtons {
+  align-self: center;
+  text-align: center;
+  margin-top: 40px;
+  width: 235px;
+}
+.switchForm {
+  position: relative;
+  background-color: white;
+  border: none;
+  padding: 5px 8px;
+  font: normal 10px verdana;
+  border-radius: 4px 4px 0 0;
+  background-color: rgb(220, 220, 220);
+  cursor: pointer;
+}
+.switchForm:focus {
+  outline: 0;
+}
+
 .container {
   display: block;
   align-self: center;
-  box-shadow: 0px 0px 10px red;
   padding: 20px;
-  margin: 20px;
   background-color: white;
-  border-radius: 4px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  max-width: 235px;
+  overflow: hidden;
+}
+h2 {
+  width: 120%;
+  margin-left: -10%;
+  margin-top: 0px;
+  border-bottom: solid 3px black;
+  padding-bottom: 20px;
+  font: bold 22px verdana;
   text-align: center;
 }
-
-h2 {
-  text-decoration: underline;
+.inputContainer {
+  border-bottom: dashed 1px black;
+  display: flex;
+  padding: 10px;
 }
-
-#stepContainer #passwordContainer {
-  box-shadow: 0px 0px 10px red;
+#passwordContainer {
+  border-radius: 0 0 8px 8px;
+  background-color: rgba(255, 255, 255, 1);
+  border-top: solid 3px black;
+  padding-top: 10px;
 }
-
-#budgetContainer {
-  box-shadow: 0px 0px 10px green;
+#password {
+  box-shadow: 0 0 0px black inset;
 }
-
 #formDestination {
-  width: 250px;
-  height: 60px;
-  border: dashed 1px black;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: none;
+  z-index: -1;
 }
-
 #stepArea {
-  max-width: 300px;
+  max-width: 250px;
+  white-space: pre-wrap;
+  text-align: left;
+  word-break: break-word;
+  font: normal 12px verdana;
+}
+input {
+  font: normal 12px verdana;
+  border: none;
+  padding: 5px;
+  max-width: 135px;
+}
+input:focus {
+  outline: none;
+}
+#uploadPhotoButton,
+#stepSubmit,
+#updateSubmit,
+#budgetSubmit {
+  background-color: #aec8f2;
+  box-shadow: 0 1px 5px black;
+  border: solid 1px gray;
+  cursor: pointer;
+  margin-top: 20px;
+}
+#stepSubmit,
+#updateSubmit,
+#budgetSubmit {
+  width: 120%;
+  margin-left: -10%;
+  border-radius: 0;
+  padding: 10px;
+  font-weight: bold;
+}
+#uploadPhotoButton {
+  background: #aec8f2 url("upload_126477.svg") no-repeat top center;
+  height: 24px;
+  width: 40px;
+  border-radius: 20px;
+  margin: 1px 10px;
+}
+#uploadPhotoButton[title] {
+  background-color: red;
+}
+/* #photoTitle, */
+#photoForm,
+#formDestination {
+  display: none;
+}
+#photoUploadLabel {
+  text-align: center;
+  font: normal 12px verdana;
+  box-shadow: 0 0 5px black inset;
+  border: none;
+  padding: 5px;
+  white-space: nowrap;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0;
+  background-color: rgba(255, 100, 100, 0.5);
+  height: 18px;
+  width: 100px;
+  margin-left: 5px;
+}
+#photoUploadLabel:hover {
+  position: relative;
+  background-color: rgba(255, 100, 100, 0.8);
+}
+#photoUploadLabel[aria-label]:hover:after {
+  content: attr(aria-label);
+  padding: 4px 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 120%;
+  background: rgb(240, 240, 240);
+  border-radius: 4px;
+  box-shadow: 0 0 5px black;
+  word-spacing: 100px;
+  white-space: normal;
+}
+#photoUpload {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
   overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+#photoContainer {
+  font: normal 12px verdana;
+  margin-top: 10px;
+}
+#key {
+  text-align: right;
+  width: 50px;
+  margin-left: -20px;
+  background-image: linear-gradient(to left, lightgray, white 80%);
+}
+#value {
+  max-width: 180px;
+  width: 180px;
+  position: absolute;
+  transform: translateX(50px);
+  background-image: linear-gradient(to right, lightgray, white 90%);
+}
+#autoContainer {
+  background-color: lightgray;
+  padding: 5px 5px 1px 5px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px;
+  font: normal 12px verdana;
+  margin-top: 10px;
+}
+.autocomplete {
+  background-color: white;
+  padding: 2px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+.autocomplete:hover {
+  box-shadow: 0 0 10px black;
+}
+#searchSteps {
+  border: dotted 2px rgb(255, 0, 0);
+  margin-top: 10px;
+}
+.newValues {
+  width: 60px;
+}
+.oldValues {
+  font: normal 10px verdana;
+  text-align: right;
+  transform: translate(-20px, 20px);
+  position: absolute;
+  width: 250px;
 }

@@ -1662,7 +1662,7 @@ function initialize() {
       
       let x = this.getBoundingClientRect().left;
       let y = this.getBoundingClientRect().top;
-     // console.log(this.getBoundingClientRect());
+
       d3.selectAll(".pinAfter").classed("pinAfter", false);
 
       d3.select(this).classed("pinAfter", true);
@@ -1676,7 +1676,6 @@ function initialize() {
 
       d3.select(".pinAfter").attr("fill", "orange");
       d3.select("#tooltip")
-        //.classed("showBefore", true)
         .style("visibility", "visible")
         .html(
           `${d.info}</br><span>Days at location: ${d.days_at_location}</span>`
@@ -1687,16 +1686,11 @@ function initialize() {
         .style("border-color", color)
         .style("box-shadow", "0px 0px 8px 4px" + color);
 
-      //setTimeout(function(){
-
       d3.select("#tooltip")
         .append("div")
         .attr("id", "tooltip-thumbnail-image")
         .html(d.image_thumbnail)
         .style("border-color", color);
-      // .style("box-shadow", "0px 0px 8px 4px"+color);
-
-      //}, 400)
     }
 
     function locationDataOff(d, i) {
