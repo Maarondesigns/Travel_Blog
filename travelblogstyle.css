@@ -267,7 +267,7 @@ a:hover {
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  /* background: rgba(0, 0, 0, 0); */
+  background: rgba(0, 0, 0, 0);
   border: none;
   cursor: pointer;
 }

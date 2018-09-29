@@ -605,10 +605,11 @@ function resetOnClick() {
 }
 
 //TIMEOUT AND INTERVAL VARIABLES
-let day = 1;
+let day = 0;
+let tourStop = 0;
 let interval;
 let timeouts = [];
-let speed = 3000;
+let speed = 5000;
 
 function clearTheInterval() {
   for (let i = 0; i < timeouts.length; i++) {
@@ -644,7 +645,7 @@ let tripControls = d3
 let slider = tripControls
   .append("input")
   .attr("type", "range")
-  .attr("min", "1")
+  .attr("min", "0")
   .attr("value", "1")
   .attr("class", "slider")
   .attr("id", "myRange")
@@ -753,12 +754,12 @@ tripControls
   .attr("id", "animationSpeed")
   .html("Speed")
   .append("input")
-  .attr("value", "3")
+  .attr("value", "1")
   .on("input", changeSpeed);
 
 function changeSpeed() {
   clearTheInterval();
-  speed = this.value * 1000;
+  speed = this.value * 5000;
 }
 
 /***** ALL MATH FUNCTIONS ****/
@@ -955,6 +956,24 @@ function initialize() {
   // VARIABLE USED TO CONVERT PATHS TO LONG,LAT AND RUN THROUGH PROJECTION
   var path = d3.geoPath().projection(projection);
 
+  // setTimeout(function(){
+  //   d3.transition()
+  //         .duration(3000)
+  //         .tween("zoom", function() {
+  //           var r = d3.interpolate((width / 2 - 20),(width * 2 - 20));
+  //           return function(t) {
+  //             projection.scale(r(t));
+  //             d3.selectAll("#globe").attr("d", path);
+  //             d3.selectAll(".graticule").attr("d", path);
+  //             d3.selectAll(".land").attr("d", path);
+  //             d3.selectAll(".border").attr("d", path);
+  //             svg.selectAll(".pin").attr("d", path);
+  //             svg.selectAll(".icelandPins").attr("d", path);
+  //             svg.selectAll(".travelPath").attr("d", path);
+  //             svg.selectAll(".icelandTravelPath").attr("d", path);
+  //           }});
+  // },2000)
+
   //CREATE BACKGROUND
 
   d3.select("body")
@@ -1058,22 +1077,67 @@ function initialize() {
       var o1 = eulerAngles(gpos0, gpos1, o0);
       if (o1 === undefined) return;
       o1[2] = 0; //<--added tthis to keep the poles always in the center (north is always up unless you keep rotating until the globe is upside down)
+      
+      let zoomInputVal = document.getElementById("zoomInput");
+      let zoomCount = Number(zoomInputVal.value);
+      let zoomTransition = 8 - ((Math.abs(o0[0]-o1[0]) + Math.abs(o0[1]-o1[1])) / 35);
+      let newZoom = 10;
 
+      let projectionObject = {
+        "Orthographic": (width / 2 - 20),
+        "Natural Earth": (width / 5 - 20),
+        "Mollweide":(width / 5 - 30),
+        "Stereographic": (width / 5),
+        "Mercator": ((width - 20) / (2 * Math.PI))
+      }
+
+      let thisWidth = projectionObject[buttonText];
+
+      function stuff() { 
+        d3.selectAll("#globe").attr("d", path);
+        d3.selectAll(".graticule").attr("d", path);
+        d3.selectAll(".land").attr("d", path);
+        d3.selectAll(".border").attr("d", path);
+        svg.selectAll(".pin").attr("d", path);
+        svg.selectAll(".icelandPins").attr("d", path);
+        svg.selectAll(".travelPath").attr("d", path);
+        svg.selectAll(".icelandTravelPath").attr("d", path);
+        zoomInputVal.value = newZoom;
+    }
+
+if (zoomCount >= zoomTransition){
       d3.transition()
-        .duration(speed / 4)
-        .tween("rotate", function() {
-          var r = d3.interpolate(o0, o1);
+        .duration(speed / 8)
+        .tween("zoom", function() {
+          let s = d3.interpolate(thisWidth * zoomCount, thisWidth * zoomTransition);
           return function(t) {
-            projection.rotate(r(t));
-            d3.selectAll(".graticule").attr("d", path);
-            d3.selectAll(".land").attr("d", path);
-            d3.selectAll(".border").attr("d", path);
-            svg.selectAll(".pin").attr("d", path);
-            svg.selectAll(".icelandPins").attr("d", path);
-            svg.selectAll(".travelPath").attr("d", path);
-            svg.selectAll(".icelandTravelPath").attr("d", path);
+          projection.scale(s(t));
+            stuff();
           };
         });
+      }
+        setTimeout(function(){
+          d3.transition()
+          .duration(speed / 4)
+          .tween("rotate", function() {
+            let r = d3.interpolate(o0, o1);
+            return function(t) {
+              projection.rotate(r(t));
+              stuff();
+            };
+          });
+        }, speed / 8);
+        setTimeout(function(){
+        d3.transition()
+        .duration(speed / 8)
+        .tween("zoom", function() {
+          let s = d3.interpolate(thisWidth * zoomTransition, thisWidth * newZoom);
+          return function(t) {
+            projection.scale(s(t));
+            stuff();
+          };
+        });
+      }, speed / 2);
     }
 
     function dragended() {
@@ -1173,7 +1237,7 @@ function initialize() {
     ];
 
     // FOR LOOP TO SET LOCATIONS ARRAY INDEXES
-    for (let i = 1; i < data.all_steps.length; i++) {
+    for (let i = 0; i < data.all_steps.length; i++) {
       // create date object with start time and get variables from it
 
       let utcTime = new Date(data.all_steps[i].start_time * 1000);
@@ -1277,7 +1341,10 @@ function initialize() {
     d3.select("#myRange")
       .attr("max", maxRange)
       .on("input", myRangeInput)
-      .on("change", myRangeChange);
+      .on("change", () => {
+        clearTheInterval();
+        myRangeChange()
+      });
 
     d3.select("#animationButton")
       .html("►")
@@ -1294,15 +1361,17 @@ function initialize() {
           }, speed);
         }
       });
-
+ 
       //ANIMATION
     function worldTour() {
-      if (day === 260 || day === undefined) {
-        day = 1;
+      
+      if (tourStop === 119) {
+        tourStop = 0;
       }
       document.getElementById("myRange").value = day;
-      myRangeChange(document.getElementById("myRange"));
-      day++;
+      myRangeChange(tourStop);
+
+      tourStop++;
     }
 
     //CHANGE CURRENTLOCATION ON INPUT
@@ -1318,7 +1387,8 @@ function initialize() {
     };
 
     //ROTATE EARTH AND ACTIVATE HOVER STATE ON SLIDER INPUT (OR ANIMATION)
-    function myRangeChange() {
+    function myRangeChange(input) {
+
       let thisGuy = document.getElementById("myRange");
 
       day = thisGuy.value; //if slider changed manually animation will continue from its new value
@@ -1329,7 +1399,13 @@ function initialize() {
 
       let lastLocation = filterLocation[filterLocation.length - 2];
       let currentLocation = filterLocation[filterLocation.length - 1];
-
+      if (input){
+        currentLocation = locations[input];
+        day = locations[input].day_of_trip;
+      }
+      if (input === undefined){
+        tourStop = filterLocation.length;
+      }
       let select = d3.select("#currentLocation");
 
       select
@@ -1339,12 +1415,7 @@ function initialize() {
             window.innerWidth / 8 +
             "px"
         )
-        .html("Day: <br><span>" + thisGuy.value + "</span>");
-
-      // select
-      //   .transition()
-      //   .duration(1)
-      //   .style("opacity", 1);
+        .html("Day: <br><span>" + day + "</span>");
 
       let oldCoords = currentLocation.coordinates.map(
         x => Math.floor(x * 100) / 100
@@ -1360,15 +1431,24 @@ function initialize() {
           document
             .querySelectorAll(`.pin[data-day="${lastLocation.day_of_trip}"]`)
             .forEach(x => x.dispatchEvent(mouseout));
+        } else {
+          document
+            .querySelector(`.pin[data-day="0"]`).dispatchEvent(mouseout);
         }
 
         dragged2(currentLocation.coordinates);
-        let delay = speed / 4 + 300;
+        let delay = speed / 1.5;
         let pins = document.querySelectorAll(
           `.pin[data-day="${currentLocation.day_of_trip}"]`
         );
 
-        if (pins.length === 1) {
+        if (input !== undefined){
+          setTimeout(function() {
+            document
+              .querySelector(`.pin[data-index="${input}"]`)
+              .dispatchEvent(mouseover);
+          }, delay);
+        } else if (pins.length === 1) {
           setTimeout(function() {
             document
               .querySelector(`.pin[data-day="${currentLocation.day_of_trip}"]`)
@@ -1385,15 +1465,11 @@ function initialize() {
         } //<--END OF ELSE STATEMENT
       } //<---END OF IF(NEW COORDS...) STATEMENT
 
-      // select
-      //   .transition()
-      //   .duration(6000)
-      //   .style("opacity", 0);
     } //<---END OF myRangeChange FUNCTION
 
     //TRAVEL PATH LINES
     let locationsPaths = [];
-    for (let i = 1; i < locations.length - 1; i++) {
+    for (let i = 0; i < locations.length - 1; i++) {
       locationsPaths.push([
         locations[i].coordinates,
         locations[i + 1].coordinates
@@ -1486,9 +1562,8 @@ function initialize() {
       .attr("d", path)
       .attr("class", "pin")
       .attr("fill", "white")
-      .attr("data-day", (d, i) => {
-        if (i !== 0) return d.day;
-      })
+      .attr("data-day", (d, i) => d.day)
+      .attr("data-index", (d, i) => i)
       .attr("stroke", "#4292c6")
       .attr("stroke-width", "2px")
       .style("opacity", worldTripOpacity)
